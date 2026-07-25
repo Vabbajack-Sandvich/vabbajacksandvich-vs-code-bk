@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "sJfiSkNmmTrxWxVw9EU2ERR/29EtHzCgOn5RQctca90CdyT5FvtzWdK7r4DFqIVgsyAsVPgt8dFi92hq2GlnVQ==",
+  "success": true,
+  "projectFilePath": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\filerenamer-semimodular.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zonid\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.21\\microsoft.netcore.app.runtime.win-x86.6.0.21.nupkg.sha512",
+    "C:\\Users\\zonid\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.21\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.21.nupkg.sha512",
+    "C:\\Users\\zonid\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.21\\microsoft.aspnetcore.app.runtime.win-x86.6.0.21.nupkg.sha512",
+    "C:\\Users\\zonid\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.21\\microsoft.netcore.app.crossgen2.win-x64.6.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}

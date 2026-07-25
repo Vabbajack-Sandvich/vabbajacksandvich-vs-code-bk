@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\bin\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.exe
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\bin\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.deps.json
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\bin\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.runtimeconfig.json
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\bin\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.dll
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\bin\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.pdb
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.Form1.resources
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.dll
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\refint\zVabbajackSandvichModuleMaster.dll
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.pdb
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\zVabbajackSandvichModuleMaster.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\zVabbajackSandvichModuleMaster\obj\Debug\net8.0-windows\ref\zVabbajackSandvichModuleMaster.dll

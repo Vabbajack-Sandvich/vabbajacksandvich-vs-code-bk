@@ -1,0 +1,129 @@
+;=====================================================================
+
+alphanumfilter(zanumfilter)
+{
+	zanumtemp2 := zanumfilter
+	if (zanumtemp2 = "") {
+		return
+	}
+	
+	zanumtemp2 := StrLower(zanumtemp2)
+	
+	;this a temp string is for the output
+	zanumtemp := ""
+	
+	;znflen is z num filter length from the input
+	znflen := StrLen(zanumtemp2)
+	
+	;this is the temp for loop value
+	znti := "1"
+	
+	;to stop the while loop at the end
+	;of going through each letter
+	znumstop := 0
+	
+	;need a temp string to iterate with
+	ztscs := ""
+	
+	while znumstop = 0 {
+		ztscs := SubStr(zanumtemp2, znti, 1)
+		Switch ztscs
+		{
+				Case "0":
+					;0
+					zanumtemp := zanumtemp "0"
+				Case "1":
+					;1
+					zanumtemp := zanumtemp "1"
+				Case "2":
+					;2
+					zanumtemp := zanumtemp "2"
+				Case "3":
+					;3
+					zanumtemp := zanumtemp "3"
+				Case "4":
+					;4
+					zanumtemp := zanumtemp "4"
+				Case "5":
+					;5
+					zanumtemp := zanumtemp "5"
+				Case "6":
+					;6
+					zanumtemp := zanumtemp "6"
+				Case "7":
+					;7
+					zanumtemp := zanumtemp "7"
+				Case "8":
+					;8
+					zanumtemp := zanumtemp "8"
+				Case "9":
+					;9
+					zanumtemp := zanumtemp "9"
+					
+				Case "a":
+					zanumtemp := zanumtemp "a"
+				Case "b":
+					zanumtemp := zanumtemp "b"
+				Case "c":
+					zanumtemp := zanumtemp "c"
+				Case "d":
+					zanumtemp := zanumtemp "d"
+				Case "e":
+					zanumtemp := zanumtemp "e"
+				Case "f":
+					zanumtemp := zanumtemp "f"
+				Case "g":
+					zanumtemp := zanumtemp "g"
+				Case "h":
+					zanumtemp := zanumtemp "h"
+				Case "i":
+					zanumtemp := zanumtemp "i"
+				Case "j":
+					zanumtemp := zanumtemp "j"
+				Case "k":
+					zanumtemp := zanumtemp "k"
+				Case "l":
+					zanumtemp := zanumtemp "l"
+				Case "m":
+					zanumtemp := zanumtemp "m"
+				Case "n":
+					zanumtemp := zanumtemp "n"
+				Case "o":
+					zanumtemp := zanumtemp "o"
+				Case "p":
+					zanumtemp := zanumtemp "p"
+				Case "q":
+					zanumtemp := zanumtemp "q"
+				Case "r":
+					zanumtemp := zanumtemp "r"
+				Case "s":
+					zanumtemp := zanumtemp "s"
+				Case "t":
+					zanumtemp := zanumtemp "t"
+				Case "u":
+					zanumtemp := zanumtemp "u"
+				Case "v":
+					zanumtemp := zanumtemp "v"
+				Case "w":
+					zanumtemp := zanumtemp "w"
+				Case "x":
+					zanumtemp := zanumtemp "x"
+				Case "y":
+					zanumtemp := zanumtemp "y"
+				Case "z":
+					zanumtemp := zanumtemp "z"
+
+		;end brace for switch znumfilter
+		}
+		;incriment the index
+		znti := znti + 1
+		if (znti = znflen + 1) {
+			znumstop := 1
+		}
+	;end brace for for loop znti
+	}
+	return zanumtemp
+	;znumfilter := zanumtemp
+;end brace for numfilter
+}
+

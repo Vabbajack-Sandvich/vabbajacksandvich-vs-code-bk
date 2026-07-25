@@ -1,0 +1,38 @@
+
+
+Dim information = My.Computer.FileSystem.GetFileInfo("C:\MyLogFile.log")
+MsgBox("The file's full name is " & information.FullName & ".")
+MsgBox("Last access time is " & information.LastAccessTime & ".")
+MsgBox("The length is " & information.Length & ".")
+
+Dim MyDuration As String =  GetDuration("C:\SomePath\SomeVideoOrAudioFile.avi")
+
+Function GetDuration(ByVal MovieFullPath As String) As String
+   If File.Exists(MovieFullPath) Then
+      Dim objShell As Object = CreateObject("Shell.Application")
+      Dim objFolder As Object = _
+         objShell.Namespace(Path.GetDirectoryName(MovieFullPath))
+            For Each strFileName In objFolder.Items
+               If strFileName.Name = Path.GetFileName(MovieFullPath) Then
+				  Return objFolder.GetDetailsOf(strFileName, 27).ToString
+                  Exit For
+                  Exit Function
+               End If
+            Next
+            Return ""
+   Else
+      Return ""
+   End If
+End Function
+
+ffprobe -i <file> -show_entries format=duration -v quiet -of csv="p=0"
+It will output the duration in seconds, such as:
+
+154.12
+Adding the -sexagesimal
+
+ffprobe -i <file> -show_entries format=duration -v quiet -of csv="p=0" -sexagesimal
+
+
+ffmpeg -i input.flv -ss 2 -vcodec copy -acodec copy output.flv
+

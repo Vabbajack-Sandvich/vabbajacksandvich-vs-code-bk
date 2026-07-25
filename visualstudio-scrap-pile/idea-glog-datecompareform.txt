@@ -1,0 +1,27 @@
+glog todo
+
+add a time compare thing
+
+Dim date1 As Date = #08/01/2009 12:00AM#
+Dim date2 As Date = #08/01/2009 12:00PM#
+Dim result As Integer = DateTime.Compare(date1, date2)
+Dim relationship As String
+
+If result < 0 Then
+   relationship = "is earlier than"
+ElseIf result = 0 Then
+   relationship = "is the same time as"
+Else
+   relationship = "is later than"
+End If
+
+Console.WriteLine("{0} {1} {2}", date1, relationship, date2)
+
+might need to add a new form and make a modular form
+
+for time compare between 2 dates where it lets you pick the dates
+
+something that tells me how many days before or after
+
+i might have to specify the date format to match what it expects
+

@@ -1,0 +1,16 @@
+C:\zonide\zip\CODE\visualstudio\zLineCombine\bin\Release\net8.0-windows\zLineCombine.exe
+C:\zonide\zip\CODE\visualstudio\zLineCombine\bin\Release\net8.0-windows\zLineCombine.deps.json
+C:\zonide\zip\CODE\visualstudio\zLineCombine\bin\Release\net8.0-windows\zLineCombine.runtimeconfig.json
+C:\zonide\zip\CODE\visualstudio\zLineCombine\bin\Release\net8.0-windows\zLineCombine.dll
+C:\zonide\zip\CODE\visualstudio\zLineCombine\bin\Release\net8.0-windows\zLineCombine.pdb
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.frmMain.resources
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.vbproj.GenerateResource.cache
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.GeneratedMSBuildEditorConfig.editorconfig
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.AssemblyInfoInputs.cache
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.AssemblyInfo.vb
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.vbproj.CoreCompileInputs.cache
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.dll
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\refint\zLineCombine.dll
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.pdb
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\zLineCombine.genruntimeconfig.cache
+C:\zonide\zip\CODE\visualstudio\zLineCombine\obj\Release\net8.0-windows\ref\zLineCombine.dll

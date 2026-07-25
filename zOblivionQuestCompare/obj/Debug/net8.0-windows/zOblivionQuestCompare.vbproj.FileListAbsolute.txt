@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\bin\Debug\net8.0-windows\zOblivionQuestCompare.exe
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\bin\Debug\net8.0-windows\zOblivionQuestCompare.deps.json
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\bin\Debug\net8.0-windows\zOblivionQuestCompare.runtimeconfig.json
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\bin\Debug\net8.0-windows\zOblivionQuestCompare.dll
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\bin\Debug\net8.0-windows\zOblivionQuestCompare.pdb
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.Form1.resources
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.dll
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\refint\zOblivionQuestCompare.dll
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.pdb
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\zOblivionQuestCompare.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\zOblivionQuestCompare\obj\Debug\net8.0-windows\ref\zOblivionQuestCompare.dll

@@ -1,0 +1,5 @@
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Release\net8.0-windows\publish\zAspect.exe
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Release\net8.0-windows\publish\zAspect.dll
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Release\net8.0-windows\publish\zAspect.deps.json
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Release\net8.0-windows\publish\zAspect.runtimeconfig.json
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Release\net8.0-windows\publish\zAspect.pdb

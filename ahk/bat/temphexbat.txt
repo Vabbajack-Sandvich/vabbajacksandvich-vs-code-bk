@@ -1,0 +1,7 @@
+rem this is a batch file to run image magick
+rem for the purpose of generating a random
+rem hex code image of a solid color at 184x184
+rem D:\zonide\ahk\heximage
+chdir /d D:
+cd d:\zonide\ahk\heximage
+rem "convert -size 184x184 xc:#" zsahc " " zsafn ".png"

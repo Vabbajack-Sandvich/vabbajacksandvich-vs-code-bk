@@ -1,0 +1,13 @@
+phone shortcut
+
+ftp://192.168.137.130:3178/
+
+C:\windows\explorer.exe "ftp://192.168.137.130:3178/"
+
+start C:\windows\explorer.exe ftp://192.168.137.130:3178/
+
+wrong ip
+
+but the windows shortcut works
+
+.15

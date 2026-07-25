@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\zonide\\CODE\\visualstudio\\zFilter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C084B636-A99C-4823-ABAF-991EFFB476ED}|zFilter.vbproj|d:\\zonide\\code\\visualstudio\\zfilter\\frmzfilter.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C084B636-A99C-4823-ABAF-991EFFB476ED}|zFilter.vbproj|solutionrelative:frmzfilter.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C084B636-A99C-4823-ABAF-991EFFB476ED}|zFilter.vbproj|d:\\zonide\\code\\visualstudio\\zfilter\\frmzfilter.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C084B636-A99C-4823-ABAF-991EFFB476ED}|zFilter.vbproj|solutionrelative:frmzfilter.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C084B636-A99C-4823-ABAF-991EFFB476ED}|zFilter.vbproj|d:\\zonide\\code\\visualstudio\\zfilter\\my project\\publishprofiles\\folderprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C084B636-A99C-4823-ABAF-991EFFB476ED}|zFilter.vbproj|solutionrelative:my project\\publishprofiles\\folderprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C084B636-A99C-4823-ABAF-991EFFB476ED}|zFilter.vbproj|d:\\zonide\\code\\visualstudio\\zfilter\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C084B636-A99C-4823-ABAF-991EFFB476ED}|zFilter.vbproj|solutionrelative:vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FolderProfile.pubxml",
+              "DocumentMoniker": "D:\\zonide\\CODE\\visualstudio\\zFilter\\My Project\\PublishProfiles\\FolderProfile.pubxml",
+              "RelativeDocumentMoniker": "My Project\\PublishProfiles\\FolderProfile.pubxml",
+              "ToolTip": "D:\\zonide\\CODE\\visualstudio\\zFilter\\My Project\\PublishProfiles\\FolderProfile.pubxml",
+              "RelativeToolTip": "My Project\\PublishProfiles\\FolderProfile.pubxml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-09-15T21:58:15.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmzFilter.vb [Design]",
+              "DocumentMoniker": "D:\\zonide\\CODE\\visualstudio\\zFilter\\frmzFilter.vb",
+              "RelativeDocumentMoniker": "frmzFilter.vb",
+              "ToolTip": "D:\\zonide\\CODE\\visualstudio\\zFilter\\frmzFilter.vb [Design]",
+              "RelativeToolTip": "frmzFilter.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-15T20:18:37.56Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmzFilter.vb",
+              "DocumentMoniker": "D:\\zonide\\CODE\\visualstudio\\zFilter\\frmzFilter.vb",
+              "RelativeDocumentMoniker": "frmzFilter.vb",
+              "ToolTip": "D:\\zonide\\CODE\\visualstudio\\zFilter\\frmzFilter.vb",
+              "RelativeToolTip": "frmzFilter.vb",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAUwGEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-15T20:30:56.54Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "e5d0cdfc-bcd6-4c66-91f3-14fc3915396e",
+        "Display": 0,
+        "X": 350,
+        "Y": 26,
+        "Width": 978,
+        "Height": 749,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "vabbajacksandvich.vb",
+              "DocumentMoniker": "D:\\zonide\\CODE\\visualstudio\\zFilter\\vabbajacksandvich.vb",
+              "RelativeDocumentMoniker": "vabbajacksandvich.vb",
+              "ToolTip": "D:\\zonide\\CODE\\visualstudio\\zFilter\\vabbajacksandvich.vb",
+              "RelativeToolTip": "vabbajacksandvich.vb",
+              "ViewState": "AgIAAJMBAAAAAAAAAAAUwJ8BAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-15T20:38:52.179Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

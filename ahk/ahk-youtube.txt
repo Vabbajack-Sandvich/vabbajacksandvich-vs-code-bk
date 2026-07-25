@@ -1,0 +1,40 @@
+reuse link
+mouse cursor - x - 1008 - y - 402
+
+top left box
+mouse cursor - x - 638 - y - 492
+
+3 right 3 down box
+mouse cursor - x - 1053 - y - 944
+
+reuse link after clicking box
+mouse cursor - x - 1230 - y - 798
+
+center for 3 character length title
+for palworld
+mouse cursor - x - 799 - y - 462
+
+thumbnail
+mouse cursor - x - 635 - y - 795
+
+palworld thumbnail file
+mouse cursor - x - 334 - y - 242
+
+open button
+mouse cursor - x - 1178 - y - 856
+
+next button - 3 clicks
+mouse cursor - x - 1345 - y - 964
+
+public option button
+mouse cursor - x - 636 - y - 626
+
+save/publish button
+mouse cursor - x - 1345 - y - 964
+
+close link in share window
+mouse cursor - x - 1143 - y - 795
+
+edit button for next video
+mouse cursor - x - 414 - y - 815
+

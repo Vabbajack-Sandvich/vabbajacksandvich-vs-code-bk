@@ -1,0 +1,833 @@
+NetworkInterface Class (System.Net.NetworkInformation)
+
+
+		
+Skip to main content
+Skip to in-page navigation
+Skip to Ask Learn chat experience
+
+We use optional cookies to improve your experience on our websites, such as through social media connections, and to display personalized advertising based on your online activity. If you reject optional cookies, only cookies necessary to provide you the services will be used. You may change your selection by clicking “Manage Cookies” at the bottom of the page. Privacy Statement Third-Party Cookies
+Learn
+
+Sign in
+.NET
+
+Version
+Search
+
+    System.Net.NetworkInformation
+    DuplicateAddressDetectionState
+
+IPStatus
+NetBiosNodeType
+NetworkAddressChangedEventHandler
+NetworkAvailabilityChangedEventHandler
+NetworkInterface
+Constructors
+NetworkInterfaceComponent
+NetworkInterfaceType
+OperationalStatus
+PingCompletedEventHandler
+PrefixOrigin
+ScopeLevel
+SuffixOrigin
+TcpState
+
+    Learn .NET API browser 
+
+NetworkInterface Class
+Definition
+
+Namespace:
+    System.Net.NetworkInformation 
+
+Assemblies:
+    netstandard.dll, System.Net.NetworkInformation.dll
+
+Source:
+    NetworkInterface.cs
+
+Provides configuration and statistical information for a network interface.
+C#
+
+public abstract class NetworkInterface
+
+Inheritance
+    Object
+    NetworkInterface
+
+Examples
+
+The following code example displays information about interfaces.
+C#
+
+public static void ShowNetworkInterfaces()
+{
+    IPGlobalProperties computerProperties = IPGlobalProperties.GetIPGlobalProperties();
+    NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+    Console.WriteLine("Interface information for {0}.{1}     ",
+            computerProperties.HostName, computerProperties.DomainName);
+    if (nics == null || nics.Length < 1)
+    {
+        Console.WriteLine("  No network interfaces found.");
+        return;
+    }
+
+    Console.WriteLine("  Number of interfaces .................... : {0}", nics.Length);
+    foreach (NetworkInterface adapter in nics)
+    {
+        IPInterfaceProperties properties = adapter.GetIPProperties();
+        Console.WriteLine();
+        Console.WriteLine(adapter.Description);
+        Console.WriteLine(String.Empty.PadLeft(adapter.Description.Length,'='));
+        Console.WriteLine("  Interface type .......................... : {0}", adapter.NetworkInterfaceType);
+        Console.WriteLine("  Physical Address ........................ : {0}",
+                   adapter.GetPhysicalAddress().ToString());
+        Console.WriteLine("  Operational status ...................... : {0}",
+            adapter.OperationalStatus);
+        string versions ="";
+
+        // Create a display string for the supported IP versions.
+        if (adapter.Supports(NetworkInterfaceComponent.IPv4))
+        {
+             versions = "IPv4";
+         }
+        if (adapter.Supports(NetworkInterfaceComponent.IPv6))
+        {
+            if (versions.Length > 0)
+            {
+                versions += " ";
+             }
+            versions += "IPv6";
+        }
+        Console.WriteLine("  IP version .............................. : {0}", versions);
+        ShowIPAddresses(properties);
+
+        // The following information is not useful for loopback adapters.
+        if (adapter.NetworkInterfaceType == NetworkInterfaceType.Loopback)
+        {
+            continue;
+        }
+        Console.WriteLine("  DNS suffix .............................. : {0}",
+            properties.DnsSuffix);
+
+        string label;
+        if (adapter.Supports(NetworkInterfaceComponent.IPv4))
+        {
+            IPv4InterfaceProperties ipv4 = properties.GetIPv4Properties();
+            Console.WriteLine("  MTU...................................... : {0}", ipv4.Mtu);
+            if (ipv4.UsesWins)
+            {
+
+                IPAddressCollection winsServers = properties.WinsServersAddresses;
+                if (winsServers.Count > 0)
+                {
+                    label = "  WINS Servers ............................ :";
+                    ShowIPAddresses(label, winsServers);
+                }
+            }
+        }
+
+        Console.WriteLine("  DNS enabled ............................. : {0}",
+            properties.IsDnsEnabled);
+        Console.WriteLine("  Dynamically configured DNS .............. : {0}",
+            properties.IsDynamicDnsEnabled);
+        Console.WriteLine("  Receive Only ............................ : {0}",
+            adapter.IsReceiveOnly);
+        Console.WriteLine("  Multicast ............................... : {0}",
+            adapter.SupportsMulticast);
+        ShowInterfaceStatistics(adapter);
+
+        Console.WriteLine();
+    }
+}
+
+Remarks
+
+This class encapsulates data for network interfaces, also known as adapters, on the local computer. You do not create instances of this class; the GetAllNetworkInterfaces method returns an array that contains one instance of this class for each network interface on the local computer.
+Constructors
+NetworkInterface() 	
+
+Initializes a new instance of the NetworkInterface class.
+Properties
+Description 	
+
+Gets the description of the interface.
+Id 	
+
+Gets the identifier of the network adapter.
+IPv6LoopbackInterfaceIndex 	
+
+Gets the index of the IPv6 loopback interface.
+IsReceiveOnly 	
+
+Gets a Boolean value that indicates whether the network interface is set to only receive data packets.
+LoopbackInterfaceIndex 	
+
+Gets the index of the IPv4 loopback interface.
+Name 	
+
+Gets the name of the network adapter.
+NetworkInterfaceType 	
+
+Gets the interface type.
+OperationalStatus 	
+
+Gets the current operational state of the network connection.
+Speed 	
+
+Gets the speed of the network interface.
+SupportsMulticast 	
+
+Gets a Boolean value that indicates whether the network interface is enabled to receive multicast packets.
+Methods
+GetAllNetworkInterfaces() 	
+
+Returns objects that describe the network interfaces on the local computer.
+GetIPProperties() 	
+
+Returns an object that describes the configuration of this network interface.
+GetIPStatistics() 	
+
+Gets the IP statistics for this NetworkInterface instance.
+GetIPv4Statistics() 	
+
+Gets the IPv4 statistics for this NetworkInterface instance.
+GetIsNetworkAvailable() 	
+
+Indicates whether any network connection is available.
+GetPhysicalAddress() 	
+
+Returns the Media Access Control (MAC) or physical address for this adapter.
+Supports(NetworkInterfaceComponent) 	
+
+Gets a Boolean value that indicates whether the interface supports the specified protocol.
+Applies to
+Product 	Versions
+.NET 	Core 1.0, Core 1.1, Core 2.0, Core 2.1, Core 2.2, Core 3.0, Core 3.1, 5, 6, 7, 8, 9, 10
+.NET Framework 	2.0, 3.0, 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1
+.NET Standard 	2.0, 2.1
+UWP 	10.0
+Collaborate with us on GitHub
+The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see our contributor guide.
+
+.NET feedback
+
+.NET is an open source project. Select a link to provide feedback:
+Open a documentation issue
+Provide product feedback
+In this article
+
+    Definition
+    Examples
+    Remarks
+    Constructors
+    Properties
+    Methods
+    Applies to
+
+Was this page helpful?
+
+    AI Disclaimer
+    Previous Versions
+    Blog
+    Contribute
+    Privacy
+    Terms of Use
+    Trademarks
+    © Microsoft 2025
+
+==========
+
+tcp connections
+
+
+		
+Skip to main content
+Skip to in-page navigation
+Skip to Ask Learn chat experience
+
+We use optional cookies to improve your experience on our websites, such as through social media connections, and to display personalized advertising based on your online activity. If you reject optional cookies, only cookies necessary to provide you the services will be used. You may change your selection by clicking “Manage Cookies” at the bottom of the page. Privacy Statement Third-Party Cookies
+.NET Conf 2025: .NET 10 launches at .NET Conf 2025! Tune in with the .NET community to celebrate and learn about the new release on November 11 - 13. Save the date
+Learn
+
+Sign in
+.NET
+
+Version
+Search
+
+    System.Net.NetworkInformation
+    DuplicateAddressDetectionState
+
+IPStatus
+NetBiosNodeType
+NetworkAddressChangedEventHandler
+NetworkAvailabilityChangedEventHandler
+NetworkInterfaceComponent
+NetworkInterfaceType
+OperationalStatus
+PingCompletedEventHandler
+PrefixOrigin
+ScopeLevel
+SuffixOrigin
+
+    TcpConnectionInformation
+    Constructors
+
+TcpState
+
+    Learn .NET API browser 
+
+TcpConnectionInformation Class
+Definition
+
+Namespace:
+    System.Net.NetworkInformation 
+
+Assemblies:
+    netstandard.dll, System.Net.NetworkInformation.dll
+
+Provides information about the Transmission Control Protocol (TCP) connections on the local computer.
+C#
+
+public abstract class TcpConnectionInformation
+
+Inheritance
+    Object
+    TcpConnectionInformation
+
+Examples
+
+The following example displays endpoint information for active TCP connections.
+C#
+
+public static void GetTcpConnections()
+{
+    IPGlobalProperties properties = IPGlobalProperties.GetIPGlobalProperties();
+    TcpConnectionInformation[] connections = properties.GetActiveTcpConnections();
+
+    foreach (TcpConnectionInformation t in connections)
+    {
+        Console.Write("Local endpoint: {0} ",t.LocalEndPoint.Address);
+        Console.Write("Remote endpoint: {0} ",t.RemoteEndPoint.Address);
+        Console.WriteLine("{0}",t.State);
+    }
+    Console.WriteLine();
+}
+
+Remarks
+
+TCP is a connection-oriented reliable protocol for transporting data between networked computers. It is defined in IETF RFC 793.
+Constructors
+TcpConnectionInformation() 	
+
+Initializes a new instance of the TcpConnectionInformation class.
+Properties
+LocalEndPoint 	
+
+Gets the local endpoint of a Transmission Control Protocol (TCP) connection.
+RemoteEndPoint 	
+
+Gets the remote endpoint of a Transmission Control Protocol (TCP) connection.
+State 	
+
+Gets the state of this Transmission Control Protocol (TCP) connection.
+Methods
+Equals(Object) 	
+
+Determines whether the specified object is equal to the current object.
+(Inherited from Object)
+GetHashCode() 	
+
+Serves as the default hash function.
+(Inherited from Object)
+GetType() 	
+
+Gets the Type of the current instance.
+(Inherited from Object)
+MemberwiseClone() 	
+
+Creates a shallow copy of the current Object.
+(Inherited from Object)
+ToString() 	
+
+Returns a string that represents the current object.
+(Inherited from Object)
+Applies to
+Product 	Versions
+.NET 	Core 1.0, Core 1.1, Core 2.0, Core 2.1, Core 2.2, Core 3.0, Core 3.1, 5, 6, 7, 8, 9, 10
+.NET Framework 	2.0, 3.0, 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1
+.NET Standard 	2.0, 2.1
+Collaborate with us on GitHub
+The source for this content can be found on GitHub, where you can also create and review issues and pull requests. For more information, see our contributor guide.
+
+.NET feedback
+
+.NET is an open source project. Select a link to provide feedback:
+Open a documentation issue
+Provide product feedback
+In this article
+
+    Definition
+    Examples
+    Remarks
+    Constructors
+    Properties
+    Methods
+    Applies to
+
+Was this page helpful?
+
+    AI Disclaimer
+    Previous Versions
+    Blog
+    Contribute
+    Privacy
+    Terms of Use
+    Trademarks
+    © Microsoft 2025
+
+===
+
+Unfortunately MRS you are correct.  The TcpConnectionInformation class does not have any events associated with the opening and/or closing of TCP connections.  My work around (as you have found) was to use a timer to regularly make a call to System.Net.NetworkInformation.GetActiveTcpConnections().  I have found that this works rather well.
+
+As for Windows API, GetTcpTable and GetTcpTableEx, can be used to glean this information as well:
+
+http://www.codeproject.com/Articles/4298/Getting-active-TCP-UDP-connections-on-a-box
+
+If you need to be notified the very instant that a socket is created or when it's state changes, then you will need to look into creating a kernel mode driver (which cannot be written in .NET).
+
+
+====
+
+
+
+CodeProject User Survey - WIN PRIZES - Help us understand AI coding assistant usage
+CODEPROJECT
+
+For Those Who Code
+Home
+Articles
+Discussions
+Community
+FAQ
+Getting active TCP/UDP connections on a box
+
+Jun 10, 2003
+
+7 min read
+
+.NET1.0
+
+.NET1.1
+
+Win2K
+
+WinXP
+
+Win2003
+
+VS.NET2002
+
+C++
+
+C#
+
+Windows
+
+.NET
+
+Visual-Studio
+
+MFC
+
+Dev
+
+Intermediate
+Author picture
+
+by Axel Charpentier
+
+Contributor
+333k Views
+
+    The library source files - 12.4 Kb
+    Download demo project - 34.3 Kb 
+
+Sample Image - netstat.jpg
+Introduction
+
+The main purpose of this library is to watch the UDP/TCP connections that are active ( like netstat does ) on your PC; it is mainly a wrapper to the IpHelperApi.dll, and it implements 4 generic functions that get statistics about TCP and UDP connections (GetUdpStats()/ GetTcpStats()) and also get the tables for UDP and TCP connections (GetUdpConnexions() / GetTcpConnexions()).
+
+It also implements 2 undocumented functions of the IpHelperApi.dll that are similar to GetUdpConnexions/GetTcpConnexions except that they get the processID attached to the connection; in the Win 32 API they are named : AllocateAndGetTcpExTableFromStack and AllocateAndGetUdpExTableFromStack.
+Wrapping the IpHlpAPI.dll
+
+The library is named IPHelper and it is just a wrapper to IpHelperAPI.dll using P/Invoke mechanism of the .NET framework In the IPHlpAPI32.cs file are all the declarations of the functions and structs from the IPHlpApi.dll; it uses standard attributes from the System.Runtime.InteropServices namespace.
+CS
+
+[DllImport(
+
+The SetLastError=true flag allow us to get info about any errors raised in the P/Invoke mechanism, usually the error code is returned by the API function but this code is not very self-explanatory so I included a function to get the message description using the FormatMessage function of the kernell32.dll :
+
+public static string GetAPIErrorMessageDescription(int ApiErrNumber )
+{     
+System.Text.StringBuilder sError = new System.Text.StringBuilder(512);
+int lErrorMessageLength; 
+lErrorMessageLength = FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM,
+  (IntPtr)0, ApiErrNumber, 0, sError, sError.Capacity, (IntPtr)0) ;
+if(lErrorMessageLength > 0) {
+string strgError = sError.ToString(); 
+strgError=strgError.Substring(0,strgError.Length-2); 
+return strgError+" ("+ApiErrNumber.ToString()+")"; 
+} 
+return "none"; 
+}
+
+This function just gets a message description from the system and if no description is found it returns "none".
+
+In the MSDN  docs all the iphlpapi functions fill their own structure using passed in arguments; for simple structures without array, pointer or nested structure, it is very easy to get the structure correctly filled, but for complex structures it could become much harder.
+
+Let's see how to do that :
+Getting the results from the API call
+
+Simple structure Wrapping
+
+First let see how to get the result for a simple function : GetTcpStats(), this function is used to get several info about the TCP connections like, the number of active connections.
+
+In the original library in C++ it is declared like this
+
+typedef struct _MIB_TCPSTATS { //The structure holding the results 
+ DWORD dwRtoAlgorithm;
+  //.. Other DWORD fields
+ DWORD dwNumConns;
+
+}MIB_TCPSTATS, *PMIB_TCPSTATS    
+DWORD GetTcpStatistics(PMIB_TCPSTATS pStats);        
+
+this structure is very simple, all the DWORD field can be replaced by integer in c# :
+CS
+
+        
+[StructLayout(LayoutKind.Sequential)] 
+
+Note that the ref keyword is required because in the C++ call, the function wants a pointer to the structure as argument.
+
+So in the IPHelper class you have a public method that fills the MIB_TCPSTATS struct :
+
+public void GetTcpStats()
+{
+    TcpStats = new MIB_TCPSTATS();
+    IPHlpAPI32Wrapper.GetTcpStatistics(ref TcpStats);
+}
+        
+
+Pretty straightforward.
+
+Note that the GetUdpStats() function works exactly in the same way
+More complex structure Wrapping
+
+The GetTcpTable() function gets an array of all the active TCP connections including the local endpoint, the remote endpoint and the connection's state; those results are stored in 2 nested structures
+
+typedef struct _MIB_TCPTABLE { // The top level structure 
+//that hold an array of the second structure 
+DWORD    dwNumEntries; 
+MIB_TCPROW table[ANY_SIZE]; //an array of undefined size
+} MIB_TCPTABLE, *PMIB_TCPTABLE;
+
+typedef struct _MIB_TCPROW { //the structure that represent 
+//a single row in the tcp table
+DWORD dwState;  
+DWORD dwLocalAddr;  
+DWORD dwLocalPort;  
+DWORD dwRemoteAddr;  
+DWORD dwRemotePort;
+} MIB_TCPROW, *PMIB_TCPROW
+
+DWORD GetTcpTable(PMIB_TCPTABLE pTcpTable,PDWORD pdwSize,BOOL bOrder);
+
+The GetTcpTable function takes three params, a pointer to the structure that will hold the results, the size of the buffer pointed to by the pTcpTable parameter (note that if the buffer is too small, on output the function sets this parameter equal to the required buffer size), and a bool flag to tell if we want the results to be sorted or not
+
+The main problem here is that we can't use direct marshalling for those 2 structures because there is a undefined size array, but there are  several solutions to solve this issue, I choose to use a simple generic method, replace the first param by a byte array.
+CS
+
+[DllImport(
+
+Then we have to use this function in the IPHelper class in the GetTcpConnexion member method.
+
+The first thing to do is to get the size of the buffer (pTcpTable) that we need to get all the results, this is done by calling the function with a dumb buffer, the function will then return the size of the necessary buffer in the pdwSize param; note that is possible because the function has been declared with the out keyword before the pdwSize param :
+
+public void GetTcpConnections()
+{
+    int pdwSize = 20000;
+    byte[] buffer = new byte[pdwSize]; // Start with 20.000 bytes 
+//left for information about tcp table
+    int res = IPHlpAPI32Wrapper.GetTcpTable(buffer, out pdwSize, true);
+    if (res != NO_ERROR)
+    {
+        buffer = new byte[pdwSize];
+        res = IPHlpAPI32Wrapper.GetTcpTable(buffer, out pdwSize, true);
+        if (res != 0)
+            return;     // Error. You should handle it
+    }
+    //.....
+}
+        
+
+Once we have the right buffer size we call the function once again, to get the buffer correctly filled, then we just have to parse the byte to get the right value
+CS
+
+TcpConnexion = 
+
+That's it we have a structure called TcpConnexion that holds all the active connections.
+
+Note that we had to convert local and remote port form a DWORD (UInt32) to an Int16 which is done with bitwise operator. The GetUdpConnexion() works exactly in the same way.
+IpHelperApi Undocumented functions
+
+The GetTcpConnexion() and GetUdpConnexion() functions are useful, but they can't be used to control the active connections, that means that we can't close any connections or even get more info of which software is using this connection. To be able to get control over the connection means that we have to know which process is attached to it, but those two functions are only available on windows XP.
+
+After several days of seeking a way to get the processId attached to a connection I found that the ipHlpApi has some undocumented functions : AllocateAndGetTcpExTableFromStack and AllocateAndGetUdpExTableFromStack - those two functions are acting exactly the same way that GetTcpTable and GetUdpTable except that they get the processID attached to the connection, don't ask why they are not documented on MSDN, I really don't know.
+
+So here is how to use them, let's see how AllocateAndGetTcpExTableFromStack (AllocateAndGetUdpExTableFromStack works in the same way) is declared in C++
+
+typedef struct _MIB_TCPTABLE_EX
+{
+DWORD dwNumEntries;
+MIB_TCPROW_EX table[ANY_SIZE];
+} MIB_TCPTABLE_EX, *PMIB_TCPTABLE_EX;    
+
+typedef struct _MIB_TCPROW_EX{
+DWORD dwState; 
+DWORD dwLocalAddr;
+DWORD dwLocalPort;
+DWORD dwRemoteAddr;
+DWORD dwRemotePort;
+DWORD dwProcessId;
+} MIB_TCPROW_EX, *PMIB_TCPROW_EX;
+
+AllocateAndGetTcpExTableFromStack(PMIB_TCPTABLE_EX*,
+   BOOL,HANDLE,DWORD,DWORD);
+        
+
+The first param is a pointer on the structure that holds the result, the 2nd param is a bool flag to order the result, the 3rd is a pointer to the heap of the process and the two others are flags that I don't know the meaning of.
+
+This function follows the same pattern of GetTcpTable and the results are stored in a structure that have an undefined size array. I used a solution lightly different to implement this in C# than I used for GetTcpTable : The safe C# version of pointer.
+
+Don't be afraid it is not so scary :) for those who are not familiar with Pointer let's (briefly) what it is about.
+
+A Pointer is a data structure that store a memory address, for example if you have an integer that holds the number "100", a pointer on this integer will store the address of the value "100" and not the value itself, hope its clear.
+
+So in C#, in a safe context, we use the IntPtr structure :
+CS
+
+[DllImport(
+
+To use it I will basically follow the same path that I used for GetTcpTable : call the function first time to get the number of connections (row) and so to get the correct buffer size, and then call the function a second time to get the correct results.
+
+public void GetExTcpConnections()
+{
+            
+    // the size of the MIB_EXTCPROW struct =  6*DWORD
+    int rowsize = 24;
+    int BufferSize = 100000;
+    // allocate a dumb memory space in order to retrieve  nb of connexion
+    IntPtr lpTable = Marshal.AllocHGlobal(BufferSize);
+    //getting infos
+    int res = IPHlpAPI32Wrapper.AllocateAndGetTcpExTableFromStack(
+          ref lpTable, true, IPHlpAPI32Wrapper.GetProcessHeap(),0,2);
+    if(res!=NO_ERROR)
+    {
+        Debug.WriteLine(
+            "Erreur : "+IPHlpAPI32Wrapper.GetAPIErrorMessageDescription(res)
+            +" "+res);
+        return; // Error. You should handle it
+    }
+    int CurrentIndex = 0;
+    //get the number of entries in the table
+    int NumEntries= (int)Marshal.ReadIntPtr(lpTable);
+    lpTable = IntPtr.Zero;
+    // free allocated space in memory
+    Marshal.FreeHGlobal(lpTable);
+    
+    //...........
+}
+        
+
+So we have to pass an IntPtr to the function, the 1st thing to do is to define an IntPtr that points to a memory space large enough to store all the result, so, as I said, we have to allocate an arbitrary memory space to call the function a 1st time, then we can get the number of connections with : int NumEntries = (int)Marshal.ReadIntPtr(lpTable); here we are using a function from the Marshal class to read the value pointed by a pointer; finally don't forget to free to memory previously allocated to avoid memory leaks.
+
+Now let's get all the data :
+CS
+
+    
+
+So we call again the function with the right buffer size, and then we will "navigate" in the memory with the beginning of the allocated memory as the starting address.
+
+The 1st 4 bytes are the number of entries, then we enter in a loop for each row in the connection table that begins at the starting address + 4 , in the 1st loop we will have the same mechanism : get each value ordered like in the MIB_TCPROW_EX, and for each value iterate the pointer by 4, do this as many time as the number of rows.
+
+That's it, we have all the connection AND the process ID attached to it, I added a few helper functions that, for example, get the process name by giving the process ID, but they are pretty simple and self-explanatory.
+
+Remember those 2 functions are only available under WinXP.
+How to use the library
+
+I wrote a little app to test the lib, it just shows the results of all the functions in the library, in a listview.
+
+Here are the methods of the lib :
+
+    GetTcpStats() fill a MIB_TCPSTATS structure
+    GetUdpStats() fill a MIB_UDPSTATS structure
+    GetTcpConnexions() fill a MIB_TCPTABLE structure
+    GetUdpConnexions() fill a MIB_UDPTABLE structure
+    GetExTcpConnexions() fill a MIB_EXTCPTABLE structure
+    GetExUdpConnexions() fill a MIB_EXUDPTABLE structure 
+
+That's it, hope it will be useful.
+License
+
+This article, along with any associated source code and files, is licensed under The Code Project Open License (CPOL)
+News
+Codeproject is back!
+
+We are happy to see you all back again!
+CODEPROJECT
+
+For Those Who Code
+Advertise
+About Us
+Privacy
+Cookies
+Terms Of Service
+Copyright 1999-2025 © CodeProject. All Rights Reserved.
+
+===
+
+8:53 PM 10/4/2025
+
+had an idea to try to automate blocking the ips for WPN service
+
+a batch file that loops and calls a csv output for tcpview would be easiest
+
+start it when the computer starts, have it overwrite or append to an output file
+
+write a monitoring program that scans that file
+
+checks for any wpn using instr
+
+or any other string
+
+if it finds it, it makes a block ip netsh command
+
+writes it to a file
+
+then runs the batch file in the background
+
+the monitoring / blocking program could also output any blocked ips to a log file which i could then add to the fwip blocking list
+
+i should write something for the bas file
+
+start by writing a seperator scanner
+
+something that looks for a character
+
+then adds everything to a listbox
+
+an example would be for csv stuff
+
+or another example would be for return characters
+
+at first i was going to say just write one for csv
+
+but writing one that lets you specify a different seperator charcter would be more useful
+
+like if i specified a space character
+
+it would get all the words in a block of text
+
+or a period it would get all the numbers
+
+it would be worth having a single character version
+
+with a seperate version that does any length string seperator
+
+but starting with the one would be easier
+
+i could use the text lines to list box function as a base
+
+since the majority of the shit i would have to write would be the same anyway
+
+or
+
+using a console app:
+
+You can use Process.Start to start the other console application.
+
+You will need to construct the process with ProcessStartInfo.RedirectOutput set to true and UseShellExecute set to false in order to be able to utilize the output yourself.
+
+You can then read the output using StandardOutput.ReadToEnd on the process.
+
+=
+
+having a thing that looped the batch file in either case would be a pain in the ass
+
+the fucking thing would keep jumping up and closing
+
+unless i could write a looping batch file
+
+unless i could get a hidden command prompt to run in the background every second or 2 seconds
+
+i dont think there is an easy way to get process information AND what connection is connected to what
+
+which is fucking stupid
+
+i know tcpviw does it
+
+so i know thats possible
+
+but specifically doing it easily with visual studio .net
+
+using a looping file is easier but less systematic in the sense of having the program call the tcpview console having it output to the file then scanning the output every time based on when the program tells it to do that
+
+the other way would still work but there might be some potential overlap between writing or reading the file or a gap in when the tcpview read the network info
+
+==
+
+this might work using tcpview
+
+but netstat does the same thing really
+
+Imports System.Diagnostics
+Imports System.IO
+
+Public Class NetworkMonitor
+    Public Function GetProcessNetworkConnections() As List(Of String)
+        Dim connections As New List(Of String)()
+        Dim psi As New ProcessStartInfo("netstat.exe", "-a -n -o") With {
+            .RedirectStandardOutput = True,
+            .UseShellExecute = False,
+            .CreateNoWindow = True
+        }
+
+        Using process As Process = Process.Start(psi)
+            Using reader As StreamReader = process.StandardOutput
+                Dim line As String
+                While Not reader.EndOfStream
+                    line = reader.ReadLine()
+                    If Not String.IsNullOrWhiteSpace(line) AndAlso Not line.StartsWith("Proto") AndAlso Not line.StartsWith("Active") Then
+                        connections.Add(line.Trim())
+                    End If
+                End While
+            End Using
+            process.WaitForExit()
+        End Using
+        Return connections
+    End Function
+End Class
+
+Imports System.Net.NetworkInformation
+
+Public Class NetworkInformation
+    Public Function GetActiveTcpConnections() As List(Of TcpConnectionInformation)
+        Dim ipGlobalProperties As IPGlobalProperties = IPGlobalProperties.GetIPGlobalProperties()
+        Return ipGlobalProperties.GetActiveTcpConnections().ToList()
+    End Function
+End Class
+

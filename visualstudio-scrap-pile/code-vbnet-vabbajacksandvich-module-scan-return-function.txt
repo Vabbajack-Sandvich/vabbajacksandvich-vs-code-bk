@@ -1,0 +1,445 @@
+2025-10-21-14-55-11-PM
+
+make a function that returns an array?
+
+make a function that returns 2 arrays? dont think i can do this without creating my own data structure
+
+that scans through a string
+
+then adds each positive find value to a temp array where its located in the string
+
+then iterates through that list
+
+using each value the same way i find entries in strings manually
+
+like this
+
+Dim zDot1 As Integer
+Dim zDot2 As Integer
+Dim zDot3 As Integer
+
+zDot1 = InStr(1, zTempzIPAddressInputTxt, ".")
+zDot2 = InStr(zDot1 + 1, zTempzIPAddressInputTxt, ".")
+zDot3 = InStr(zDot2 + 1, zTempzIPAddressInputTxt, ".")
+
+Dim zS1 As String
+Dim zS2 As String
+Dim zS3 As String
+Dim zS4 As String
+
+zS1 = Mid(zTempzIPAddressInputTxt, 1, zDot1 - 1)
+zS2 = Mid(zTempzIPAddressInputTxt, zDot1 + 1, zDot2 - zDot1 - 1)
+zS3 = Mid(zTempzIPAddressInputTxt, zDot2 + 1, zDot3 - zDot2 - 1)
+zS4 = Mid(zTempzIPAddressInputTxt, zDot3 + 1, Len(zTempzIPAddressInputTxt))
+
+the entries would just use the previous index as the previous zDot in the code
+zS2 = Mid(zTempzIPAddressInputTxt, zDot1 + 1, zDot2 - zDot1 - 1)
+
+with a special case if tree for when its the first one
+zDot1 = InStr(1, zTempzIPAddressInputTxt, ".")
+zS1 = Mid(zTempzIPAddressInputTxt, 1, zDot1 - 1)
+
+then it returns the entire array of found entries
+
+which you can add to your own temp array
+
+that way i dont have to use a global
+
+    Public Function zScanReturn(zSRInputString As String, zSRFind As String) As Array
+
+seems to accept that as valid code?
+
+
+'Dim zTmp(50000) As String
+'zTmp = zScanReturnAsArray(Input String, Thing to find)
+
+
+
+
+    'make an array to listbox
+    'make an listbox to array
+    'make an array to string with seperator specification
+
+    Public Function zScanReturnAsArray(zSRInputString As String, zSRFind As String) As Array
+        'this can be used for comma seperated
+        'space seperated - words
+        'return character seperated - text lines
+        'any character seperated and returned as a list
+
+        'the way you use this
+        'from the code that calls the function
+        'Dim zTmp(50000) As String
+        'zTmp = zScanReturnAsArray(Input String, Thing to find)
+
+        'this should work?
+
+        'the code here needs to be based on add text to lines with progress
+        'i can make the progress bar thing first
+        'then just modify it and comment out the progress bar stuff
+        'its easier than adding it again
+
+        'zTstr = Mid(zTLTLWPInputTxt.Text, zRt + 2, zRt2 - zRt - 2)
+
+        'instead of 2 i can just use the length of the find string i think
+        'zTstr = Mid(zTLTLWPInputTxt.Text, zRt + 2, zRt2 - zRt - len(zSRFind))
+
+        'this assumes that whichever text or list box exists
+        'and is correct
+        'this function adds every line of text to a list box
+        'this also clears the list box based on zListClear
+        'this wont clear the list unless its set to 1
+        'this also trims return characters when adding entires
+        'this also trims blank lines vbcrlf
+        If zTLTLWPInputTxt.Text = vbNullString Then Exit Function
+
+        'have to make sure the last character is a return character
+        Dim zLastCharacter1 As String
+        Dim zLastCharacter2 As String
+        zLastCharacter1 = Mid(zTLTLWPInputTxt.Text, Len(zTLTLWPInputTxt.Text))
+        zLastCharacter2 = Mid(zTLTLWPInputTxt.Text, Len(zTLTLWPInputTxt.Text) - 1)
+        If zLastCharacter1 <> Chr(13) And zLastCharacter2 <> Chr(10) Then
+            zTLTLWPInputTxt.Text = zTLTLWPInputTxt.Text & vbCrLf
+        End If
+
+        zTLTLWPProgressBar.Maximum = Len(zTLTLWPInputTxt.Text)
+        zTLTLWPProgressBar.Visible = True
+
+        Dim zRt As Integer, zRt2 As Integer, zTstr As String
+        Dim zRstop As Boolean
+        zRstop = False
+        zRt = InStr(zTLTLWPInputTxt.Text, vbCrLf)
+        If zRt = 0 Then
+            'no return character
+            'assuming just one line
+            If zTLTLWPListClear = 1 Then
+                zTLTLWPInputListBox.Items.Clear()
+            End If
+            zTLTLWPInputListBox.Items.Add(zTLTLWPInputTxt.Text)
+        Else
+            If zTLTLWPListClear = 1 Then
+                zTLTLWPInputListBox.Items.Clear()
+            End If
+            'found a return character
+            'check to see if there is more than one
+            zRt2 = InStr(zRt + 2, zTLTLWPInputTxt.Text, vbCrLf)
+            If zRt2 > 0 Then
+                'there is more than one
+                zRt2 = zRt
+                zRt = 1
+                'first pass
+                zTstr = Mid(zTLTLWPInputTxt.Text, zRt, zRt2 - 1)
+                If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                    zTLTLWPInputListBox.Items.Add(zTstr)
+                End If
+                'every other pass to the end
+                zRt = zRt2
+                zRt2 = InStr(zRt + 2, zTLTLWPInputTxt.Text, vbCrLf)
+                Do
+                    Application.DoEvents()
+                    'zTLTLWPProgressBar.Value = zRt
+                    zTstr = Mid(zTLTLWPInputTxt.Text, zRt + 2, zRt2 - zRt - 2)
+                    If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                        zTLTLWPInputListBox.Items.Add(zTstr)
+                    End If
+                    zRt = zRt2
+                    zRt2 = InStr(zRt + 2, zTLTLWPInputTxt.Text, vbCrLf)
+                    zTLTLWPProgressBar.Value = zRt2
+                    If zRt2 = 0 Then
+                        zRstop = True
+                        zTstr = Mid(zTLTLWPInputTxt.Text, zRt, Len(zTLTLWPInputTxt.Text))
+                        If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                            zTLTLWPInputListBox.Items.Add(zTstr)
+                        End If
+                    End If
+                Loop Until zRstop = True
+            Else
+                'there isnt more than one
+                'add the string to the list box minus the return character
+                zTstr = Mid(zTLTLWPInputTxt.Text, 1, Len(zTLTLWPInputTxt.Text) - 2)
+                zTLTLWPInputListBox.Items.Add(zTstr)
+            End If
+        End If
+
+        zTLTLWPProgressBar.Value = zTLTLWPProgressBar.Maximum
+        zTLTLWPProgressBar.Visible = False
+        zTLTLWPProgressBar.Value = 0
+        zTLTLWPProgressBar.Maximum = 0
+
+
+    End Function
+
+
+
+
+    Public Function zScanReturnAsArrayWithProgress(zSRInputString As String, zSRFind As String, zSRAProgressBar As ProgressBar) As Array
+        'this can be used for comma seperated
+        'space seperated - words
+        'return character seperated - text lines
+        'any character seperated and returned as a list
+
+        'the way you use this
+        'from the code that calls the function
+        'Dim zTmp(50000) As String
+        'zTmp = zScanReturnAsArray(Input String, Thing to find)
+
+        'this should work?
+
+        'the code here needs to be based on add text to lines with progress
+        'i can make the progress bar thing first
+        'then just modify it and comment out the progress bar stuff
+        'its easier than adding it again
+
+        'zTstr = Mid(zSRInputString, zRt + 2, zRt2 - zRt - 2)
+
+        'instead of 2 i can just use the length of the find string i think
+        'zTstr = Mid(zSRInputString, zRt + 2, zRt2 - zRt - len(zSRFind))
+
+        'this assumes that whichever text or list box exists
+        'and is correct
+        'this function adds every line of text to a list box
+        'this also clears the list box based on zListClear
+        'this wont clear the list unless its set to 1
+        'this also trims return characters when adding entires
+        'this also trims blank lines vbcrlf
+        If zSRInputString = vbNullString Then Exit Function
+
+        'have to make sure the last character is a return character
+        Dim zLastCharacter1 As String
+        Dim zLastCharacter2 As String
+        zLastCharacter1 = Mid(zSRInputString, Len(zSRInputString))
+        zLastCharacter2 = Mid(zSRInputString, Len(zSRInputString) - 1)
+        If zLastCharacter1 <> Chr(13) And zLastCharacter2 <> Chr(10) Then
+            zSRInputString = zSRInputString & vbCrLf
+        End If
+
+        zSRAProgressBar.Maximum = Len(zSRInputString)
+        zSRAProgressBar.Visible = True
+
+        Dim zRt As Integer, zRt2 As Integer, zTstr As String
+        Dim zRstop As Boolean
+        zRstop = False
+        zRt = InStr(zSRInputString, vbCrLf)
+        If zRt = 0 Then
+            'no return character
+            'assuming just one line
+            If zTLTLWPListClear = 1 Then
+                zTLTLWPInputListBox.Items.Clear()
+            End If
+            zTLTLWPInputListBox.Items.Add(zSRInputString)
+        Else
+            If zTLTLWPListClear = 1 Then
+                zTLTLWPInputListBox.Items.Clear()
+            End If
+            'found a return character
+            'check to see if there is more than one
+            zRt2 = InStr(zRt + 2, zSRInputString, vbCrLf)
+            If zRt2 > 0 Then
+                'there is more than one
+                zRt2 = zRt
+                zRt = 1
+                'first pass
+                zTstr = Mid(zSRInputString, zRt, zRt2 - 1)
+                If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                    zTLTLWPInputListBox.Items.Add(zTstr)
+                End If
+                'every other pass to the end
+                zRt = zRt2
+                zRt2 = InStr(zRt + 2, zSRInputString, vbCrLf)
+                Do
+                    Application.DoEvents()
+                    'zSRAProgressBar.Value = zRt
+                    zTstr = Mid(zSRInputString, zRt + 2, zRt2 - zRt - 2)
+                    If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                        zTLTLWPInputListBox.Items.Add(zTstr)
+                    End If
+                    zRt = zRt2
+                    zRt2 = InStr(zRt + 2, zSRInputString, vbCrLf)
+                    zSRAProgressBar.Value = zRt2
+                    If zRt2 = 0 Then
+                        zRstop = True
+                        zTstr = Mid(zSRInputString, zRt, Len(zSRInputString))
+                        If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                            zTLTLWPInputListBox.Items.Add(zTstr)
+                        End If
+                    End If
+                Loop Until zRstop = True
+            Else
+                'there isnt more than one
+                'add the string to the list box minus the return character
+                zTstr = Mid(zSRInputString, 1, Len(zSRInputString) - 2)
+                zTLTLWPInputListBox.Items.Add(zTstr)
+            End If
+        End If
+
+        zSRAProgressBar.Value = zSRAProgressBar.Maximum
+        zSRAProgressBar.Visible = False
+        zSRAProgressBar.Value = 0
+        zSRAProgressBar.Maximum = 0
+
+
+    End Function
+
+
+        zTestStrInput = "this" & vbcrlf & "is" & vbcrlf & "a" & vbcrlf & "test" & vbcrlf & "string" & vbcrlf & "for" & vbcrlf & "testing" & vbcrlf & "to" & vbcrlf & "see" & vbcrlf & "what" & vbcrlf & "happens" & vbcrlf & "when" & vbcrlf & "i" & vbcrlf & "scan" & vbcrlf & "for" & vbcrlf & "spaces"
+
+
+=================================
+2025-10-21-18-09-29-PM
+this is before trimming the comments out
+
+    Public Function zScanStringReturnAsArrayWithProgress(zSRInputString As String, zSRFind As String, zSRProgressBar As ProgressBar) As Array
+        'just got done testing this
+        'this works to find any amount of the find string
+        'and puts it in to an array that can be iterated through
+
+        'i wrote a zgetarraycount for use with this
+        'it gets all consecutive entries and lets you
+        'iterate through them with a for statement
+
+        'tested all of these and they work
+        'this can be used for comma seperated
+        'space seperated - looks for words
+        'return character seperated - looks for text lines
+        'any string delimted by the find string and returned as an array - tested and this works too
+
+        'the way you use this
+        'from the code that calls the function
+
+        'example 1 i use this way: from procedure side
+        'Dim zTempArrayTest As Array
+        'zTempArrayTest = zScanStringReturnAsArrayWithProgress(zTestStrInput, vbCrLf, pbSaveLoad)
+        'Debug.Print(zTempArrayTest(3))
+
+        'example 2: from procedure side
+        'Dim zTmp(50000) As String
+        'zTmp = zScanReturnAsArray(Input String, Thing to find)
+
+        'this assumes that whichever text or list box exists
+        'and is correct
+        'this function adds every line of text to a list box
+        'this also clears the list box based on zListClear
+        'this wont clear the list unless its set to 1
+        'this also trims return characters when adding entires
+        'this also trims blank lines vbcrlf
+
+        If zSRInputString = vbNullString Then Exit Function
+
+        'have to make sure the last character is a return character
+        'Dim zLastCharacter1 As String
+        'Dim zLastCharacter2 As String
+        'zLastCharacter1 = Mid(zSRInputString, Len(zSRInputString))
+        'zLastCharacter2 = Mid(zSRInputString, Len(zSRInputString) - 1)
+        'If zLastCharacter1 <> Chr(13) And zLastCharacter2 <> Chr(10) Then
+        '    zSRInputString = zSRInputString & vbCrLf
+        'End If
+
+        'was going to try this
+        'but its just easier to ignore it
+        'zSRProgressBar.Minimum = 1
+        zSRProgressBar.Maximum = Len(zSRInputString)
+        zSRProgressBar.Visible = True
+
+        Dim zFind1 As Integer, zFind2 As Integer, zTempstr As String
+
+        Dim zFindStop As Boolean
+
+        zFindStop = False
+
+        'doing it this way worked
+        Dim zTmpArray(50000) As String
+
+        Dim zTmpArrayCount As Integer = 0
+        Dim zTmpIterator As Integer = 0
+
+        zFind1 = InStr(zSRInputString, zSRFind)
+        If zFind1 = 0 Then
+            'no return character
+            'assuming just one line
+            'If zTLTLWPListClear = 1 Then
+            '    zTLTLWPInputListBox.Items.Clear()
+            'End If
+            'zTLTLWPInputListBox.Items.Add(zSRInputString)
+
+            'zTmpArray(zTmpIterator) = zSRInputString
+            'zTmpIterator = zTmpIterator + 1
+
+            'yeahhh noo
+            'if the find thing wasnt found at all just exit function
+            zSRProgressBar.Value = zSRProgressBar.Maximum
+            zSRProgressBar.Visible = False
+            zSRProgressBar.Value = 0
+            zSRProgressBar.Maximum = 0
+
+            Exit Function
+        Else
+
+            'If zTLTLWPListClear = 1 Then
+            '    zTLTLWPInputListBox.Items.Clear()
+            'End If
+
+            'found a return character
+            'check to see if there is more than one
+
+            zFind2 = InStr(zFind1 + Len(zSRFind), zSRInputString, zSRFind)
+            If zFind2 > 0 Then
+                'there is more than one
+                zFind2 = zFind1
+                zFind1 = 1
+                'first pass
+                zTempstr = Mid(zSRInputString, zFind1, zFind2 - 1)
+                'If zTempstr <> vbNullString And zTempstr <> vbCrLf Then
+                If zTempstr <> vbNullString And zTempstr <> zSRFind Then
+                    'zTLTLWPInputListBox.Items.Add(zTempstr)
+                    zTmpArray(zTmpIterator) = zTempstr
+                    zTmpIterator = zTmpIterator + 1
+                End If
+                'every other pass to the end
+                zFind1 = zFind2
+                'zFind2 = InStr(zFind1 + 2, zSRInputString, vbCrLf)
+                zFind2 = InStr(zFind1 + Len(zSRFind), zSRInputString, zSRFind)
+                Do
+                    Application.DoEvents()
+                    'zSRAProgressBar.Value = zRt
+                    'zTempstr = Mid(zSRInputString, zFind1 + 2, zFind2 - zFind1 - 2)
+                    zTempstr = Mid(zSRInputString, zFind1 + Len(zSRFind), zFind2 - zFind1 - Len(zSRFind))
+                    'If zTempstr <> vbNullString And zTempstr <> vbCrLf Then
+                    If zTempstr <> vbNullString And zTempstr <> zSRFind Then
+                        'zTLTLWPInputListBox.Items.Add(zTempstr)
+                        zTmpArray(zTmpIterator) = zTempstr
+                        zTmpIterator = zTmpIterator + 1
+                    End If
+                    zFind1 = zFind2
+                    'zFind2 = InStr(zFind1 + 2, zSRInputString, vbCrLf)
+                    zFind2 = InStr(zFind1 + Len(zSRFind), zSRInputString, zSRFind)
+                    zSRProgressBar.Value = zFind2
+                    If zFind2 = 0 Then
+                        zFindStop = True
+                        zTempstr = Mid(zSRInputString, zFind1 + Len(zSRFind), Len(zSRInputString))
+                        'If zTempstr <> vbNullString And zTempstr <> vbCrLf Then
+                        If zTempstr <> vbNullString And zTempstr <> zSRFind Then
+                            'zTLTLWPInputListBox.Items.Add(zTempstr)
+                            zTmpArray(zTmpIterator) = zTempstr
+                            'zTmpIterator = zTmpIterator + 1
+                        End If
+                    End If
+                Loop Until zFindStop = True
+            Else
+                'there isnt more than one
+                'add the string to the list box minus the return character
+                'zTempstr = Mid(zSRInputString, 1, Len(zSRInputString) - 2)
+                zTempstr = Mid(zSRInputString, 1, Len(zSRInputString) - Len(zSRFind))
+                'zTLTLWPInputListBox.Items.Add(zTempstr)
+                zTmpArray(zTmpIterator) = zTempstr
+                'zTmpIterator = zTmpIterator + 1
+            End If
+            zScanStringReturnAsArrayWithProgress = zTmpArray
+        End If
+
+        zSRProgressBar.Value = zSRProgressBar.Maximum
+        zSRProgressBar.Visible = False
+        zSRProgressBar.Value = 0
+        zSRProgressBar.Maximum = 0
+
+    End Function
+
+=================================

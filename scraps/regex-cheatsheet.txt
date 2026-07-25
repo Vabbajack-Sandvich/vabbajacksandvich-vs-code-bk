@@ -1,0 +1,786 @@
+regex notes
+
+
+captialize first letter
+
+#(\s|^)([a-z0-9-_]+)#i
+
+
+(\w+) replace with \u$0 this one only does the first letter of the word, so like it turns attackontitan to Attackontitan and i need it to be AttackOnTitan – 
+ramza75
+
+
+
+this finds words on the first line
+\r\n(\w+)
+
+replace with 
+\U\1
+
+this replaces the whole word as uppercase but it works for that
+
+
+^(.)
+
+-------
+this works to find and replace the first letter only from the first line
+find
+\r\n^(.)
+replace
+\r\n\U\1
+
+-----
+this finds a dash at the front of a line
+keeps everything in the middle
+then moves the dash to the end
+
+find
+-(.*)\r\n
+replace
+$1-\r\n
+
+to move the dash back to
+the front
+
+find
+(.*)-\r\n
+replace
+-$1\r\n
+
+i used this for tracking
+the oblivion quests
+and having to re sort them
+
+---
+trying to replace
+multiple tabs
+with just one
+
+find
+([\t]+)
+
+replace
+\t
+
+this works
+
+finds "any amount of" with +
+
+
+---
+
+this is to find all instances of RecFilePath=
+then replace them nonmatching parts with d:\youtube-recordings
+
+RecFilePath=(.*)\n
+
+obs files use only the LF or \n character at the end
+
+
+replace
+RecFilePath=D:/youtube-recordings\n
+
+that works
+
+--
+
+(.*)\.(.*)\r\n
+
+works to find anything with a period
+
+replace keeps just the number
+$1\r\n
+
+replace keeps just the decimal
+$2\r\n
+
+
+----
+find
+KAZAN\r\n\r\n(.*)\r\n
+
+replace
+KAZAN $1\r\n
+
+second find
+KAZAN (.*)\r\n
+
+second replace
+$1\r\n
+
+--
+
+replaces Case with quotes
+
+find
+Case (.):
+
+replace
+Case "$1":
+
+Case A:
+to
+Case "A":
+
+---
+
+for satisfactory format 2
+
+to swap the machine with the part from right to left
+
+Constructor (x6.98) - Screw (279 units/min)
+
+find
+
+(.*)\s\-\s(.*)\r\n
+
+replace
+
+$2 - $1\r\n
+
+--
+
+to remove any amount of returns and replace with 1
+
+find
+([\r\n]+)
+
+replace
+\r\n
+
+--
+
+\r is cr
+\n is lf
+
+
+-
+
+"[A-Za-z]+\d+"
+
+this works to find letters and numbers in quotes
+
+alias "[A-Za-z]+\d+" "[A-Za-z]+\d+"\r\n
+
+[A-Za-z]+\d+
+
+--
+
+^feed the (?:cat|dog|bear)\.$
+
+^(?:alias)\.$
+
+===
+
+\x22.*?\x22
+
+this finds just what is in the quotes quote by quote
+
+--
+
+(?:alias)\s\x22{1}(.*)\x22{1}
+
+(?:alias)(?:\s\x22{1})(.*)(?:\x22{1})
+
+(?:alias)(?:\s\x22+?)(.*)(?:\x22+?)
+
+(?:alias)(?:\s\x22+1)(.*)(?:\x22+1)
+
+(?:alias)(?:\s\x22{1})(.*)(?:\x22{1})
+
+(?:alias)(?:\s\x22{1})(.*)(?:\x22{1})\b
+
+(?:alias)(?:\s\x22{1})(.)(?:\x22{1})\b
+
+(?:alias)(?:\s\x22{1})([A-Za-z]+\d+)(?:\x22{1})
+
+^.*?(?:alias)(?:\s\x22{1})([A-Za-z]+\d+)(?:\x22{1})
+
+^.*?(?:alias)(?:\s\x22{1})([A-Za-z]+\d+)(?:\x22{1})$
+
+---
+
+^.*?(?:alias)(?:\s\x22{1})([A-Za-z]+\d+)(?:\x22{1})(?:.*\r\n)
+
+(\x22{1})\w(?:\x22{1})
+
+---
+
+Group\s+\w*[0-9]\t*[A-Za-z_\x7F-\xFF][\w\x7F-\xFF]
+
+Group\s+\w*[0-9]\t*[A-Za-z_\x7F-\xFF][\w\x7F-\xFF]
+
+--
+
+^alias\s\x22{1}\w\x22{1}\s.*\r\n
+
+alias\s\x22{1}[A-Za-z]+\d+?:\x22{1}?:.*\r\n
+
+^?:alias?:\s\x22{1}[A-Za-z]+\d+?:\x22{1}.*\r\n
+
+^alias\s\x22{1}\w\x22{1}\s.*\r\n
+
+--
+
+alias\s{1}\x22{1}[\w]\x22{1}
+
+alias\s{1}\x22{1}[\w+]\x22{1}
+
+alias\s{1}\x22{1}[A-Za-z]+\d+]\x22{1}
+
+alias\s{1}\x22{1}[A-Za-z]+\d+\x22{1}
+
+--
+
+//this works for function list xml files
+//for notepad++ function list
+
+<function mainExpr="alias\s{1}\x22{1}[A-Za-z]+\d+\x22{1}" />
+
+alias\s{1}\x22{1}[A-Za-z]+\d+\x22{1}
+
+just replace alias
+
+this finds
+
+alias "anything"
+
+--
+
+finds binds without quotes
+
+^bind\s(\w)\s
+
+^bind\s([A-za-z]\d+)\s
+
+replaces with quotes
+
+use space to replace instead of \s
+
+bind "$1" 
+
+--
+
+^alias\s([A-za-z]\d+)\s
+
+alias "$1" 
+
+--
+
+^alias [\-{1}|\+{1}]{1}
+
+finds the + or - but only at the start
+
+^alias\s([\-{1}|\+{1}]{1}[A-za-z]\d+)\s
+
+^alias\s([\-{1}|\+{1}][A-za-z]\d+)\s
+
+^alias\s([[\-{1}|\+{1}][A-za-z]\d+])\s
+
+--
+this finds it
+^alias [\-{1}|\+{1}]{1}[A-za-z\d]+
+^alias ([\-{1}|\+{1}]{1}[A-za-z\d]+)
+
+replace
+
+alias "$1"
+
+--
+
+finds binds without quotes
+
+^bind ([A-za-z\d]+) 
+
+replace
+
+bind "$1" 
+
+--
+
+for junk-rust-tf2 xml function list
+
+^[alias|bind]+\s{1}\x22{1}[A-Za-z]+\d+\x22{1}
+
+finds bind or alias at the start of the line
+
+--
+
+[A-Za-z*\d*]
+
+^[alias|bind]+\s{1}\x22{1}[A-Za-z*\d*]\x22{1}
+
+^[alias|bind]+\s{1}\x22{1}[[\-{*}|\+{*}]{*}]A-Za-z*\d*]\x22{1}
+
+^[alias|bind]+\s{1}\x22{1}[\-{*}|\+{*}][A-Za-z*\d*]\x22{1}
+
+---
+
+updated version for junk-rust-tf2 functionlist xml
+
+^[alias|bind]+\s{1}\x22{1}[A-Za-z]*\d*\x22{1}
+
+this finds any combo of letter or numbers
+
+need to add = or -
+
+^[alias|bind]+\s{1}\x22{1}[A-Za-z]*\d*\x22{1}
+
+^[alias|bind]+\s{1}\x22{1}[]\-*|\+*][A-Za-z]*\d*\x22{1}
+
+---
+
+updated version
+
+for junk-rust-tf2 functionlist xml
+
+^[alias|bind]+\s{1}\x22{1}[\-*|\+*]*[A-Za-z]*\d*\x22{1}
+
+this finds + - a-z # for
+alias or bind at the start of a line
+and stops at the last quote of the
+alias or bind name
+
+----
+
+trying find and replace for quotes
+
+quotes
+^[alias|bind]+\s{1}\x22{1}[]\-*|\+*]*[A-Za-z]*\d*\x22{1}
+
+replace
+
+no quotes
+^[alias|bind]+\s{1}([[\-*|\+*]*[A-Za-z]*[\d*]])\s{1}
+
+^[alias|bind]+\s{1}([\-*|\+*]*[A-Za-z]*\d*)\s{1}
+
+need to add underscore and other symbols
+
+^[alias|bind]+\s{1}\x22{1}[\-*|\+*]*[[A-Za-z]*\d*\x22{1}
+
+^[alias|bind]+\s{1}\x22{1}
+[\-*|\+*|\_*A-Z*a-z*\d*]
+\x22{1}
+
+^[alias|bind]+\s{1}\x22{1}[\-*|\+*|\_*A-Z*a-z*\d*]\x22{1}
+
+^[alias|bind]+\s{1}\x22{1}
+[\-*\+*\_*\=*\\*\/*A-Z*a-z*\d*]
+\x22{1}
+
+^[alias|bind]+\s{1}\x22{1}[\-*\+*\_*\=*\\*\/*A-Z*a-z*\d*]\x22{1}
+
+--
+
+update
+
+^[alias|bind]+\s{1}\x22{1}[\-*\+*\_*\=*\\*\/*A-Z*a-z*\d*]*\x22{1}
+
+==
+
+working version for bind and alias
+
+^[alias|bind]+\s{1}\x22{1}[\-*\+*\_*\=*\\*\/*A-Z*a-z*\d*]*\x22{1}
+
+===
+
+^[alias|bind]+\s{1}\x22{1}[\-*\+*\_*\=*\\*\/*A-Z*a-z*\d*]*\x22{1}
+
+^\t*\x22A-Z*a-z*\d*\x22
+
+^\t*\x22{1}[A-Z*a-z*\d*]\x22{1}\r\n
+
+^\t*\x22{1}A-Z*a-z*\d*\x22{1}\r\n
+
+this works
+
+^\t*\x22{1}[A-Z*a-z*]*\x22{1}\r\n
+
+^\t*\x22{1}[A-Z*a-z*\d*]*\x22{1}\r\n
+
+===
+
+this looks for } with no extra return
+
+find
+
+\}+\r\n\t*\x22{1}
+
+this adds the second return
+
+its just easier to hit enter because
+its an un specified amount of tabs
+
+find using 1 tab
+
+\}+\r\n\t*\x22{1}
+
+find
+
+\}\r\n\t\x22{1}
+
+replace
+
+\}\r\n\r\n\t\x22
+
+===
+
+\t+[A-Z*a-z*\d*]*\r\n
+
+\t+([A-Z*a-z*\d*]*)\r\n
+
+\t+"$1"\r\n
+
+(\t+)([A-Z*a-z*\d*]*)\r\n
+
+$1"$2"\r\n
+
+this finds any text or numbers
+a return any tabs and a brace {
+
+find
+
+(\t+)([A-Z*a-z*\d*]*)\r\n(\t+)\{
+
+replace
+
+then replaces the letters or numbers
+with the same amount of whatever tabs with quotes with the brace
+
+$1"$2"\r\n$3{
+
+===
+
+old working version for quotes
+for tf2 res files
+misses files without quotes
+
+^\t*\x22{1}[A-Z*a-z*\d*]*\x22{1}\r\n
+
+new version with any amount of quote
+
+^\t*\x22*[A-Z*a-z*\d*]*\x22*\r\n
+
+===
+
+finds un quoted element names in res files for tf2 hud
+
+(^\t{1})([A-Z*a-z*\d*]*)(\r\n\t{1}\{)
+
+replace
+
+adds quotes
+
+$1"$2"$3
+
+==
+
+"\d+\t+\d+\t+\d+\t+\d+"
+
+find
+
+"(\d+)\t+(\d+)\t+(\d+)\t+(\d+)"
+
+replace
+
+"$1 $2 $3 $4"
+
+====
+
+this should work for autohotkey function lists
+
+[*A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+
+===
+
+ahk update
+
+adding space to the front end
+
+\x22 is quotes
+\x20 is space
+
+old one
+
+			<function mainExpr="^[*\t*A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+" />
+
+			<function mainExpr="^[*\t*\x22*A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+" />
+			
+			<function mainExpr="^[*\t*\x22{*}*A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+" />
+
+			
+			^[*\t*\x20{*}*A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+
+			
+			
+			<function mainExpr="^[*\t*\x20{*}*A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+" />
+
+the above works
+
+now i have to add "any amount of tabs or spaces"
+in front of every line?
+or
+was it checking for the last brace
+
+doest care about the last brace at all
+
+<function mainExpr="^[*\t*\x20{*}*A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+" />
+
+^[*\t*\x20{*}*A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+
+
+^[*\t*\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+
+
+working one from file
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\{+
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\x20{*}\{+
+
+\x20{*}
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}\r\n\t*\x20{*}\{+|^[*\t\$\^\!\+*A-Z*a-z*\d]*\:\:\r\n\t*\x20{*}\{+
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]+[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\$\^\!\+*A-Z*a-z*\d]*[\:\:]+[\r\n]+[\t*\x20{*}]*[\{+]+
+
+==
+
+i think this is the last modded untested version
+before the fucking backup bullshit
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]+[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\$\^\!\+*A-Z*a-z*\d]*[\:\:]+[\r\n]+[\t*\x20{*}]*[\{+]+
+
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]+[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\$\^\!\+*A-Z*a-z*\d]*[\:\:]+[\r\n]+[\t*\x20{*}]*[\{+]+
+
+==
+
+tested and it works
+
+for both space and tab
+
+note: using the "breakdown" method
+works great
+
+after every search entry
+encapsulated in [ ] (or not sometimes)
+put each [ ] on its own line
+then add + or * to the end
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]+[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\$\^\!\+*A-Z*a-z*\d]*[\:\:]+[\r\n]+[\t*\x20{*}]*[\{+]+
+
+now i think i need to add equals
+
+=
+
+testing to see if the \x escape codes are just
+hex codes
+
+3d is the hex code for equals =
+
+\x3d
+\x3d{*}
+
+tested and yeah its just the hexcodes
+
+was the break down
+
+modded now
+
+^[*\t\x20{*}A-Z*a-z*\d*]*
+\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+[\r\n]+[\t*\x20{*}]*
+[\{+]+
+|
+^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*
+[\:\:]+
+[\r\n]+
+[\t*\x20{*}]*
+[\{+]+
+
+
+tested and this works
+
+1.1 version
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]+[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*[\:\:]+[\r\n]+[\t*\x20{*}]*[\{+]+
+
+1.2 version
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]*[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+1.3 version
+
+this is a wip
+
+after 1.2 i noticed that it picked up
+
+	if not (zcmdstr) {
+
+but nothing else if statement related
+
+need to try a NOT this thing for regex?
+
+1.2 version break down - working
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]*[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+break down
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}
+[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+[\r\n]*[\t*\x20{*}]*[\{+]+
+|
+^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*
+[\:\:]+[\r\n]*[\t*\x20{*}]*
+[\{+]+
+
+modded break down
+
+^[
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}
+[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+[\r\n]*[\t*\x20{*}]*[\{+
+]+
+|
+^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*
+[\:\:]+[\r\n]*[\t*\x20{*}]*
+[\{+]+
+
+rewrap before test
+
+^[*\t\x20{*}A-Z*a-z*\d*(?!if\x20)]*\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+[\r\n]*[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+==
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}
+[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+[\r\n]*[\t*\x20{*}]*[\{+]+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}
+[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+
+===
+
+restarting
+
+original breakdown
+
+^[*\t\x20{*}A-Z*a-z*\d*]*\({1}
+[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+[\r\n]*[\t*\x20{*}]*[\{+]+
+|
+^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*
+[\:\:]+[\r\n]*[\t*\x20{*}]*
+[\{+]+
+
+mod breakdown
+
+(?!if\x20)^[*\t\x20{*}A-Z*a-z*\d*]*\({1}
+[\,*[*A-Z*a-z*\d*\s*]*]*\){1}
+[\r\n]*[\t*\x20{*}]*[\{+]+
+|
+^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]*
+[\:\:]+[\r\n]*[\t*\x20{*}]*
+[\{+]+
+
+
+==
+
+working updated 1.2
+
+not incrementing it just updating it
+
+^[*\t\x20{*}A-Z*a-z*\d*]+(?<!if not )(?<!if )\({1}[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]*[\t*\x20{*}]*[\{+]+|^[*\t\x20{*}\x3d{*}\$\^\!\+*A-Z*a-z*\d]+[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+===
+
+working updated again 1.2
+
+^[\t*\x20{*}A-Z*a-z*\d*]+(?<!if not )(?<!if )(?<!else )(?<!while )(?<!select )\({1}(?<!if not\()(?<!if\()(?<!else\()(?<!while\()(?<!select\()[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]*[\t*\x20{*}]*[\{+]+|^[\x3d{*}\$\^\!\+*A-Z*a-z*\d]+[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+==
+
+working updated again 1.2
+
+^[\t*\x20{*}A-Z*a-z*\d*]+(?<!if not )(?<!if )(?<!else )(?<!while )(?<!while not)(?<!select )\({1}(?<! if not\()(?<!\tif not\()(?<! if\()(?<!\tif\()(?<! else\()(?<!\telse\()(?<! while\()(?<!\twhile\()(?<! while not\()(?<!\twhile not\()(?<! select\()(?<!\tselect\()[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]*[\t*\x20{*}]*[\{+]+|^[\x3d{*}\$\^\!\+*A-Z*a-z*\d]+[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+==
+
+copy paste test
+
+^[\t*\x20{*}A-Z*a-z*\d*]+(?<!if not )(?<!if )(?<!else )(?<!while )(?<!while not)(?<!select )\({1}(?<! if not\()(?<!\tif not\()(?<! if\()(?<!\tif\()(?<! else\()(?<!\telse\()(?<! while\()(?<!\twhile\()(?<! while not\()(?<!\twhile not\()(?<! select\()(?<!\tselect\()[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]*[\t*\x20{*}]*[\{+]+|^[\x3d{*}\$\^\!\+*A-Z*a-z*\d]+[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+===
+
+working updated again 1.2
+
+^[\t*\x20{*}A-Z*a-z*\d*]+(?<!if not )(?<!if )(?<!else )(?<!while )(?<!while not )(?<!select )\({1}(?<! if not\()(?<!\tif not\()(?<! if\()(?<!\tif\()(?<! else\()(?<!\telse\()(?<! while\()(?<!\twhile\()(?<! while not\()(?<!\twhile not\()(?<! select\()(?<!\tselect\()[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]*[\t*\x20{*}]*[\{+]+|^[\x3d{*}\$\^\!\+*A-Z*a-z*\d]+[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+
+
+
+working breakdown
+
+had to do this to check as to why i needed the checks after and before the (
+
+but yeah i do need them
+
+because the ones before check for the word and then a space after it BEFORE the (
+
+and the ones after it check to see if there is a space or a tab before it
+
+and neither sides look for just the keyword
+
+^[\t*\x20{*}A-Z*a-z*\d*]+
+(?<!if not )
+(?<!if )
+(?<!else )
+(?<!while )
+(?<!while not )
+(?<!select )
+\({1}
+(?<! if not\()
+(?<!\tif not\()
+(?<! if\()
+(?<!\tif\()
+(?<! else\()
+(?<!\telse\()
+(?<! while\()
+(?<!\twhile\()
+(?<! while not\()
+(?<!\twhile not\()
+(?<! select\()
+(?<!\tselect\()
+[\,*[*A-Z*a-z*\d*\s*]*]*
+\){1}
+[\r\n]*
+[\t*\x20{*}]*
+[\{+]+
+|
+^[\x3d{*}\$\^\!\+*A-Z*a-z*\d]+
+[\:\:]+
+[\r\n]*
+[\t*\x20{*}]*
+[\{+]+
+
+===
+
+i could add asterisks here
+
+^[\x3d{*}\$\^\!\+*A-Z*a-z*\d]+
+
+like this
+
+^[\x3d{*}\$*\^*\!*\+*A-Z*a-z*\d]+
+
+===
+
+
+\"+alpha\"+\x20{*}\t*\"+0\"+
+
+this works for finding non slashed alphas in tf2 res files
+
+\t+\"+alpha\"+[\t*\x20{*}]*\"+0\"+
+
+replace
+
+\t\t\/\/\"alpha\"\t\"0\"\r\n\t\t\"alpha\"\t\"255\"

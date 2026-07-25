@@ -1,0 +1,39 @@
+
+globals:
+
+    Public zBasePath As String
+    Public zBaseFileName As String
+    Public zBpFn As String
+	
+		
+put in form load:	
+	
+'get documents path
+Dim baseDir As String
+baseDir = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+'txtBaseDir.Text = baseDir
+'check if craft-notes folder exists
+Dim DirEx As Boolean
+Dim bdwCn As String
+'base directory with craft-notes
+bdwCn = baseDir & "\craft-notes-0"
+txtBaseDir.Text = bdwCn
+zBasePath = bdwCn
+DirEx = Directory.Exists(bdwCn)
+If DirEx = False Then
+    'if not make folder for craft-notes
+    My.Computer.FileSystem.CreateDirectory(zBasePath)
+End If
+zBaseFileName = "craft-notes-0.txt"
+zBpFn = zBasePath & "\" & zBaseFileName
+Dim zFe As Boolean
+zFe = File.Exists(zBpFn)
+Dim zfileReader As String
+If zFe = False Then
+    My.Computer.FileSystem.WriteAllText(zBpFn, "Craft-Notes-0 Log File" & vbCrLf, False)
+    zfileReader = My.Computer.FileSystem.ReadAllText(zBpFn)
+    txtLog.Text = zfileReader
+Else
+    zfileReader = My.Computer.FileSystem.ReadAllText(zBpFn)
+    txtLog.Text = zfileReader
+End If

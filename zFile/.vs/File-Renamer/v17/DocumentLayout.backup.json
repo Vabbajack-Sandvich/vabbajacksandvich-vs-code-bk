@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|filerenamer-semimodular.vbproj|d:\\zonide\\code\\visualstudio\\filerenamer-semimodular\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|filerenamer-semimodular.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|filerenamer-semimodular.vbproj|d:\\zonide\\code\\visualstudio\\filerenamer-semimodular\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|filerenamer-semimodular.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|filerenamer-semimodular.vbproj|d:\\zonide\\code\\visualstudio\\filerenamer-semimodular\\frmmain.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|filerenamer-semimodular.vbproj|solutionrelative:frmmain.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|filerenamer-semimodular.vbproj|d:\\zonide\\code\\visualstudio\\filerenamer-semimodular\\zonide.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|filerenamer-semimodular.vbproj|solutionrelative:zonide.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmMain.vb",
+              "DocumentMoniker": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\frmMain.vb",
+              "RelativeDocumentMoniker": "frmMain.vb",
+              "ToolTip": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\frmMain.vb",
+              "RelativeToolTip": "frmMain.vb",
+              "ViewState": "AgIAADYBAAAAAAAAAAD4v8MAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2023-08-21T08:53:53.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMain.vb [Design]",
+              "DocumentMoniker": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\frmMain.vb",
+              "RelativeDocumentMoniker": "frmMain.vb",
+              "ToolTip": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\frmMain.vb [Design]",
+              "RelativeToolTip": "frmMain.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2023-08-21T09:49:06.262Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "zonide.vb",
+              "DocumentMoniker": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\zonide.vb",
+              "RelativeDocumentMoniker": "zonide.vb",
+              "ToolTip": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\zonide.vb",
+              "RelativeToolTip": "zonide.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2023-08-21T09:45:33.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmMain.Designer.vb",
+              "DocumentMoniker": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\frmMain.Designer.vb",
+              "RelativeDocumentMoniker": "frmMain.Designer.vb",
+              "ToolTip": "D:\\zonide\\CODE\\visualstudio\\filerenamer-semimodular\\frmMain.Designer.vb",
+              "RelativeToolTip": "frmMain.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2023-08-21T09:26:38.828Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\publish\Title incrementor.exe
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\publish\Title incrementor.dll
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\publish\Title incrementor.deps.json
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\publish\Title incrementor.runtimeconfig.json
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\publish\Title incrementor.pdb

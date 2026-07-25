@@ -1,0 +1,575 @@
+
+HomeQuick linksForumsMembersDiscordIRCAHK DocsDownload - 2.0.19FAQLoginRegister
+Login Register Web Search
+Board indexAutoHotkey (v2, current version)EditorsNotepad++
+Enable Function List in Notepad++ for AHK Scripts (with classes now)
+Post Reply65 posts 
+1
+ 
+2
+ 
+3
+ 
+4
+ 
+Next
+User avatar
+ahkDustVorteX
+Posts: 47
+Joined: 14 May 2014
+@
+13 Jun 2016, 18:27
+Updated November 2017
+
+Hello everyone!
+
+Please Configure your Notepad++ as jNizM's great thread teaches. After you can add this feature too
+https://autohotkey.com/boards/viewtopic.php?f=7&t=50
+
+Nightwolf86/85 has added classes too!
+
+Those who use Notepad++ and love it as your main text editor, I create a simple function list tracking. :dance:
+Function List is a useful resource to track your functions in a big script. This resource is built-in in newer notepad++ versions. So you just need to activate and use it!
+In order to Function List work, you need to do some simple settings before you use it. First, make a backup copy of functionList.xml or rename it, if something goes wrong you restore it.
+
+Now, Follow the steps below:
+
+1. Open the xml file called functionList.xml with an editor;
+This file is in installation folder if you only extracted notepad++. If you installed notepad using the installer, it is most likely that this file is in appdata notepad++ folder, which you can reach typing %appData% in windows explorer path.
+
+2. In <associationMap> field add these lines:
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+ <association ext=".ahk" id="ahk_function"/>
+ <association userDefinedLangName="Name" id="ahk_function"/>
+Where Name should be the exact name you have defined as the AHK Language in
+Language menu. This is, in most cases, a user defined Language.
+
+3. In <parsers> field add another parser as below. Last modified by Nightwolf85 in June 2017:
+Code: Select all - Expand - Download - Line numbers - Word wrap - V2
+
+			<parser id="ahk_function" displayName="AHK" commentExpr="((/\*.*?\*)/|((?<=[\s]);.*?$))">
+				<!-- AutoHotKey Function List -->
+				<classRange
+					mainExpr="^[ \t]*(class|struct)[ \t]+[\w]+([ \t]+|[ \t]+(extends)[ \t]+)?\w*([\s]|(/\*.*?\*)/|((?<=[\s]);[^\r\n]*?$))*?[\s]*\{"
+					openSymbole = "\{"
+					closeSymbole = "\}"
+					displayMode="node">
+					<className>
+						<nameExpr expr="(class|struct)[\s]+[\w]+"/>
+						<nameExpr expr="[\s]+[\w]+"/>
+						<nameExpr expr="[\w]+"/>
+					</className>
+					<function
+						mainExpr="^[ \t]*(?!(if\(|while\(|for\())([\w#!^+&<>*~$])+\d*(\([^)]*\)|\[[^]]*\])([\s]|(/\*.*?\*)/|((?<=[\s]);[^\r\n]*?$))*?[\s]*\{|^[ \t]*(?!(if\(|while\(|for\())([\w#!^+&<>*~$])+\d*:(?=([\s]*[\r\n]|[\s]+;.*[\r\n]))|^[ \t]*(?!(;|if\(|while\(|for\())([^\r\n\t])+\d*(?<![\s])::">
+						<functionName>
+							<funcNameExpr expr="([\w#!^+&<>*~$])+\d*(\([^)]*\)|\[[^]]*\])|([\w#!^+&<>*~$])+\d*:(?!:)|(?![ ])([^\r\n\t])+\d*::"/>
+						</functionName>
+					</function>
+				</classRange>
+				<function
+					mainExpr="^[ \t]*(?!(if\(|while\(|for\())([\w#!^+&<>*~$])+\d*\([^)]*\)([\s]|(/\*.*?\*)/|((?<=[\s]);[^\r\n]*?$))*?[\s]*\{|^[ \t]*(?!(if\(|while\(|for\())([\w#!^+&<>*~$])+\d*:(?=([\s]*[\r\n]|[\s]+;.*[\r\n]))|^[ \t]*(?!(;|if\(|while\(|for\())([^\r\n\t])+\d*(?<![\s])::"
+					displayMode="$className->$functionName">
+					<functionName>
+						<nameExpr expr="([\w#!^+&<>*~$])+\d*\([^)]*\)|([\w#!^+&<>*~$])+\d*:(?!:)|(?![ ])([^\r\n\t])+\d*::"/>
+					</functionName>
+				</function>
+			</parser>
+4. Restart your notepad++ and function list should be working for AutoHotKey scripts.
+
+If you have any question and concerns please leave a message.
+
+I hope you like it! :thumbup:
+Last edited by ahkDustVorteX on 28 Nov 2017, 12:46, edited 4 times in total.
+Editor: Notepad++
+"Those who wait and persist, always achieve."
+Top
+newscripter
+@
+16 Jun 2016, 05:42
+Thanks dude, works perfect.
+
+Any chance you can add class methods?
+Top
+newscripter
+@
+16 Jun 2016, 06:05
+Hey guys, if you want to make this work for class methods indented with tab, you have to edit it just a little bit :)
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+			<parser id="ahk_function" displayName="AHK" commentExpr="(\/\*[\s+\w+\n]{1,}\*\/)|(^;[\s+\w+]{1,})">
+				<!-- AutoHotKey Function List -->
+				<function
+				mainExpr="^\t?\w+\d*(\([\w+:=\d\s,"#]*\)|:)\s*\{?"
+				displayMode="$functionName">
+					<functionName>
+						<nameExpr expr="^\t?\w+\d*(\([\w+:=\d\s,"#]*\)|:)\s*\{?"/>
+					</functionName>
+				</function>
+			</parser>
+The only difference is I added '\t?' in mainExpr and expr.
+Top
+User avatar
+ahkDustVorteX
+Posts: 47
+Joined: 14 May 2014
+@
+16 Jun 2016, 08:25
+Hey newscripter,
+
+Im glad you liked it. I will add classes later, when I have a little more time. :D
+
+Thanks for your suggestion to add \t? in regular expression. :thumbup:
+Editor: Notepad++
+"Those who wait and persist, always achieve."
+Top
+User avatar
+lmstearn
+Posts: 752
+Joined: 11 Aug 2016
+Contact: Contact lmstearn
+@
+13 Aug 2016, 02:30
+Thanks for the tutorial. For newbs like yours truly it's recommended to setup AHK for N++ first.
+And of course the same guy at this forum. :)
+:arrow: itros "ylbbub eht tuO kaerB" a ni kcuts m'I pleH
+Top
+User avatar
+kczx3
+Posts: 1682
+Joined: 06 Oct 2015
+@
+28 Sep 2016, 08:04
+I would love to see this have subs and hotkeys in their own groups/categories to distinguish them from normal functions or classes. NP++ does this with PHP for classes where you have to drop down another level in the treeview.
+Top
+Nightwolf86
+@
+05 Feb 2017, 01:33
+I found your code and thought it was extremely useful, and so I took a shot at adding support for classes, including classes that use 'extends'.
+
+One bug I'm aware of but don't know how to exactly fix is any function or label that starts with (if|while|for) won't be found. I wanted to avoid all the Ifs in a script appearing, but haven't figured out how to make it find stings like 'IfTest' and also not find IF(). Another bug is that nested class functions apparently still show up under the class it is nested in rather than it's own class node.
+
+I hope this will be useful for you, and anyone else who happens to find it.
+Code: Select all - Expand - Download - Line numbers - Word wrap - V2
+
+		<parser id="ahk_function" displayName="AHK" commentExpr="(\/\*[\s+\w+\n]{1,}\*\/)|(^;[\s+\w+]{1,})">
+				<!-- AutoHotKey Function List -->
+				<classRange
+					mainExpr="^[\t ]*(class|struct)[\t ]+[\w]+([\t ]+|[\t ]+(extends)[\s]+(\,[\t ]*|(\\|[\w][\w]*))+[\s]*)?[\r\n\s]*\{"
+					openSymbole = "\{"
+					closeSymbole = "\}"
+					displayMode="node">
+					<className>
+						<nameExpr expr="(class|struct)[\t ]+[\w]+"/>
+						<nameExpr expr="[\t ]+[\w]+"/>
+						<nameExpr expr="[\w]+"/>
+					</className>
+					<function
+						mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_:])+\d*(\([\w+:=\d\s,"#]*\)[\s]*\{|::?)">
+						<functionName>
+							<funcNameExpr expr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_:])+\d*(\([\w+:=\d\s,"#]*\)|::?)"/>
+						</functionName>
+					</function>
+				</classRange>
+				<function
+					mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_:])+\d*(\([\w+:=\d\s,"#]*\)[\s]*\{|::?)"
+					displayMode="$className->$functionName">
+					<functionName>
+						<nameExpr expr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_:])+\d*(\([\w+:=\d\s,"#]*\)|::?)"/>
+					</functionName>
+				</function>
+			</parser>
+Top
+User avatar
+ahkDustVorteX
+Posts: 47
+Joined: 14 May 2014
+@
+07 Feb 2017, 16:04
+found your code and thought it was extremely useful, and so I took a shot at adding support for classes, including classes that use 'extends'.
+Hi Nightwolf86!
+
+Thanks for sharing your work! I have tried several times to add classes in this xml file but without success. It is not intuitive to add, in my opinion. There are some 'bugs' for adding classes or I didnt understand completely how to manage this. It seems you have completed the puzzle! Thanks a lot. :bravo: :clap:
+Editor: Notepad++
+"Those who wait and persist, always achieve."
+Top
+Nightwolf85
+Posts: 302
+Joined: 05 Feb 2017
+@
+09 Feb 2017, 10:07
+Oops I thought I was logged in when commenting before, and thought it was weird my login was Nightwolf85 and it posted as Nightwolf86. I just made the same mistake again and noticed it was still asking me to login.
+
+Oh well, anyways I'll post any updates I make, and check back every once and awhile to check if anyone else has made any improved versions.
+
+I'm glad you find it useful. There are a couple more bugs I've noticed, and this version fixes one: Where if there was an expression assignment (:=) without a space ie. test:= instead of test :=, it would be considered a Label test:
+
+Another thing I've noticed is if a function has a lot of parameters it appears to cut them off at some point. And I'd like to try to get it to display optional parameters the way they are in Documentation (behind brackets []), instead of including the = sign and default values, but I can't get that to work yet.
+
+I've been trying to get a version that will separate out Labels, Hotkeys and Functions like mentioned above, but I can't get that to work at all yet either.
+Code: Select all - Expand - Download - Line numbers - Word wrap - V2
+
+			<parser id="ahk_function" displayName="AHK" commentExpr="(\/\*[\s+\w+\n]{1,}\*\/)|(^;[\s+\w+]{1,})">
+				<!-- AutoHotKey Function List -->
+				<classRange
+					mainExpr="^[\t ]*(class|struct)[\t ]+[\w]+([\t ]+|[\t ]+(extends)[\s]+(\,[\t ]*|(\\|[\w][\w]*))+[\s]*)?[\r\n\t\s]*\{"
+					openSymbole = "\{"
+					closeSymbole = "\}"
+					displayMode="node">
+					<className>
+						<nameExpr expr="(class|struct)[\t ]+[\w]+"/>
+						<nameExpr expr="[\t ]+[\w]+"/>
+						<nameExpr expr="[\w]+"/>
+					</className>
+					<function
+						mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_:])+\d*(\([\w+:=\d\s,"#]*\)[\s\r\n\t]*\{|:(?![^\r\n\t\s]):?)">
+						<functionName>
+							<funcNameExpr expr="([a-zA-Z0-9#!^+&<>*~$_:])+\d*(\([\w+:=\d\s,"#]*\)|::?)"/>
+						</functionName>
+					</function>
+				</classRange>
+				<function
+					mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_:])+\d*(\([\w+:=\d\s,"#]*\)[\s\r\n\t]*\{|:(?![^\r\n\t\s]):?)"
+					displayMode="$className->$functionName">
+					<functionName>
+						<nameExpr expr="([a-zA-Z0-9#!^+&<>*~$_:])+\d*(\([\w+:=\d\s,"#]*\)|::?)"/>
+					</functionName>
+				</function>
+			</parser>
+Sorry jNizM, I was editing my post when you merged my mistake guest post into this one, so It deleted my guest post info. So I'm re-editing it back in here.
+Last edited by jNizM on 09 Feb 2017, 10:11, edited 1 time in total.
+Reason: moved your guest post to your account
+Top
+User avatar
+ahkDustVorteX
+Posts: 47
+Joined: 14 May 2014
+@
+13 Feb 2017, 06:02
+Awesome Nightwolf85!
+
+Thanks for your interest in this subject, I appreciate your help.
+
+I will keep my efforts to improve this function list too.
+Editor: Notepad++
+"Those who wait and persist, always achieve."
+Top
+User avatar
+mapa4
+Posts: 13
+Joined: 14 Nov 2013
+@
+05 Mar 2017, 03:33
+Hi ahkDustVorteX and Nightwolf85,
+
+Thanks for your contribution on this subject, very useful for Notepad++ and AutoHotkey communities.
+May I report that these 3 code example types are not compliant with the parser :
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+LWin & LAlt::msgbox
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+aa(bb=0.1)
+{}
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+cc() ; -- comment
+{}
+Mapa.
+Top
+Nightwolf85
+Posts: 302
+Joined: 05 Feb 2017
+@
+09 Mar 2017, 22:51
+I've updated the parser to allow for:
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+LWin & LAlt::msgbox
+and:
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+aa(bb=0.1)
+{}
+However for some reason NP++ stops searching for more functions if I add the RegEx for comments between the end parenthesis and the open bracket.
+
+example: If code looks like this -
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+FirstLabel:
+aa()
+{}
+bb() ; Comment
+{}
+cc() {
+}
+testLabel:
+msgbox, Not Found by function search
+function list will only show 'FirstLabel:', 'aa()', and 'bb()' but then stop.
+
+Meaning 'cc()' and 'testLabel:' won't show up. Or anything else located below the first function with a comment before the opening bracket. This is strange because when manually running the RegEx it finds everything exactly right.
+
+As a work around just make sure that you put the bracket before the comment, ie:
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+bb() { ; Comment
+}
+Latest version of the Functionlist parser:
+Code: Select all - Expand - Download - Line numbers - Word wrap - V2
+
+			<parser id="ahk_function" displayName="AHK" commentExpr="(\/\*[\s+\w+\n]{1,}\*\/)|(^;[\s+\w+]{1,})">
+				<!-- AutoHotKey Function List -->
+				<classRange
+					mainExpr="^[\t ]*(class|struct)[\t ]+[\w]+([\t ]+|[\t ]+(extends)[\s]+(\,[\t ]*|(\\|[\w][\w]*))+[\s]*)?[\r\n\t\s]*\{"
+					openSymbole = "\{"
+					closeSymbole = "\}"
+					displayMode="node">
+					<className>
+						<nameExpr expr="(class|struct)[\t ]+[\w]+"/>
+						<nameExpr expr="[\t ]+[\w]+"/>
+						<nameExpr expr="[\w]+"/>
+					</className>
+					<function
+						mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)[\s\t\r\n]*\{|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*:(?=([\s\t]*[\r\n]|[\s\t]+;.*[\r\n]))|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_ ])+\d*(?<![ ])::(?=[^\r\n\t\s])?">
+						<functionName>
+							<funcNameExpr expr="([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)|([a-zA-Z0-9#!^+&<>*~$_ ])+\d*::?"/>
+						</functionName>
+					</function>
+				</classRange>
+				<function
+					mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)[\s\t\r\n]*\{|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*:(?=([\s\t]*[\r\n]|[\s\t]+;.*[\r\n]))|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_ ])+\d*(?<![ ])::(?=[^\r\n\t\s])?"
+					displayMode="$className->$functionName">
+					<functionName>
+						<nameExpr expr="([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)|([a-zA-Z0-9#!^+&<>*~$_ ])+\d*::?"/>
+					</functionName>
+				</function>
+			</parser>
+Lastly if you want to play around with the RegEx that matches properly but doesn't continue searching, just replace both *funtion* mainExpr with:
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+"^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)([\s\t]+;.*[\r\n]*\{|[\s\t\r\n]*\{)|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*:(?=([\s\t]*[\r\n]|[\s\t]+;.*[\r\n]))|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_ ])+\d*(?<![ ])::(?=[^\r\n\t\s])?"
+I'll keep working on getting the comments to be allowed before the bracket, but like getting the labels, functions, and hotkeys to separate in groupings I feel like it might be a limitation of NP++ function list implementation currently.
+Top
+User avatar
+mapa4
+Posts: 13
+Joined: 14 Nov 2013
+@
+10 Mar 2017, 02:43
+Hi Nightwolf85,
+
+Thanks for your quick answer and the fix, it works really well for the 2 first ones, good shot.
+About the 3rd one, I can do the workaround on my own scripts, but the parser will not discover this syntax type on other scripts we can grab from people on some sites.
+I also found a 4th type of syntax that the parser does not discover, do you think it could also be fixed ?
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+	:*:zz::
+		msgbox
+		; other script lines
+	Return
+Thanks in advance.
+Mapa.
+Top
+User avatar
+mapa4
+Posts: 13
+Joined: 14 Nov 2013
+@
+11 Mar 2017, 06:36
+Hi Nightwolf85,
+
+I have tested your regex thu http://regexr.com and it seems there is an error :
+MWSnap021.png
+MWSnap021.png (32.97 KiB) Viewed 36556 times
+Mapa.
+Top
+guest3456
+Posts: 3478
+Joined: 09 Oct 2013
+@
+11 Mar 2017, 07:06
+mapa4 wrote:
+Hi Nightwolf85,
+
+I have tested your regex thu http://regexr.com and it seems there is an error :
+MWSnap021.png
+it looks like there was probably some pasting errors, try changing these and see what happens: " should be " and < should probably be <
+Top
+User avatar
+mapa4
+Posts: 13
+Joined: 14 Nov 2013
+@
+11 Mar 2017, 08:07
+guest3456 wrote:
+mapa4 wrote:
+Hi Nightwolf85,
+
+I have tested your regex thu http://regexr.com and it seems there is an error :
+MWSnap021.png
+it looks like there was probably some pasting errors, try changing these and see what happens: " should be " and < should probably be <
+I just removed the first and last double quote and also the question mark on which there was a problem, then no more syntax error, but I do not know if it is relevant
+Mapa.
+Top
+Nightwolf85
+Posts: 302
+Joined: 05 Feb 2017
+@
+11 Mar 2017, 19:34
+Those aren't pasting errors, the functionlist file is in XML format and I need to use " and < otherwise the XML will be messed up, but guest3456 is correct they should be switched to " and < when not in the XML file. The ? is important because (?<!) is negative lookbehind in RegEx; Which in the case you found the error, I am making sure that the colon isn't preceded by a space character. ( To eliminate Run ::{645FF040-5081-101B-9F08-00AA002F954E} from matching a hotkey).
+
+I will work on adding the support for that 4th format for text replacements, I initially didn't include them since they aren't actual hotkeys right? they are just text replacements? I will still look into getting that and the commented functions to work.
+
+I should be able to get to it soon.
+
+*EDIT*
+I just checked on the site linked for checking RegEx and the Error I get states that you can't use lookbehind in JavaScript.
+
+*EDIT2*
+It was way easier getting the replacements to be found than I anticipated, so I did update it for that, but comment before the bracket issue isn't fixed.
+Code: Select all - Expand - Download - Line numbers - Word wrap - V2
+
+			<parser id="ahk_function" displayName="AHK" commentExpr="(\/\*[\s+\w+\n]{1,}\*\/)|(^;[\s+\w+]{1,})">
+				<!-- AutoHotKey Function List -->
+				<classRange
+					mainExpr="^[\t ]*(class|struct)[\t ]+[\w]+([\t ]+|[\t ]+(extends)[\s]+(\,[\t ]*|(\\|[\w][\w]*))+[\s]*)?[\r\n\t\s]*\{"
+					openSymbole = "\{"
+					closeSymbole = "\}"
+					displayMode="node">
+					<className>
+						<nameExpr expr="(class|struct)[\t ]+[\w]+"/>
+						<nameExpr expr="[\t ]+[\w]+"/>
+						<nameExpr expr="[\w]+"/>
+					</className>
+					<function
+						mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)[\s\t\r\n]*\{|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*:(?=([\s\t]*[\r\n]|[\s\t]+;.*[\r\n]))|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_: ])+\d*(?<![ ])::(?=[^\r\n\t\s])?">
+						<functionName>
+							<funcNameExpr expr="([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)|([a-zA-Z0-9#!^+&<>*~$_: ])+\d*::?"/>
+						</functionName>
+					</function>
+				</classRange>
+				<function
+					mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)[\s\t\r\n]*\{|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*:(?=([\s\t]*[\r\n]|[\s\t]+;.*[\r\n]))|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_: ])+\d*(?<![ ])::(?=[^\r\n\t\s])?"
+					displayMode="$className->$functionName">
+					<functionName>
+						<nameExpr expr="([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)|([a-zA-Z0-9#!^+&<>*~$_: ])+\d*::?"/>
+					</functionName>
+				</function>
+			</parser>
+*EDIT3*
+This is the RegEx for only the function part which does correctly find the problem format, but seems to break the function list from continuing. (this uses " instead of " so it is for testing in NP++ RegEx search, or possibly that site)
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,";#.]*\)([\s\t]+;.*[\r\n]+\{|[\s\t\r\n]*\{)
+Top
+User avatar
+mapa4
+Posts: 13
+Joined: 14 Nov 2013
+@
+12 Mar 2017, 03:33
+Hi Nightwolf85,
+
+Good shot again, it works for the 4th syntax type !
+
+Regarding your EDIT3 RegEx, I tried it into NP++ classical Find window with this small update (just added \s\t), and it seems to work, but I do not know where to apply it into your parser :
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,";#.]*\)([\s\t]+;.*[\s\t\r\n]+\{|[\s\t\r\n]*\{)
+Mapa.
+Top
+Nightwolf85
+Posts: 302
+Joined: 05 Feb 2017
+@
+12 Mar 2017, 14:56
+Hmm it works in NP++' Find' without that extra\s\t for me, since the previous .* before the new lines will eat spaces and tabs already, the problem comes when adding that RegEx to the functionlist parser, it seems to break the functionality. Look up to a previous post of mine where I explain it with an example. Basically the parser stops when it hits a function with a comment before the opening bracket, it finds that function, but nothing after it.
+example: If code looks like this -
+Code: Select all - Download - Line numbers - Word wrap - V2
+
+FirstLabel:
+aa()
+{}
+bb() ; Comment
+{}
+cc() {
+}
+testLabel:
+msgbox, Not Found by function search
+function list will only show 'FirstLabel:', 'aa()', and 'bb()' but then stop.
+
+Meaning 'cc()' and 'testLabel:' won't show up. Or anything else located below the first function with a comment before the opening bracket. This is strange because when manually running the RegEx it finds everything exactly right.
+*EDIT*
+It may be that the function parser uses the option for . to match new lines, which isn't default behavior, and the problem was with the RegEx being too 'greedy' and matching everything to the last open bracket in the file ignoring everything else in between.
+I believe this version fixes the issue by manually setting the 'greed' level to stop before the last new line before the open bracket:
+Code: Select all - Expand - Download - Line numbers - Word wrap - V2
+
+			<parser id="ahk_function" displayName="AHK" commentExpr="(\/\*[\s+\w+\n]{1,}\*\/)|(^;[\s+\w+]{1,})">
+				<!-- AutoHotKey Function List -->
+				<classRange
+					mainExpr="^[\t ]*(class|struct)[\t ]+[\w]+([\t ]+|[\t ]+(extends)[\s]+(\,[\t ]*|(\\|[\w][\w]*))+[\s]*)?[\r\n\t\s]*\{"
+					openSymbole = "\{"
+					closeSymbole = "\}"
+					displayMode="node">
+					<className>
+						<nameExpr expr="(class|struct)[\t ]+[\w]+"/>
+						<nameExpr expr="[\t ]+[\w]+"/>
+						<nameExpr expr="[\w]+"/>
+					</className>
+					<function
+						mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)([\s\t]+;.*?[\r\n]+\{|[\s\t\r\n]*\{)|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*:(?=([\s\t]*[\r\n]|[\s\t]+;.*[\r\n]))|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_: ])+\d*(?<![ ])::(?=[^\r\n\t\s])?">
+						<functionName>
+							<funcNameExpr expr="([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)|([a-zA-Z0-9#!^+&<>*~$_: ])+\d*::?"/>
+						</functionName>
+					</function>
+				</classRange>
+				<function
+					mainExpr="^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)([\s\t]+;.*?[\r\n]+\{|[\s\t\r\n]*\{)|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_])+\d*:(?=([\s\t]*[\r\n]|[\s\t]+;.*[\r\n]))|^[\t ]*(?!(if|while|for))([a-zA-Z0-9#!^+&<>*~$_: ])+\d*(?<![ ])::(?=[^\r\n\t\s])?"
+					displayMode="$className->$functionName">
+					<functionName>
+						<nameExpr expr="([a-zA-Z0-9#!^+&<>*~$_])+\d*\([\w+:=\d\s,"#.]*\)|([a-zA-Z0-9#!^+&<>*~$_: ])+\d*::?"/>
+					</functionName>
+				</function>
+			</parser>
+Top
+User avatar
+mapa4
+Posts: 13
+Joined: 14 Nov 2013
+@
+13 Mar 2017, 01:29
+Hi Nightwolf85,
+
+Thank you for your effort and perseverance, much appreciated.
+I keep the first version of the 12 March (BTW thanks for this gift, it was my birthday ;-)), if the last one detects it, it ignores a lot of functions or labels that are behind.
+So, this is frustrating but it could maybe a bug in n++ ?
+
+Best regards,
+Mapa.
+Top
+Display posts from previous: 
+All posts
+ Sort by 
+Post time
+ 
+Ascending
+ 
+Post Reply65 posts 
+1
+ 
+2
+ 
+3
+ 
+4
+ 
+Next
+Return to “Notepad++”
+
+Jump to
+Who is online
+Users browsing this forum: No registered users and 1 guest
+
+HomeBoard indexAll times are UTC-05:00Delete cookiesThe teamContact us
+Powered by phpBB® Forum Software © phpBB Limited
+Style by Arty

@@ -1,0 +1,82 @@
+                                                                                                    
+                                         AAAAA                    AA          A AAAAA               
+                                      AAAAA                               A         AAAAA           
+                                  AAAAA       A    A                    AA              AAAA        
+                                  AAA                         AAA                       AAAA        
+                                  AA                                            A    AAAAA A        
+                                  AA                    A                 A      AAAAAA  A A        
+                                  AA                       AAAA              AAAAAAAAAAA A A        
+                                  AA A            A                      AAAAAAAAAAAAAAAAA A        
+                                  AA A  AAAA    AAAAA                 AAAAAA  AAAAAAAAAAAA A        
+                                  AAAA     AAA      AAAA          AAAAAA  AAAAAAAAAAAAAA A A        
+                                  A             A           A  AAAAA   AAAAAAAAAAAAAAAAAAA A        
+                                  AA                           AAAAAAAAAAAAAAAAAAAAAAAAAAA A        
+                                   A                    AAA A  A   AAAAAAAAAAAAAAA    AA A A        
+                                   A  AA                   AA  A      AAAA AAAAAA     AA A A        
+                                AAA   AAAAA                    A AAAAAAAAAAAAAAAAAAAAAAA A A        
+                             AAA    A AAAAAAA    AAA        A  AAAAAAAAAAAAAAAAAAAAAAAAA A A        
+                          AAA             AAA           A      AAAAA AAAAAAAAAAAAAAAAAAA A A        
+                       AAAA                         AA         AA  AA  AAAAAAAAAAAAAAAAAAA A        
+                    AAA                      AAAA   AAAAAA     AA  AA  AA AAAAAAAAAAAAAA A A        
+                 AAA              AA   A  A  AAAAAAA AAAAAAA   AA   AAAAAA A  A AA AAAAA AAA        
+              AAAA                AAAA     AA    AAA    AAAA           AAA    AAAAAAAA A A A        
+           AAA                    AAAAAAA          A            A  AA  AAAAA  AAAA  AA AAAAA        
+        AAA                                 AA      AAA     AA AAAAA AAA   A AAAA  A AAAA           
+     AAAA                         AAAAAAAA AA AA     AAA    A  AAAAAAAAAAAA  A   AAAA               
+  AAAAA                        AAAAAAAAAAA    AAAA          A  AAAAA AA  A AA AAAAA  AA             
+  AA                        AAAAAAAAAAAAAA       AAAAA A       AAAAAAAA  AAAAAA         AAA         
+ AAA AAA     A           AA AAAAAAAAAAAAAA           A A    A  AAAAAAAAAAAAA               AAAAA    
+ A   AAAAAA           AAAAAAAAAAAAAAAAAAAA           AAA    AA AAAAAAAAA                        AA  
+ A   AA A  AAAA    AAAAAAAAAAAAAAAAAAAAAAA              AAAAAA AAAA                          AAA A  
+ A    AAA A  AAAAAAAAAAAAAAAAAAAAAAAAAAAAA                                              AAAAAA   A  
+ AAAAAAAA A  AAA AAAAAAAAAAAAAAAA AAAAA   A                                         AAAAA        AA 
+ AAAA   A    AAA AAAAAAAAAAAAAAAAAAA      A                        AAA          AAAAA      AAA    A 
+ A A    AAAAAAA AAAAAAAAAAAAAAAAA         A                                AAAAAA     A AAA AA   AA 
+ AAAA    AAAA A  AAAAAAA  AAAA            A                            AAAAAA  A   AAAAAA    A    A 
+  AAAAA A AA    AAA AAAAAAA            AAAA                        AAAAAAA         A    AAAAAA    A 
+      AAAAAA AA AAAAAAAA              AAA                     AAAAA      A         AAAAAA A AAA   A 
+          AAAAA AAAAA                 AAAAAA              AAAAAA    A              AAAAAAAA AAA  AA 
+             AAAAA                    AAA   AAAA     AAAAAAA     AA                AAAAA    A AAAA  
+                                      AAA    AA AAAAA           AAA                     AAAAAA      
+                                       AAA  AAAA        AAA AAAAA                   AAAAA           
+                                       A AA  AAA AA    AAAAA                   A    A               
+                                       A  AAAAAA                       A A       AAAA               
+                                       AA A A    A   A           AAAA       AAAAAAAAA               
+                                       AA A A   AAAA A             AAAAAAAAAAAAAAAA A               
+                                       AAAAAA    AAA        A AAAAAA   AA A AAAAAA  A               
+                                          AAAA   AAA   AA AAAAA        AA AAAAAAAA AA               
+                                          A   A AAAA  AAAAA            AA AAAAAAAA AA               
+                                          AA    AAAA A                 A  AAAAAAAA  A               
+                                          A   AA    A AAAA             A  AAA      AA               
+                                          A     AAAAA   AAAAAAA        AAAA   AAAAAAA               
+                                          A                 AAA        A  AAAAAAAAAAA               
+                                          A           A AAA  AA        A  AAAAAAAAAAA               
+                                          A               A  AA        A  AAAAAAAAAAA               
+                                          A              AA  AAAAAA    A AAAAAAAAAAAA               
+                                          A                 A   AAA    AAAAAAAAAAAAAA               
+                                          A   A             AA         AA AAAAAAAAAAA               
+                                          A   A              AAA AAAA AAAAAAAAAAAAAAA               
+                                          A   A                  A  A AAAAAAAAAAAAAAA               
+                                          A   A                       AAAAAAAAAAAAAAA               
+                                          A A                         AAAAAAAAAAAAAAA               
+                                          A A                         AAAAAAAAAAAAAAA               
+                                          A        A                  AAAAAAAAAAAAAAA               
+                                          A  AA       AA              AAAAAAAAAAAAAAA               
+                                          A  AAAAAA A A               AAAAAAAAAAAAAAA               
+                                          A    AAAAAA    A AAAA  A    AAAAAAAAAAAAAAA               
+                                          A      AAA     A            AAAAAAAAAAAAAAA               
+                                          A   AA      A     AAAAA     AAAAAAAAAAAAAAA               
+                                          A                 AAAAA A   AAAAAAAAAAAAAAA               
+                                          A              A  AAAAAAA   AAAAAAAAAAAAAAA               
+                                          A A             A      AAAA AAAAAAAAAAAAAAA               
+                                          A                           AAAAAAAAAAAAAAA               
+                                          AAA                    AAAA AAAAAAAAAAAAAAA               
+                                          AA                          AAAAAAAAAAAAAAA               
+                                          A AAAAA                     AAAAAAAAAAAAAAA               
+                                          A     AAAAAAAAA  A  A A     AAAAAAAAAAAAAAA               
+                                          A        AAA AA  A    A     AAAAAAAAAAAAA A               
+                                          A            AAAA AA        AAAAAAAAAAAAA A               
+                                          AAA   A         AAAA AA     AAAAAAAAAAAAA A               
+                                             AAAA              AAAAA  AAAAAAAAAAAAA A               
+                                                AAAAA              AA AAAAAAAAAAAAA A               
+                                                                       A            A               

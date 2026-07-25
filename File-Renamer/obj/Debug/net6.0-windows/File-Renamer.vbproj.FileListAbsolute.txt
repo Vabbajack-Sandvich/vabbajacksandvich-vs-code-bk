@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File_Renamer.frmMain.resources
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File-Renamer.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File-Renamer.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File-Renamer.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File-Renamer.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File-Renamer.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\File-Renamer\bin\Debug\net6.0-windows\File-Renamer.exe
+D:\zonide\CODE\visualstudio\File-Renamer\bin\Debug\net6.0-windows\File-Renamer.deps.json
+D:\zonide\CODE\visualstudio\File-Renamer\bin\Debug\net6.0-windows\File-Renamer.runtimeconfig.json
+D:\zonide\CODE\visualstudio\File-Renamer\bin\Debug\net6.0-windows\File-Renamer.dll
+D:\zonide\CODE\visualstudio\File-Renamer\bin\Debug\net6.0-windows\File-Renamer.pdb
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File-Renamer.dll
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\refint\File-Renamer.dll
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File-Renamer.pdb
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\File-Renamer.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\File-Renamer\obj\Debug\net6.0-windows\ref\File-Renamer.dll

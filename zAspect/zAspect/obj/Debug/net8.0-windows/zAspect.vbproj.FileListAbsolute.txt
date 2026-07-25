@@ -1,0 +1,16 @@
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.FrmzAspect.resources
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.vbproj.GenerateResource.cache
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.AssemblyInfoInputs.cache
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.AssemblyInfo.vb
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.vbproj.CoreCompileInputs.cache
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Debug\net8.0-windows\zAspect.exe
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Debug\net8.0-windows\zAspect.deps.json
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Debug\net8.0-windows\zAspect.runtimeconfig.json
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Debug\net8.0-windows\zAspect.dll
+C:\Users\zonid\source\repos\zAspect\zAspect\bin\Debug\net8.0-windows\zAspect.pdb
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.dll
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\refint\zAspect.dll
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.pdb
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\zAspect.genruntimeconfig.cache
+C:\Users\zonid\source\repos\zAspect\zAspect\obj\Debug\net8.0-windows\ref\zAspect.dll

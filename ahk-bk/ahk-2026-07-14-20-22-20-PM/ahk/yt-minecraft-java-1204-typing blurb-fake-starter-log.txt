@@ -1,0 +1,28 @@
+
+2025/02/18 00:48:36
+homebase
+overworld to the nether
+o - initial coordinates
+1 2 3
+n
+0 2 0
+
+2025/02/18 00:48:53
+iron farm
+overworld to the nether
+o - initial coordinates
+34 2 575
+n
+4 2 72
+
+2025/02/18 00:49:25
+
+got lost in the nether
+nether to the overworld
+o
+272 2 4600
+n - initial coordinates
+34 2 575
+
+
+

@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\zFilter\bin\Release\net8.0-windows\zFilter.exe
+D:\zonide\CODE\visualstudio\zFilter\bin\Release\net8.0-windows\zFilter.deps.json
+D:\zonide\CODE\visualstudio\zFilter\bin\Release\net8.0-windows\zFilter.runtimeconfig.json
+D:\zonide\CODE\visualstudio\zFilter\bin\Release\net8.0-windows\zFilter.dll
+D:\zonide\CODE\visualstudio\zFilter\bin\Release\net8.0-windows\zFilter.pdb
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.frmzFilter.resources
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.dll
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\refint\zFilter.dll
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.pdb
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\zFilter.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\zFilter\obj\Release\net8.0-windows\ref\zFilter.dll

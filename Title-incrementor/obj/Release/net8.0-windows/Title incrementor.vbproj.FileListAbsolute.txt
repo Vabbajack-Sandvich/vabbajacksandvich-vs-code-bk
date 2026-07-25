@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\Title incrementor.exe
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\Title incrementor.deps.json
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\Title incrementor.runtimeconfig.json
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\Title incrementor.dll
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows\Title incrementor.pdb
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title_incrementor.Form1.resources
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title incrementor.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title incrementor.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title incrementor.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title incrementor.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title incrementor.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title incrementor.dll
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\refint\Title incrementor.dll
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title incrementor.pdb
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\Title incrementor.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows\ref\Title incrementor.dll

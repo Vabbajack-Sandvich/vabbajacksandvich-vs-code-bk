@@ -1,0 +1,587 @@
+        '1     svchost.exe,
+        '2     5124,
+        '3     TCP,
+        '4     Established,
+        '5     192.168.18.198,
+        '6     49710,
+        '7     23.194.99.73,
+        '8     443,
+        '9     10/4/2025 7:53:23 PM,
+        '10    WpnUserService_61beb,
+        '11    ,
+        '12    ,
+        '13    ,
+
+
+
+1   -      Process: The name of the process that owns the connection or port.
+2   -      PID: The Process ID (PID) of the process that owns the endpoint.
+3   -      Protocol: The network protocol used (TCP or UDP).
+4   -      Local Address: The IP address of your local machine.
+5   -      Local Port: The port number on your local machine used by the connection.
+6   -      Remote Address: The IP address of the remote system.
+7   -      Remote Port: The port number on the remote system.
+8   -      State: The state of the TCP connection (e.g., ESTABLISHED, LISTEN, TIME_WAIT).
+9   -      Sent Packets / Sent Bytes: The number of packets and bytes sent by the process.
+10  -      Received Packets / Received Bytes: The number of packets and bytes received by the process. 
+
+
+
+1     Process
+2     PID (Process ID)
+3     Protocol
+4     Local Address
+5     Local Port
+6     Remote Address
+7     Remote Port
+8     State
+9     Sent Packets
+10    Sent Bytes
+11    Received Packets
+12    Received Bytes
+
+
+Process
+PID (Process ID)
+Protocol
+State
+Local Address
+Local Port
+Remote Address
+Remote Port
+Create Time
+Module Name
+Sent Packets
+Sent Bytes
+Received Packets
+Received Bytes
+
+
+'TCP,svchost.exe,924,LISTENING,0.0.0.0,0.0.0.0
+'TCP,OneApp.IGCC.WinService.exe,3904,LISTENING,0.0.0.0,0.0.0.0
+'TCP,svchost.exe,3912,LISTENING,0.0.0.0,0.0.0.0
+'TCP,NahimicService.exe,3976,LISTENING,127.0.0.1,0.0.0.0
+'TCP,lsass.exe,852,LISTENING,0.0.0.0,0.0.0.0
+'TCP,wininit.exe,756,LISTENING,0.0.0.0,0.0.0.0
+'TCP,svchost.exe,1452,LISTENING,0.0.0.0,0.0.0.0
+'TCP,svchost.exe,1948,LISTENING,0.0.0.0,0.0.0.0
+'TCP,spoolsv.exe,3356,LISTENING,0.0.0.0,0.0.0.0
+'TCP,services.exe,840,LISTENING,0.0.0.0,0.0.0.0
+'TCP,firefox.exe,13116,ESTABLISHED,127.0.0.1,127.0.0.1
+'TCP,firefox.exe,13116,ESTABLISHED,127.0.0.1,127.0.0.1
+'TCP,firefox.exe,11900,ESTABLISHED,127.0.0.1,127.0.0.1
+'TCP,firefox.exe,11900,ESTABLISHED,127.0.0.1,127.0.0.1
+'UDP,svchost.exe,4108,*,0.0.0.0,*
+'UDP,svchost.exe,3912,*,0.0.0.0,*
+'UDP,svchost.exe,3956,*,127.0.0.1,*
+'TCPV6,svchost.exe,924,LISTENING,[0:0:0:0:0:0:0:0],[0:0:0:0:0:0:0:0]
+'TCPV6,OneApp.IGCC.WinService.exe,3904,LISTENING,[0:0:0:0:0:0:0:0],[0:0:0:0:0:0:0:0]
+
+
+
+        '1     svchost.exe,               - processs name
+        '2     5124,                      - process id
+        '3     TCP,                       - protocol
+        '4     Established,               - state
+        '5     192.168.18.198,            - local address
+        '6     49710,                     - local port
+        '7     23.194.99.73,              - remote address
+        '8     443,                       - remote port
+        '9     10/4/2025 7:53:23 PM,      - create time
+        '10    WpnUserService_61beb,      - module name
+        '11    ,                          - sent packets null for some reason
+        '12    ,                          - receive packets null for some reason
+        '13    ,                          - 
+
+
+
+
+        '1     svchost.exe,               - Process
+        '2     5124,                      - PID (Process ID)
+        '3     TCP,                       - Protocol
+        '4     Established,               - State
+        '5     192.168.18.198,            - Local Address
+        '6     49710,                     - Local Port
+        '7     23.194.99.73,              - Remote Address
+        '8     443,                       - Remote Port
+        '9     10/4/2025 7:53:23 PM,      - Create Time
+        '10    WpnUserService_61beb,      - Module Name
+        '11    ,                          - null?
+        '12    ,                          - null?
+        '13    ,                          - null?
+
+
+
+
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+        Dim zComma1 As Integer
+
+
+        Dim zComma1  As Integer
+        Dim zComma2  As Integer
+        Dim zComma3  As Integer
+        Dim zComma4  As Integer
+        Dim zComma5  As Integer
+        Dim zComma6  As Integer
+        Dim zComma7  As Integer
+        Dim zComma8  As Integer
+        Dim zComma9  As Integer
+        Dim zComma10 As Integer
+        Dim zComma11 As Integer
+        Dim zComma12 As Integer
+        Dim zComma13 As Integer
+        Dim zComma14 As Integer
+		        
+				
+		Dim zDot1 As Integer
+
+		
+		
+        Dim zDot1  As Integer
+        Dim zDot2  As Integer
+        Dim zDot3  As Integer
+        Dim zDot4  As Integer
+        Dim zDot5  As Integer
+        Dim zDot6  As Integer
+        Dim zDot7  As Integer
+
+
+        zComma2  = InStr(zComma1 + 1, zExTcpTxt, ",")
+        zComma3  = InStr(zComma2 + 1, zExTcpTxt, ",")
+        zComma4  = InStr(zComma3 + 1, zExTcpTxt, ",")
+        zComma5  = InStr(zComma4 + 1, zExTcpTxt, ",")
+        zComma6  = InStr(zComma5 + 1, zExTcpTxt, ",")
+        zComma7  = InStr(zComma6 + 1, zExTcpTxt, ",")
+        zComma8  = InStr(zComma7 + 1, zExTcpTxt, ",")
+        zComma9  = InStr(zComma8 + 1, zExTcpTxt, ",")
+        zComma10 = InStr(zComma9 + 1, zExTcpTxt, ",")
+        zComma11 = InStr(zComma10 + 1, zExTcpTxt, ",")
+        zComma12 = InStr(zComma11 + 1, zExTcpTxt, ",")
+        zComma13 = InStr(zComma12 + 1, zExTcpTxt, ",")
+
+
+        If zComma1  <> 0 Then
+        If zComma2  <> 0 Then
+        If zComma3  <> 0 Then
+        If zComma4  <> 0 Then
+        If zComma5  <> 0 Then
+        If zComma6  <> 0 Then
+        If zComma7  <> 0 Then
+        If zComma8  <> 0 Then
+        If zComma9  <> 0 Then
+        If zComma10 <> 0 Then
+        If zComma11 <> 0 Then
+        If zComma12 <> 0 Then
+        If zComma13 <> 0 Then
+
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+        End If
+
+
+        zDot1 = InStr(1, zExTcpTxt, ",")
+        zDot2 = InStr(zDot1 + 1, zExTcpTxt, ",")
+        zDot3 = InStr(zDot2 + 1, zExTcpTxt, ",")
+        zDot4 = InStr(zDot3 + 1, zExTcpTxt, ",")
+        zDot5 = InStr(zDot4 + 1, zExTcpTxt, ",")
+        zDot6 = InStr(zDot5 + 1, zExTcpTxt, ",")
+        zDot7 = InStr(zDot6 + 1, zExTcpTxt, ",")
+
+
+
+            If zDot1 <> 0 Then
+            If zDot2 <> 0 Then
+            If zDot3 <> 0 Then
+            If zDot4 <> 0 Then
+            If zDot5 <> 0 Then
+            If zDot6 <> 0 Then
+            If zDot7 <> 0 Then
+
+            End If
+            End If
+            End If
+            End If
+            End If
+            End If
+            End If
+
+
+zStrProcess
+zStrPID
+zStrProtocol
+zStrState
+zStrLocalAddress
+zStrLocalPort
+zStrRemoteAddress
+zStrRemotePort
+zStrCreateTime
+zStrModuleName
+
+Dim zStrProcess as string
+Dim zStrPID as string
+Dim zStrProtocol as string
+Dim zStrState as string
+Dim zStrLocalAddress as string
+Dim zStrLocalPort as string
+Dim zStrRemoteAddress as string
+Dim zStrRemotePort as string
+Dim zStrCreateTime as string
+Dim zStrModuleName as string
+
+
+Dim zStrPID As String
+Dim zStrProtocol As String
+Dim zStrState As String
+Dim zStrLocalAddress As String
+Dim zStrLocalPort As String
+Dim zStrRemoteAddress As String
+Dim zStrRemotePort As String
+Dim zStrCreateTime As String
+Dim zStrModuleName As String
+
+
+zStrProcess = Mid(zExTcpTxt, 1, zComma1 - 1)
+zStrPID = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+
+
+zStrPID = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+zStrProtocol = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+zStrState = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+zStrLocalAddress = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+zStrLocalPort = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+zStrRemoteAddress = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+zStrRemotePort = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+zStrCreateTime = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+zStrModuleName = Mid(zExTcpTxt, zComma1 + 1, zComma2 - zComma1 - 1)
+
+
+ = Mid(zExTcpTxt, zComma1 + 1, zComma2  - zComma1 - 1)
+ = Mid(zExTcpTxt, zComma2 + 1, zComma3  - zComma2 - 1)
+ = Mid(zExTcpTxt, zComma3 + 1, zComma4  - zComma3 - 1)
+ = Mid(zExTcpTxt, zComma4 + 1, zComma5  - zComma4 - 1)
+ = Mid(zExTcpTxt, zComma5 + 1, zComma6  - zComma5 - 1)
+ = Mid(zExTcpTxt, zComma6 + 1, zComma7  - zComma6 - 1)
+ = Mid(zExTcpTxt, zComma7 + 1, zComma8  - zComma7 - 1)
+ = Mid(zExTcpTxt, zComma8 + 1, zComma9  - zComma8 - 1)
+ = Mid(zExTcpTxt, zComma9 + 1, zComma10 - zComma9 - 1)
+
+
+zStrPID
+zStrProtocol
+zStrState
+zStrLocalAddress
+zStrLocalPort
+zStrRemoteAddress
+zStrRemotePort
+zStrCreateTime
+zStrModuleName
+
+
+zStrPID = Mid(zExTcpTxt, zComma1 + 1, zComma2  - zComma1 - 1)
+zStrProtocol = Mid(zExTcpTxt, zComma2 + 1, zComma3  - zComma2 - 1)
+zStrState = Mid(zExTcpTxt, zComma3 + 1, zComma4  - zComma3 - 1)
+zStrLocalAddress = Mid(zExTcpTxt, zComma4 + 1, zComma5  - zComma4 - 1)
+zStrLocalPort = Mid(zExTcpTxt, zComma5 + 1, zComma6  - zComma5 - 1)
+zStrRemoteAddress = Mid(zExTcpTxt, zComma6 + 1, zComma7  - zComma6 - 1)
+zStrRemotePort = Mid(zExTcpTxt, zComma7 + 1, zComma8  - zComma7 - 1)
+zStrCreateTime = Mid(zExTcpTxt, zComma8 + 1, zComma9  - zComma8 - 1)
+zStrModuleName = Mid(zExTcpTxt, zComma9 + 1, zComma10 - zComma9 - 1)
+
+
+
+
+        'this assumes that whichever text or list box exists
+        'and is correct
+        'this function adds every line of text to a list box
+        'this also clears the list box based on zListClear
+        'this wont clear the list unless its set to 1
+        'this also trims return characters when adding entires
+        'this also trims blank lines vbcrlf
+        If zTxt.Text = vbNullString Then Exit Function
+        'have to make sure the last character is a return character
+        Dim zLastCharacter1 As String
+        Dim zLastCharacter2 As String
+        zLastCharacter1 = Mid(zTxt.Text, Len(zTxt.Text))
+        zLastCharacter2 = Mid(zTxt.Text, Len(zTxt.Text) - 1)
+        If zLastCharacter1 <> Chr(13) And zLastCharacter2 <> Chr(10) Then
+            zTxt.Text = zTxt.Text & vbCrLf
+        End If
+        Dim zRt As Integer, zRt2 As Integer, zTstr As String
+        Dim zRstop As Boolean
+        zRstop = False
+        zRt = InStr(zTxt.Text, vbCrLf)
+        If zRt = 0 Then
+            'no return character
+            'assuming just one line
+            If zListClear = 1 Then
+                zList.Items.Clear()
+            End If
+            zList.Items.Add(zTxt.Text)
+        Else
+            If zListClear = 1 Then
+                zList.Items.Clear()
+            End If
+            'found a return character
+            'check to see if there is more than one
+            zRt2 = InStr(zRt + 2, zTxt.Text, vbCrLf)
+            If zRt2 > 0 Then
+                'there is more than one
+                zRt2 = zRt
+                zRt = 1
+                'first pass
+                zTstr = Mid(zTxt.Text, zRt, zRt2 - 1)
+                If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                    zList.Items.Add(zTstr)
+                End If
+                'every other pass to the end
+                zRt = zRt2
+                zRt2 = InStr(zRt + 2, zTxt.Text, vbCrLf)
+                Do
+                    Application.DoEvents()
+                    zTstr = Mid(zTxt.Text, zRt + 2, zRt2 - zRt - 2)
+                    If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                        zList.Items.Add(zTstr)
+                    End If
+                    zRt = zRt2
+                    zRt2 = InStr(zRt + 2, zTxt.Text, vbCrLf)
+                    If zRt2 = 0 Then
+                        zRstop = True
+                        zTstr = Mid(zTxt.Text, zRt, Len(zTxt.Text))
+                        If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                            zList.Items.Add(zTstr)
+                        End If
+                    End If
+                Loop Until zRstop = True
+            Else
+                'there isnt more than one
+                'add the string to the list box minus the return character
+                zTstr = Mid(zTxt.Text, 1, Len(zTxt.Text) - 2)
+                zList.Items.Add(zTstr)
+            End If
+        End If
+
+
+        'this assumes that whichever text or list box exists
+        'and is correct
+        'this function adds every line of text to a list box
+        'this also clears the list box based on zeftcpvListboxOutputClear
+        'this wont clear the list unless its set to 1
+        'this also trims return characters when adding entires
+        'this also trims blank lines vbcrlf
+        If zeftcpvTextboxInput.Text = vbNullString Then Exit Function
+        'have to make sure the last character is a return character
+        Dim zLastCharacter1 As String
+        Dim zLastCharacter2 As String
+        zLastCharacter1 = Mid(zeftcpvTextboxInput.Text, Len(zeftcpvTextboxInput.Text))
+        zLastCharacter2 = Mid(zeftcpvTextboxInput.Text, Len(zeftcpvTextboxInput.Text) - 1)
+        If zLastCharacter1 <> Chr(13) And zLastCharacter2 <> Chr(10) Then
+            zeftcpvTextboxInput.Text = zeftcpvTextboxInput.Text & vbCrLf
+        End If
+        Dim zRt As Integer, zRt2 As Integer, zTstr As String
+        Dim zRstop As Boolean
+        zRstop = False
+        zRt = InStr(zeftcpvTextboxInput.Text, vbCrLf)
+        If zRt = 0 Then
+            'no return character
+            'assuming just one line
+            If zeftcpvListboxOutputClear = 1 Then
+                zeftcpvListboxOutput.Items.Clear()
+            End If
+            zeftcpvListboxOutput.Items.Add(zeftcpvTextboxInput.Text)
+        Else
+            If zeftcpvListboxOutputClear = 1 Then
+                zeftcpvListboxOutput.Items.Clear()
+            End If
+            'found a return character
+            'check to see if there is more than one
+            zRt2 = InStr(zRt + 2, zeftcpvTextboxInput.Text, vbCrLf)
+            If zRt2 > 0 Then
+                'there is more than one
+                zRt2 = zRt
+                zRt = 1
+                'first pass
+                zTstr = Mid(zeftcpvTextboxInput.Text, zRt, zRt2 - 1)
+                If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                    zeftcpvListboxOutput.Items.Add(zTstr)
+                End If
+                'every other pass to the end
+                zRt = zRt2
+                zRt2 = InStr(zRt + 2, zeftcpvTextboxInput.Text, vbCrLf)
+                Do
+                    Application.DoEvents()
+                    zTstr = Mid(zeftcpvTextboxInput.Text, zRt + 2, zRt2 - zRt - 2)
+                    If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                        zeftcpvListboxOutput.Items.Add(zTstr)
+                    End If
+                    zRt = zRt2
+                    zRt2 = InStr(zRt + 2, zeftcpvTextboxInput.Text, vbCrLf)
+                    If zRt2 = 0 Then
+                        zRstop = True
+                        zTstr = Mid(zeftcpvTextboxInput.Text, zRt, Len(zeftcpvTextboxInput.Text))
+                        If zTstr <> vbNullString And zTstr <> vbCrLf Then
+                            zeftcpvListboxOutput.Items.Add(zTstr)
+                        End If
+                    End If
+                Loop Until zRstop = True
+            Else
+                'there isnt more than one
+                'add the string to the list box minus the return character
+                zTstr = Mid(zeftcpvTextboxInput.Text, 1, Len(zeftcpvTextboxInput.Text) - 2)
+                zeftcpvListboxOutput.Items.Add(zTstr)
+            End If
+        End If
+
+this one is the first one which is for no returns found
+
+            'add to every spot where the list box gets an entry added
+            'this checks to see if the line containss the extraction value
+            'default 0 optional returns remote address
+            zExtractValue = zExtractValueFromTCPViewLine(zeftcpvTextboxInput.Text)
+            If zExtractValue <> "" Then
+                'add it to the list if it found the value
+                zeftcpvListboxOutput.Items.Add(zExtractValue)
+            Else
+                'didnt return a value
+                Exit Function
+            End If
+
+
+this one is for returns which are all the same but dont use the textbox
+instead they use the string value zTstr
+
+this is also for a garbage search and only adds matches but skips non matches
+and doesnt exit function and pickss out all the matching lines
+
+                    'add to every spot where the list box gets an entry added
+                    'this checks to see if the line containss the extraction value
+                    'default 0 optional returns remote address
+                    zExtractValue = zExtractValueFromTCPViewLine(zTstr)
+                    If zExtractValue <> "" Then
+                        'add it to the list if it found the value
+                        zeftcpvListboxOutput.Items.Add(zExtractValue)
+                    End If
+
+
+
+
+If Len(zS1) <= 3 And Len(zS1) >= 1 Then
+If Len(zS2) <= 3 And Len(zS2) >= 1 Then
+If Len(zS3) <= 3 And Len(zS3) >= 1 Then
+If Len(zS4) <= 3 And Len(zS4) >= 1 Then
+If Len(zS5) <= 3 And Len(zS5) >= 1 Then
+
+
+
+
+
+        zDot1 = InStr(1, zIPAddressInputTxt, ",")
+        zDot2 = InStr(zDot1 + 1, zIPAddressInputTxt, ",")
+        zDot3 = InStr(zDot2 + 1, zIPAddressInputTxt, ",")
+
+        If zDot1 <> 0 Then
+            If zDot2 <> 0 Then
+                If zDot3 <> 0 Then
+                    'all three dots
+                    Dim zS1 As String
+                    Dim zS2 As String
+                    Dim zS3 As String
+                    Dim zS4 As String
+
+                    zS1 = Mid(zIPAddressInputTxt, 1, zDot1 - 1)
+                    zS2 = Mid(zIPAddressInputTxt, zDot1 + 1, zDot2 - zDot1 - 1)
+                    zS3 = Mid(zIPAddressInputTxt, zDot2 + 1, zDot3 - zDot2 - 1)
+                    zS4 = Mid(zIPAddressInputTxt, zDot3 + 1, Len(zIPAddressInputTxt))
+
+
+        zDot1 = InStr(1, zTempzIPAddressInputTxt, ",")
+        zDot2 = InStr(zDot1 + 1, zTempzIPAddressInputTxt, ",")
+        zDot3 = InStr(zDot2 + 1, zTempzIPAddressInputTxt, ",")
+
+        If zDot1 <> 0 Then
+            If zDot2 <> 0 Then
+                If zDot3 <> 0 Then
+                    'all three dots
+                    Dim zS1 As String
+                    Dim zS2 As String
+                    Dim zS3 As String
+                    Dim zS4 As String
+
+                    zS1 = Mid(zTempzIPAddressInputTxt, 1, zDot1 - 1)
+                    zS2 = Mid(zTempzIPAddressInputTxt, zDot1 + 1, zDot2 - zDot1 - 1)
+                    zS3 = Mid(zTempzIPAddressInputTxt, zDot2 + 1, zDot3 - zDot2 - 1)
+                    zS4 = Mid(zTempzIPAddressInputTxt, zDot3 + 1, Len(zTempzIPAddressInputTxt))
+
+
+
+
+If CInt(zS1) >= 0 And CInt(zS1) <= 255 Then
+
+End If
+
+
+If CInt(zS1) >= 0 And CInt(zS1) <= 255 Then
+If CInt(zS2) >= 0 And CInt(zS2) <= 255 Then
+If CInt(zS3) >= 0 And CInt(zS3) <= 255 Then
+If CInt(zS4) >= 0 And CInt(zS4) <= 255 Then
+
+End If
+End If
+End If
+End If
+
+
+
+        lblstInput.Text = lstInput.Items.Count
+        lblstOld.Text = lstOld.Items.Count
+        lblstIterator.Text = lstIterator.Items.Count
+        lblstUnique.Text = lstUnique.Items.Count
+
+
+
+        lblstInput.Text = " - " & lstInput.Items.Count
+        lblstOld.Text = " - " & lstOld.Items.Count
+        lblstIterator.Text = " - " & lstIterator.Items.Count
+        lblstUnique.Text = " - " & lstUnique.Items.Count
+
+
+
+        If System.IO.Directory.Exists(folderPath) Then
+            ' Open the folder using Windows Explorer
+            Process.Start("explorer.exe", folderPath)
+        Else
+            MessageBox.Show("The specified folder does not exist.", "Folder Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+		
+		
+
+
+
+
+
+
+
+
+
+

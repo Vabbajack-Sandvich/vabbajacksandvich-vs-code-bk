@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ShutDownTimer</id>
+    <version>1.0.0</version>
+    <authors>ShutDownTimer</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="D:\zonide\CODE\visualstudio\ShutDownTimer\bin\Debug\net5.0-windows\ShutDownTimer.runtimeconfig.json" target="lib\net5.0-windows7.0\ShutDownTimer.runtimeconfig.json" />
+    <file src="D:\zonide\CODE\visualstudio\ShutDownTimer\bin\Debug\net5.0-windows\ShutDownTimer.dll" target="lib\net5.0-windows7.0\ShutDownTimer.dll" />
+  </files>
+</package>

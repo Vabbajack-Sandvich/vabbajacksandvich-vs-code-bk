@@ -1,0 +1,22 @@
+todo for glog and craft notes
+
+add search form to glog
+
+add an undo array with like 1000 undos
+
+every time you type in the box it adds the new version to the undo array and deletes the top most if its its entires
+
+either that
+
+or a timer that checks for changes every 15 seconds
+
+if its different than the last entry in the array it adds the new one
+
+when you click undo it just sets the text box to the previous version of undo
+
+it lets you cycle through them
+
+if you start typing it resets the timer and adds the new edits to the newest entry of the array up to 200
+
+which means you can still cycle through the previous ones too including the new edits
+

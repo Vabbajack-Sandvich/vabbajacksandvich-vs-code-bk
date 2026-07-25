@@ -1,0 +1,98 @@
+processes and services to kill for zprocess
+
+processes
+        'TiWorker
+        'TrustedInstaller
+        'IKEEXT
+
+services
+        'McpManagementService
+        'OneSyncSvc_6243a
+        'DevicesFlowUserSvc_6243a
+        'DevicePickerUserSvc_6243a
+        'cbdhsvc_6243a
+        'CaptureService_6243a
+        'wuauserv
+        'WinRM
+        'WaaSMedicSvc
+        'vmicvss
+        'vmicvmsession
+        'vmictimesync
+        'vmicshutdown
+        'vmicrdv
+        'vmickvpexchange
+        'vmicheartbeat
+        'vmicguestinterface
+        'UsoSvc
+        'UmRdpService
+        'TermService
+        'SSDPSRV
+        'SessionEnv
+        'RemoteAccess
+        'RasMan
+        'RasAuto
+        'PushToInstall
+        'PolicyAgent
+        'MapsBroker
+        'lmhosts
+        'InstallService
+        'IKEEXT
+        'HvHost
+        'FrameServer
+        'DsmSvc
+        'DoSvc
+        'DiagTrack
+        'diagsvc
+        'diagnosticshub.standardcollector.service
+        'ClipSVC
+        'BthAvctpSvc
+        'BITS
+        'AJRouter
+		
+lstServiceKillList.Items.Add("IKEEXT")
+lstServiceKillList.Items.Add("
+IKEEXT
+")
+
+lstServiceKillList.Items.Add("McpManagementService")
+lstServiceKillList.Items.Add("OneSyncSvc_6243a")
+lstServiceKillList.Items.Add("DevicesFlowUserSvc_6243a")
+lstServiceKillList.Items.Add("DevicePickerUserSvc_6243a")
+lstServiceKillList.Items.Add("cbdhsvc_6243a")
+lstServiceKillList.Items.Add("CaptureService_6243a")
+lstServiceKillList.Items.Add("wuauserv")
+lstServiceKillList.Items.Add("WinRM")
+lstServiceKillList.Items.Add("WaaSMedicSvc")
+lstServiceKillList.Items.Add("vmicvss")
+lstServiceKillList.Items.Add("vmicvmsession")
+lstServiceKillList.Items.Add("vmictimesync")
+lstServiceKillList.Items.Add("vmicshutdown")
+lstServiceKillList.Items.Add("vmicrdv")
+lstServiceKillList.Items.Add("vmickvpexchange")
+lstServiceKillList.Items.Add("vmicheartbeat")
+lstServiceKillList.Items.Add("vmicguestinterface")
+lstServiceKillList.Items.Add("UsoSvc")
+lstServiceKillList.Items.Add("UmRdpService")
+lstServiceKillList.Items.Add("TermService")
+lstServiceKillList.Items.Add("SSDPSRV")
+lstServiceKillList.Items.Add("SessionEnv")
+lstServiceKillList.Items.Add("RemoteAccess")
+lstServiceKillList.Items.Add("RasMan")
+lstServiceKillList.Items.Add("RasAuto")
+lstServiceKillList.Items.Add("PushToInstall")
+lstServiceKillList.Items.Add("PolicyAgent")
+lstServiceKillList.Items.Add("MapsBroker")
+lstServiceKillList.Items.Add("lmhosts")
+lstServiceKillList.Items.Add("InstallService")
+lstServiceKillList.Items.Add("IKEEXT")
+lstServiceKillList.Items.Add("HvHost")
+lstServiceKillList.Items.Add("FrameServer")
+lstServiceKillList.Items.Add("DsmSvc")
+lstServiceKillList.Items.Add("DoSvc")
+lstServiceKillList.Items.Add("DiagTrack")
+lstServiceKillList.Items.Add("diagsvc")
+lstServiceKillList.Items.Add("diagnosticshub.standardcollector.service")
+lstServiceKillList.Items.Add("ClipSVC")
+lstServiceKillList.Items.Add("BthAvctpSvc")
+lstServiceKillList.Items.Add("BITS")
+lstServiceKillList.Items.Add("AJRouter")

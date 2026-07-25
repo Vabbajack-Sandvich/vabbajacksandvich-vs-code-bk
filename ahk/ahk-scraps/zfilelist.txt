@@ -1,0 +1,3 @@
+ahk-zstdcbs.ahk, ahk-zstdcbslc.ahk, ahk-zstuscbs.ahk, ahk-zstuscbslc.ahk,
+
+git commit -m "updating test.ahk and test.exe. updating control d, with clipboard swap space to dash lower case filter, updating control shift f which is file list to suspend after use, updated ascii."

@@ -1,0 +1,9 @@
+Scout
+Soldier
+Pyro
+Demo-Man
+Heavy
+Engineer
+Medic
+Sniper
+Spy

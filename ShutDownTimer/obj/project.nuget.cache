@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ad5L/o9PxwI=",
+  "success": true,
+  "projectFilePath": "D:\\zonide\\CODE\\visualstudio\\ShutDownTimer\\ShutDownTimer.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zonid\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.57\\microsoft.windows.sdk.net.ref.10.0.17763.57.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "D:\\zonide\\CODE\\visualstudio\\ShutDownTimer\\ShutDownTimer.vbproj",
+      "warningLevel": 1,
+      "filePath": "D:\\zonide\\CODE\\visualstudio\\ShutDownTimer\\ShutDownTimer.vbproj",
+      "targetGraphs": []
+    }
+  ]
+}

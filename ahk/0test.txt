@@ -1,0 +1,16 @@
+;default autohotkey folder path
+;D:\zonide\ahk\
+
+;test button
+;loads a file in to a buffer
+
+^l::
+{
+zbuf := fileread("D:\zonide\ahk\filereadtest.txt")
+for k, v in zbuf
+{
+	s .= k "=" v "`n"
+	MsgBox % s
+}
+return
+}

@@ -1,0 +1,5 @@
+SelectAll:
+Compressor:attackMs="30" compressionRatio="10" kneeWidthDb="5" lookaheadMs="1" makeupGainDb="0" releaseMs="150" showActual="1" showInput="0" showOutput="1" showTarget="0" thresholdDb="-10"
+LoudnessNormalization:DualMono="1" LUFSLevel="-23" NormalizeTo="0" RMSLevel="-20" StereoIndependent="1"
+ExportMp3:
+New:

@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF33A1E5-2454-4C4D-BC9E-16F293D0C7C3}|zTf2Script.vbproj|c:\\zonide\\zip\\code\\visualstudio\\ztf2script\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FF33A1E5-2454-4C4D-BC9E-16F293D0C7C3}|zTf2Script.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF33A1E5-2454-4C4D-BC9E-16F293D0C7C3}|zTf2Script.vbproj|c:\\zonide\\zip\\code\\visualstudio\\ztf2script\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{FF33A1E5-2454-4C4D-BC9E-16F293D0C7C3}|zTf2Script.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF33A1E5-2454-4C4D-BC9E-16F293D0C7C3}|zTf2Script.vbproj|c:\\zonide\\zip\\code\\visualstudio\\ztf2script\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FF33A1E5-2454-4C4D-BC9E-16F293D0C7C3}|zTf2Script.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF33A1E5-2454-4C4D-BC9E-16F293D0C7C3}|zTf2Script.vbproj|c:\\zonide\\zip\\code\\visualstudio\\ztf2script\\zonide.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{FF33A1E5-2454-4C4D-BC9E-16F293D0C7C3}|zTf2Script.vbproj|solutionrelative:zonide.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-24T22:12:03.487Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\Form1.Designer.vb",
+              "RelativeDocumentMoniker": "Form1.Designer.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\Form1.Designer.vb",
+              "RelativeToolTip": "Form1.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-24T22:12:00.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "zonide.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\zonide.vb",
+              "RelativeDocumentMoniker": "zonide.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\zonide.vb",
+              "RelativeToolTip": "zonide.vb",
+              "ViewState": "AgIAAOgBAAAAAAAAAAAhwMUBAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-22T13:59:18.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zTf2Script\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAIABAAAAAAAAAAAewJMBAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-20T06:58:57.713Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+I'm using AutoHotkey to fake-type this. I have it written in a file.
+
+I wrote craft notes to make calculating portals and writing down stuff about bases easier.
+
+Hardcore 1 World changed to Survival a few videos ago using NBT Explorer, I didn't want to lose the builds.

@@ -1,0 +1,19 @@
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows10.0.17763.0\Title incrementor.exe
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows10.0.17763.0\Title incrementor.deps.json
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows10.0.17763.0\Title incrementor.runtimeconfig.json
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows10.0.17763.0\Title incrementor.dll
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows10.0.17763.0\Title incrementor.pdb
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll
+D:\zonide\CODE\visualstudio\Title incrementor\bin\Release\net8.0-windows10.0.17763.0\WinRT.Runtime.dll
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title_incrementor.Form1.resources
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title incrementor.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title incrementor.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title incrementor.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title incrementor.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title incrementor.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title in.B62ADA38.Up2Date
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title incrementor.dll
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\refint\Title incrementor.dll
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title incrementor.pdb
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\Title incrementor.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\Title incrementor\obj\Release\net8.0-windows10.0.17763.0\ref\Title incrementor.dll

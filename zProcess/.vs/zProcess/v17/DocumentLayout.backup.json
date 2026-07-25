@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zProcess\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6B28E6-CBDC-4551-9EFC-E2686CC52826}|zProcess.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zprocess\\frmzprocess.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4E6B28E6-CBDC-4551-9EFC-E2686CC52826}|zProcess.vbproj|solutionrelative:frmzprocess.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6B28E6-CBDC-4551-9EFC-E2686CC52826}|zProcess.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zprocess\\frmzprocess.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4E6B28E6-CBDC-4551-9EFC-E2686CC52826}|zProcess.vbproj|solutionrelative:frmzprocess.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6B28E6-CBDC-4551-9EFC-E2686CC52826}|zProcess.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zprocess\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4E6B28E6-CBDC-4551-9EFC-E2686CC52826}|zProcess.vbproj|solutionrelative:vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmzProcess.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zProcess\\frmzProcess.vb",
+              "RelativeDocumentMoniker": "frmzProcess.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zProcess\\frmzProcess.vb",
+              "RelativeToolTip": "frmzProcess.vb",
+              "ViewState": "AgIAADcBAAAAAAAAAAAhwEYBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-17T08:55:56.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmzProcess.vb [Design]",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zProcess\\frmzProcess.vb",
+              "RelativeDocumentMoniker": "frmzProcess.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zProcess\\frmzProcess.vb [Design]",
+              "RelativeToolTip": "frmzProcess.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-16T22:47:57.037Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vabbajacksandvich.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zProcess\\vabbajacksandvich.vb",
+              "RelativeDocumentMoniker": "vabbajacksandvich.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zProcess\\vabbajacksandvich.vb",
+              "RelativeToolTip": "vabbajacksandvich.vb",
+              "ViewState": "AgIAAM0KAAAAAAAAAAAAANgKAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-12T13:05:01.815Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

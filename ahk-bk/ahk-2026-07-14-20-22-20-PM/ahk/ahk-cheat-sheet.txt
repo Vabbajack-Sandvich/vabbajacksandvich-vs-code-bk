@@ -1,0 +1,85 @@
+Toggle := !Toggle
+loop
+{
+    If not Toggle
+        break
+    UR CODE HERE
+}
+
+--
+
+#MaxThreadsPerHotkey 2
+
+F6::
+ {
+   Toggle:=!Toggle
+
+   While, Toggle
+    {
+		MsgBox, Something...
+		Sleep, 1000
+    }
+ }
+Return
+
+--
+
+Random, rand, 1, 10
+
+
+--
+
+
+;basic control letter thing
+;control T
+$^t::
+{
+	sleep 1000
+	sendevent "That " lines[zindex] " is a Spy{!}"
+return
+}
+
+--
+
+zrandhex
+
+Random, rand, 1, 10
+
+Random, zrandhex, 0, 36
+
+--
+
+Switch SwitchValue
+{
+Case CaseValue1:
+    Statements1
+Case CaseValue2a, CaseValue2b:
+    Statements2
+Default:
+    Statements3
+}
+
+--
+
+Switch zranddig
+{
+Case 1
+    Statements1
+}
+
+
+	sleep 1000
+	sendevent "That " lines[zindex] " is a Spy{!}"
+
+--
+
+to add strings
+have to use the percent thing
+
+%var1%%var2%
+
+
+SetKeyDelay Delay, PressDuration, "Play"
+
+
+ObjCount

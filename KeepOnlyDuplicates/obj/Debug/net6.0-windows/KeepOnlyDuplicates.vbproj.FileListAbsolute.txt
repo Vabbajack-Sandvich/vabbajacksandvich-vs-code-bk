@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.Form1.resources
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\bin\Debug\net6.0-windows\KeepOnlyDuplicates.exe
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\bin\Debug\net6.0-windows\KeepOnlyDuplicates.deps.json
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\bin\Debug\net6.0-windows\KeepOnlyDuplicates.runtimeconfig.json
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\bin\Debug\net6.0-windows\KeepOnlyDuplicates.dll
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\bin\Debug\net6.0-windows\KeepOnlyDuplicates.pdb
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.dll
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\refint\KeepOnlyDuplicates.dll
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.pdb
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\KeepOnlyDuplicates.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\KeepOnlyDuplicates\obj\Debug\net6.0-windows\ref\KeepOnlyDuplicates.dll

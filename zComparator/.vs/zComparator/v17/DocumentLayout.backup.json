@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zonid\\source\\repos\\zComparator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B03EC253-885B-4B29-8437-999DD5F4FC27}|zComparator\\zComparator.vbproj|c:\\users\\zonid\\source\\repos\\zcomparator\\zcomparator\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{B03EC253-885B-4B29-8437-999DD5F4FC27}|zComparator\\zComparator.vbproj|solutionrelative:zcomparator\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B03EC253-885B-4B29-8437-999DD5F4FC27}|zComparator\\zComparator.vbproj|c:\\users\\zonid\\source\\repos\\zcomparator\\zcomparator\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{B03EC253-885B-4B29-8437-999DD5F4FC27}|zComparator\\zComparator.vbproj|solutionrelative:zcomparator\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\zonid\\source\\repos\\zComparator\\zComparator\\Form1.vb",
+              "RelativeDocumentMoniker": "zComparator\\Form1.vb",
+              "ToolTip": "C:\\Users\\zonid\\source\\repos\\zComparator\\zComparator\\Form1.vb*",
+              "RelativeToolTip": "zComparator\\Form1.vb*",
+              "ViewState": "AgIAAAEAAAAAAAAAAADgvw4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-15T13:29:38.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\zonid\\source\\repos\\zComparator\\zComparator\\Form1.vb",
+              "RelativeDocumentMoniker": "zComparator\\Form1.vb",
+              "ToolTip": "C:\\Users\\zonid\\source\\repos\\zComparator\\zComparator\\Form1.vb [Design]*",
+              "RelativeToolTip": "zComparator\\Form1.vb [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-15T13:28:29.323Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

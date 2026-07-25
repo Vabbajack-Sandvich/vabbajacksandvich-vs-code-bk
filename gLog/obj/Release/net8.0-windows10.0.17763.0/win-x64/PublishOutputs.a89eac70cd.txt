@@ -1,0 +1,2 @@
+D:\zonide\CODE\visualstudio\gLog\gLog\bin\Release\net8.0-windows\publish\win-x64\gLog.pdb
+D:\zonide\CODE\visualstudio\gLog\gLog\bin\Release\net8.0-windows\publish\win-x64\gLog.exe

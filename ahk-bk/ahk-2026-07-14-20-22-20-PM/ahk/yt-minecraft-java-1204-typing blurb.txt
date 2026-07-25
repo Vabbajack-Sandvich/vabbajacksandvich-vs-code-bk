@@ -1,0 +1,16 @@
+im using autohotkey to fake type this in the log right now
+i have it written in a file
+
+thought it looked cool like something out of a movie where the computer is typing stuff instead of instantly displaying it for some reason
+
+i dont really expect anyone to read this
+i just think it looks cool
+
+craft notes is a program i wrote that makes time stamping short notes about bases or portals easy that only deals with 1 file and auto opens, saves, and goes to the end when it starts
+
+it has a portal calculator that does both the nether and overworld calculations and lets you add whichever version you want to the log file
+
+i used nbtexplorer to set hardcore 1 to survival a few videos ago
+just updated craft notes
+need the calculator to setup portals
+makes it easier to write down stuff for bases or portals

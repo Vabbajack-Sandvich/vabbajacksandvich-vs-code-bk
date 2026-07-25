@@ -1,0 +1,17 @@
+    Public Function zShowIface()
+        With Form1
+            .PictureBox1.Show()
+            .btAdd.show()
+            .btClear.show()
+            .btDeDupe.show()
+            .btGetScreen.show()
+            .btRem.show()
+            .btToggleWindow.show()
+            .lbMouseEvents.show()
+            .listM.show()
+            .txtMEvAdd.show()
+        End With
+    End Function
+	
+	
+	

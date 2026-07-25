@@ -1,0 +1,46 @@
+make the line adder for list 2
+
+add a comment at the end of the line
+
+that it was added by the line adder
+
+to easily differentiate which ones are new
+
+after the unique differences search
+
+===
+
+add to vabbajack vb
+
+list deduplicator that uses 2 input lists
+
+but has a flag that can be set to a number
+
+the number changes what happens in the deduplication
+
+and what list gets the output
+
+with an optional third list
+
+optional so that the list 1 and 2 will run
+
+===
+
+would just be easier to make the one deduplicator
+
+for each specific thing
+
+like
+
+
+zFindAndKeepDifferences
+
+dedupe 2 lists but keep only the differences from list 1 to list 2 in a third listbox as output
+
+====
+
+make something for autohotkey
+
+that filters the clipboard for spaces to dashes
+
+for manually changing filenames

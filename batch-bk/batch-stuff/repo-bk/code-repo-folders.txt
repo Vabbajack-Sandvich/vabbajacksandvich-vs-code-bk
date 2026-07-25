@@ -1,0 +1,18 @@
+Machine Set Calculator
+frmTextBoxFindPopUpModular
+gLog
+scraps
+zAspect
+zBlocker
+zCodeGen
+zComparator
+zConCat
+zFile
+zFilter
+zLineCombine
+zOblivionQuestCompare
+zProcess
+zRemote
+zTf2Script
+zVabbajackSandvichModuleMaster
+zVabbajackSandvichModuleMaster-bk

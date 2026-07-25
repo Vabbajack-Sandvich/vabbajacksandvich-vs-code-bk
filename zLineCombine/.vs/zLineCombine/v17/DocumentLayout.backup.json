@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\zonide\\zip\\CODE\\visualstudio\\zLineCombine\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B5B1C24-1346-4874-B06A-57325A744C67}|zLineCombine.vbproj|c:\\zonide\\zip\\code\\visualstudio\\zlinecombine\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{9B5B1C24-1346-4874-B06A-57325A744C67}|zLineCombine.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B5B1C24-1346-4874-B06A-57325A744C67}|zLineCombine.vbproj|c:\\zonide\\zip\\code\\visualstudio\\zlinecombine\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{9B5B1C24-1346-4874-B06A-57325A744C67}|zLineCombine.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B5B1C24-1346-4874-B06A-57325A744C67}|zLineCombine.vbproj|c:\\zonide\\zip\\code\\visualstudio\\zlinecombine\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{9B5B1C24-1346-4874-B06A-57325A744C67}|zLineCombine.vbproj|solutionrelative:vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zLineCombine\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zLineCombine\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAADYBAAAAAAAAAAAvwE8BAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-06-21T06:48:22.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zLineCombine\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zLineCombine\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-06-21T06:46:37.276Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vabbajacksandvich.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zLineCombine\\vabbajacksandvich.vb",
+              "RelativeDocumentMoniker": "vabbajacksandvich.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zLineCombine\\vabbajacksandvich.vb",
+              "RelativeToolTip": "vabbajacksandvich.vb",
+              "ViewState": "AgIAAPgVAAAAAAAAAAAuwP8VAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-06-21T06:45:33.931Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+5:49 AM 3/1/2022
+add a mouse down timer
+
+that turns on as soon as you click the mouse down
+
+and doesnt turn off until the mouse up event fires
+
+it has its own zCount
+
+that resets to zero on mouse down
+
+before timer starts
+
+and mouse up
+
+while the mouse down timer ticks
+
+it has its own select case statement
+
+during the first event to a small range of ticks
+
+it counts as a single click
+
+past that point it counts as a long click and a hold and drag
+
+when the mouse up event fires
+
+that is the event that determines what mouse button what pressed
+
+for how long
+
+that would mean that in order for me to determine that on a live record
+
+it would have to store the intial index of the item that would count as the start of the mouse click
+
+and since we have no way of knowing until the mouse up event is fired
+
+i would have to replace that item with the special long mouse click code i have to determine
+
+like i guess
+
+-c:
+l
+m
+r
+
+
+5:59 AM 3/1/2022
+--------------
+actually scrap that
+
+if instead i just use mouse up codes also
+
+then i dont need the timer
+
+so mouse down codes for each button
+
+and mouse up codes for each button
+
+recorded at the time the mouse button up and down events are fired
+
+then
+
+when replayed
+
+it should just replay the same actions
+
+like
+
+send only the api to do mouse click left button down
+
+and it wont let go until you send
+
+mouse click left button up
+
+which would just be another event with another code in the
+
+list box
+
+without having to add anything other than that
+
+mouse down event that is already there
+
+-c:
+l
+m
+r
+
+copy paste code that is there and change the c to a u
+u = mouse up event
+
+that would mean i would have to change the mouse reset color
+
+to the mouse up event
+
+so that way it easily shows that the mouse button is being held down
+
+instead of just blinking
+
+and that should easily be implimented in the existing code
+
+5:52 AM 3/1/2022
+different idea
+
+you could map out every single permutative output combination
+
+for every combination of not just an if statement but the whole program
+
+truth table but like every part
+
+and layed out visually using like a tree and root system
+
+starting from the center
+
+it would be pretty easy to identify infinite recursions
+
+color code every branch
+
+put counters on shit if they exceed potential shit, add it to a likely infinite recursion list

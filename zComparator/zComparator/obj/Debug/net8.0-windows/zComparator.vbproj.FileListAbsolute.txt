@@ -1,0 +1,16 @@
+C:\Users\zonid\source\repos\zComparator\zComparator\bin\Debug\net8.0-windows\zComparator.exe
+C:\Users\zonid\source\repos\zComparator\zComparator\bin\Debug\net8.0-windows\zComparator.deps.json
+C:\Users\zonid\source\repos\zComparator\zComparator\bin\Debug\net8.0-windows\zComparator.runtimeconfig.json
+C:\Users\zonid\source\repos\zComparator\zComparator\bin\Debug\net8.0-windows\zComparator.dll
+C:\Users\zonid\source\repos\zComparator\zComparator\bin\Debug\net8.0-windows\zComparator.pdb
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.Form1.resources
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.vbproj.GenerateResource.cache
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.AssemblyInfoInputs.cache
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.AssemblyInfo.vb
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.vbproj.CoreCompileInputs.cache
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.dll
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\refint\zComparator.dll
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.pdb
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\zComparator.genruntimeconfig.cache
+C:\Users\zonid\source\repos\zComparator\zComparator\obj\Debug\net8.0-windows\ref\zComparator.dll

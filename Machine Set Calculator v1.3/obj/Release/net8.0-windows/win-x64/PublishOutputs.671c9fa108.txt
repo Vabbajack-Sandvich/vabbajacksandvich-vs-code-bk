@@ -1,0 +1,2 @@
+C:\zonide\zip\CODE\visualstudio\Machine Set Calculator\bin\Release\net8.0-windows\publish\win-x64\Machine Set Calculator.pdb
+C:\zonide\zip\CODE\visualstudio\Machine Set Calculator\bin\Release\net8.0-windows\publish\win-x64\Machine Set Calculator.exe

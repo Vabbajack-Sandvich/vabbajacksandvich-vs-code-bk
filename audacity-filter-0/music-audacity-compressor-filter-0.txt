@@ -1,0 +1,1 @@
+Compressor:attackMs="30" compressionRatio="10" kneeWidthDb="5" lookaheadMs="1" makeupGainDb="0" releaseMs="150" showActual="1" showInput="0" showOutput="1" showTarget="0" thresholdDb="-10"

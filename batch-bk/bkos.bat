@@ -1,0 +1,1 @@
+dism /capture-image /imagefile:d:\bkos.wim /capturedir:c:\ /name:"os bk"

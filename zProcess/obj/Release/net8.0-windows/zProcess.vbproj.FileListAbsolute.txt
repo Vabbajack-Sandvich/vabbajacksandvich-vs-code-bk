@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\zProcess\bin\Release\net8.0-windows\zProcess.exe
+D:\zonide\CODE\visualstudio\zProcess\bin\Release\net8.0-windows\zProcess.deps.json
+D:\zonide\CODE\visualstudio\zProcess\bin\Release\net8.0-windows\zProcess.runtimeconfig.json
+D:\zonide\CODE\visualstudio\zProcess\bin\Release\net8.0-windows\zProcess.dll
+D:\zonide\CODE\visualstudio\zProcess\bin\Release\net8.0-windows\zProcess.pdb
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.frmzProcess.resources
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.dll
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\refint\zProcess.dll
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.pdb
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\zProcess.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\zProcess\obj\Release\net8.0-windows\ref\zProcess.dll

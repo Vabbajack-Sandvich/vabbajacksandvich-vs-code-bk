@@ -1,0 +1,287 @@
+to do
+
+dont forget to 
+
+make the check label box
+
+10 - whatever timer numbe
+
+that way it counts down
+
+--
+
+make it so only the bot command
+auto enumerates
+
+--
+
+for other commands mode
+
+which is no teleport
+and no cyclical
+
+when i click the thing in the list
+
+it updates the command box
+
+then i can edit the command from there
+and alias button click
+
+also have a button that adds every command
+
+that is checked to the list box and the text box
+
+
+use a list box for final commands
+
+while also setting the text box
+
+to all of the commands in the list box
+
+==
+
+make a notification list box
+
+and have the timer remove the notifications
+
+starting from the first one
+
+==
+
+at the point where i can add
+
+a list entry editor for list 3
+
+to edit each entry individually then update the list
+
+i can also add saved and stored scripts
+
+using the non cyclical non mass non teleport
+
+add alias mode
+
+just save them to a text file
+
+and load them to list 3
+
+-
+
+everything is setup to where i can just add new each command to the select case tree from the list box
+
+-
+
+the one extra button i should add
+
+is to iterate through the bot number
+
+using the button
+
+but
+
+its just easier to leave it for now
+
+--
+
+im also at the point where i can add
+
+stored commands
+
+stored in the sense that they are only ever going
+
+to be just the one thing
+
+like bot force jump and shit like that
+
+--
+
+need to add a mass generate option
+
+need to add a mass command button
+
+this would use the alias name and the current amount of iterations to simply add an alias line at the end with all of the aliases in it
+
+--
+
+bot_forcefireweapon tf_weapon_wrench
+
+makes engineer swing and only the engineers
+
+useful for upgrading
+
+-
+
+use the code to enumerate bots to enumerate aliases in command mode
+
+make it in to a replace in list box function
+
+with an option to enumerate values
+
+--
+
+add an option to monitor the console output log file and automatically add it to a list box
+
+the problem then becomes that it might use the wrong teleport coordinates
+
+in which case add it to a checked list box
+
+then i can check which teleport commands i want
+
+should add a de duplicator and make the list unsorted
+
+so that it stays in the order of the file
+
+would probably be easier to just have an update button that i click manually to update the list file
+
+because otherwise i would have to start and stop a timer or setup actual file monitoring
+
+which
+
+if im in the middle of something and it updates it might fuck up what im doing
+
+        On Error GoTo zHandler
+
+        Dim zFile As String
+
+        zFile = My.Computer.FileSystem.ReadAllText("D:\zonide\glog.log")
+        txtLog.Text = zFile
+
+        zSaveCount = 1
+
+        Exit Sub
+
+zHandler:
+        'MsgBox("no log file found", MsgBoxStyle.OkOnly, "Error: no log")
+        zFile = txtLog.Text
+        My.Computer.FileSystem.WriteAllText("D:\zonide\glog.log", zFile, False)
+		
+		
+====
+
+                            Dim zBotCmdNextSpace As Integer
+                            zBotCmdNextSpace = InStr(1, zTemptxtAcmd, " ")
+                            Dim zLineLeft As String
+                            zLineLeft = Mid(zTemptxtAcmd, 1, zBotDashName + Len("-name ") + 1)
+                            Dim zLineRight As String
+                            zLineRight = Mid(zTemptxtAcmd, zBotCmdNextSpace, Len(zTemptxtAcmd))
+                            Dim zBotTempOut As String
+                            zBotTempOut = zLineLeft & txtBotCmdName.Text & zLi & zLineRight
+							
+							
+Dim zBotCmdNextSpace As Integer
+zBotCmdNextSpace = InStr(1, zTemptxtAcmd, " ")
+Dim zLineLeft As String
+zLineLeft = Mid(zTemptxtAcmd, 1, zBotDashName + Len("-name ") + 1)
+Dim zLineRight As String
+zLineRight = Mid(zTemptxtAcmd, zBotCmdNextSpace, Len(zTemptxtAcmd))
+Dim zBotTempOut As String
+zBotTempOut = zLineLeft & txtBotCmdName.Text & zLi & zLineRight
+
+===
+
+bot
+bot_changeclass
+bot_changeteams
+bot_command
+bot_crouch
+bot_dontmove
+bot_forceattack
+bot_forceattack2
+bot_forceattack_down
+bot_forcefireweapon
+bot_hurt
+bot_jump
+bot_kick
+bot_kill
+bot_mimic
+bot_mimic_inverse
+bot_mimic_yaw_offset
+bot_mirror
+bot_randomnames
+bot_refill
+bot_saveme
+bot_selectweaponslot
+bot_teleport
+bot_whack
+cc_bot_selectweapon
+
+
+
+0    bot
+1    bot_changeclass
+2    bot_changeteams
+3    bot_command
+4    bot_crouch
+5    bot_dontmove
+6    bot_forceattack
+7    bot_forceattack2
+8    bot_forceattack_down
+9    bot_forcefireweapon
+10   bot_hurt
+11   bot_jump
+12   bot_kick
+13   bot_kill
+14   bot_mimic
+15   bot_mimic_inverse
+16   bot_mimic_yaw_offset
+17   bot_mirror
+18   bot_randomnames
+19   bot_refill
+20   bot_saveme
+21   bot_selectweaponslot
+22   bot_teleport
+23   bot_whack
+24   cc_bot_selectweapon
+
+
+'0    bot
+'1    bot_changeclass
+'2    bot_changeteams
+'3    bot_command
+'4    bot_crouch
+'5    bot_dontmove
+'6    bot_forceattack
+'7    bot_forceattack2
+'8    bot_forceattack_down
+'9    bot_forcefireweapon
+'10   bot_hurt
+'11   bot_jump
+'12   bot_kick
+'13   bot_kill
+'14   bot_mimic
+'15   bot_mimic_inverse
+'16   bot_mimic_yaw_offset
+'17   bot_mirror
+'18   bot_randomnames
+'19   bot_refill
+'20   bot_saveme
+'21   bot_selectweaponslot
+'22   bot_teleport
+'23   bot_whack
+'24   cc_bot_selectweapon
+
+		
+link bot kick all check box
+to the other command box
+and the 1 or 0 box
+
+make it so they match the check box
+
+and update the command box
+
+bot -name bot0 -team red -class engineer -teleport; bot_changeclass bot0 engineer; bot
+
+----
+
+need to make a thing that converts alias lines
+in to bot command lines
+
+to be stored in a bot command list
+
+from there i can make a convert to cyclical
+
+button
+
+could probably just convert
+
+the existing cyclical option in the existing function over to adding cycled lines using the command box, the way it was supposed to be in the first place
+

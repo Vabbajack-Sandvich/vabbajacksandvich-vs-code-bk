@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\zonide\\zip\\CODE\\visualstudio\\zCodeGen\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B943C06-3F48-42B9-B6A6-74DDA0A05E92}|zCodeGen.vbproj|c:\\zonide\\zip\\code\\visualstudio\\zcodegen\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{0B943C06-3F48-42B9-B6A6-74DDA0A05E92}|zCodeGen.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B943C06-3F48-42B9-B6A6-74DDA0A05E92}|zCodeGen.vbproj|c:\\zonide\\zip\\code\\visualstudio\\zcodegen\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0B943C06-3F48-42B9-B6A6-74DDA0A05E92}|zCodeGen.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B943C06-3F48-42B9-B6A6-74DDA0A05E92}|zCodeGen.vbproj|c:\\zonide\\zip\\code\\visualstudio\\zcodegen\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0B943C06-3F48-42B9-B6A6-74DDA0A05E92}|zCodeGen.vbproj|solutionrelative:vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vabbajacksandvich.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zCodeGen\\vabbajacksandvich.vb",
+              "RelativeDocumentMoniker": "vabbajacksandvich.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zCodeGen\\vabbajacksandvich.vb",
+              "RelativeToolTip": "vabbajacksandvich.vb",
+              "ViewState": "AgIAAMgWAAAAAAAAAAAAAN4WAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-06-23T11:49:02.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zCodeGen\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zCodeGen\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-13T10:09:19.527Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\visualstudio\\zCodeGen\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\visualstudio\\zCodeGen\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAGsBAAAAAAAAAAApwHcBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-13T11:30:22.493Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

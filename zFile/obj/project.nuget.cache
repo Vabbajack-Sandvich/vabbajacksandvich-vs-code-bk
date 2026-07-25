@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "dgSpecHash": "V0UcMkZh3Js=",
+  "success": true,
+  "projectFilePath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\zFile.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zonid\\.nuget\\packages\\windowsapicodepack-core\\1.1.1\\windowsapicodepack-core.1.1.1.nupkg.sha512",
+    "C:\\Users\\zonid\\.nuget\\packages\\windowsapicodepack-shell\\1.1.1\\windowsapicodepack-shell.1.1.1.nupkg.sha512",
+    "C:\\Users\\zonid\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.57\\microsoft.windows.sdk.net.ref.10.0.17763.57.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'WindowsAPICodePack-Core 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows10.0.17763'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\zFile.vbproj",
+      "warningLevel": 1,
+      "filePath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\zFile.vbproj",
+      "libraryId": "WindowsAPICodePack-Core",
+      "targetGraphs": [
+        "net8.0-windows10.0.17763"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'WindowsAPICodePack-Shell 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows10.0.17763'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\zFile.vbproj",
+      "warningLevel": 1,
+      "filePath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\zFile.vbproj",
+      "libraryId": "WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        "net8.0-windows10.0.17763"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.frmZBlocker.resources
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\bin\Debug\net8.0-windows\zBlocker.exe
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\bin\Debug\net8.0-windows\zBlocker.deps.json
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\bin\Debug\net8.0-windows\zBlocker.runtimeconfig.json
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\bin\Debug\net8.0-windows\zBlocker.dll
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\bin\Debug\net8.0-windows\zBlocker.pdb
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.dll
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\refint\zBlocker.dll
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.pdb
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\zBlocker.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\zBlocker\zBlocker\obj\Debug\net8.0-windows\ref\zBlocker.dll

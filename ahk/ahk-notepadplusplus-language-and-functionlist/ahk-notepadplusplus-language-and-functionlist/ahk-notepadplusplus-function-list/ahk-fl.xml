@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ==========================================================================\
+|
+|   To learn how to make your own language parser, please check the following
+|   link:
+|       https://npp-user-manual.org/docs/function-list/
+|
+\=========================================================================== -->
+<NotepadPlus>
+	<functionList>
+		<!-- ========================================= [ this is for auto hot key ] -->
+		<!-- File format used for: .ahk       -->
+
+		<parser
+			displayName="ahk"
+			id="ahk" >
+			
+			<!-- version 1.2 -->
+			
+			<function mainExpr="^[\t*\x20{*}A-Z*a-z*\d*]+(?<!if not )(?<!if )(?<!else )(?<!while )(?<!while not )(?<!select )\({1}(?<! if not\()(?<!\tif not\()(?<! if\()(?<!\tif\()(?<! else\()(?<!\telse\()(?<! while\()(?<!\twhile\()(?<! while not\()(?<!\twhile not\()(?<! select\()(?<!\tselect\()[\,*[*A-Z*a-z*\d*\s*]*]*\){1}[\r\n]*[\t*\x20{*}]*[\{+]+|^[\x3d{*}\$\^\!\+*A-Z*a-z*\d]+[\:\:]+[\r\n]*[\t*\x20{*}]*[\{+]+"
+			/>
+
+		</parser>
+				
+	</functionList>
+</NotepadPlus>

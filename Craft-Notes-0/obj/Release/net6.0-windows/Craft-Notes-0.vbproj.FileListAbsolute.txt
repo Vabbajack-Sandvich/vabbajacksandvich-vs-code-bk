@@ -1,0 +1,16 @@
+D:\zonide\CODE\visualstudio\Craft-Notes-0\bin\Release\net6.0-windows\Craft-Notes-0.exe
+D:\zonide\CODE\visualstudio\Craft-Notes-0\bin\Release\net6.0-windows\Craft-Notes-0.deps.json
+D:\zonide\CODE\visualstudio\Craft-Notes-0\bin\Release\net6.0-windows\Craft-Notes-0.runtimeconfig.json
+D:\zonide\CODE\visualstudio\Craft-Notes-0\bin\Release\net6.0-windows\Craft-Notes-0.dll
+D:\zonide\CODE\visualstudio\Craft-Notes-0\bin\Release\net6.0-windows\Craft-Notes-0.pdb
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft_Notes_0.Form1.resources
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft-Notes-0.vbproj.GenerateResource.cache
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft-Notes-0.GeneratedMSBuildEditorConfig.editorconfig
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft-Notes-0.AssemblyInfoInputs.cache
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft-Notes-0.AssemblyInfo.vb
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft-Notes-0.vbproj.CoreCompileInputs.cache
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft-Notes-0.dll
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\refint\Craft-Notes-0.dll
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft-Notes-0.pdb
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\Craft-Notes-0.genruntimeconfig.cache
+D:\zonide\CODE\visualstudio\Craft-Notes-0\obj\Release\net6.0-windows\ref\Craft-Notes-0.dll
