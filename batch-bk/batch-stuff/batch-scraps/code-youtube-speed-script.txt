@@ -1,0 +1,11 @@
+==================================================
+2026-07-03-12-05-18-PM
+==================================================
+youtube speed script
+==================================================
+Then open your browser console (F12)
+Go to the console tab and type:
+==================================================
+document.getElementsByClassName("video-stream html5-main-video")[0].playbackRate = 2.5;
+==================================================
+

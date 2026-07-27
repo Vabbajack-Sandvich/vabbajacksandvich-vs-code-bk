@@ -3629,6 +3629,9 @@
 'then have the new changes appened back here from each project
 'unless there is a way to use 1 file for each one like it used to be
 'but i havent found it yet
+'//2026-07-25-09-43-42-AM
+'//2026-07-25-09-43-42-AM
+'//these bitches are witches that need scritches for itches
 
 '===================================================
 '                   ideas and todo

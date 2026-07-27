@@ -32,12 +32,12 @@ setlocal EnableDelayedExpansion
 rem echo "==================================================="
 
 @rem source
-set "sourcepath=C:\cmdbatshortcuts\"
-@rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\cmdbatshortcuts\"
+set "sourcepath=C:\cmdbatshortcuts"
+@rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\cmdbatshortcuts"
 
 rem @rem destination
 rem @rem vabbajacksandvich-vs-code-bk
-rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\cmdbatshortcuts\"
+rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\cmdbatshortcuts"
 rem 
 rem echo "==================================================="
 rem echo "sourcepath - !sourcepath!"
@@ -49,47 +49,50 @@ rem @rem pause
 
 @rem destination
 @rem non repo
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\cmdbatshortcuts\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\cmdbatshortcuts"
 
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 @@rem pause
 
 @rem ===================================================
 @rem source
-set "sourcepath=C:\ffmpeg-batch\"
+set "sourcepath=C:\ffmpeg-batch"
 @rem destination
 @rem git ffmpeg batch repo
-set "destinationpath=C:\zonide\zip\CODE\git\vabbajack-sandvich-ffmpeg-batch-2\"
+set "destinationpath=C:\zonide\zip\CODE\git\vabbajack-sandvich-ffmpeg-batch-2"
 @@rem pause
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
 @rem destination
 @rem non repo
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\ffmpeg-batch\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\ffmpeg-batch"
 
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
 rem @rem destination
 rem @rem vabbajacksandvich-vs-code-bk
-rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\ffmpeg-batch\"
+rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\ffmpeg-batch"
 rem 
 rem echo "==================================================="
 rem echo "sourcepath - !sourcepath!"
@@ -101,61 +104,64 @@ rem @rem pause
 
 @rem destination
 @rem vabbajacksandvich-vs-code-bk
-@rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\"
+@rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk"
 @rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
 @rem pause
 
 @rem ===================================================
 
 @rem source
-set "sourcepath=C:\ffmpeg-batch\revisions\"
+set "sourcepath=C:\ffmpeg-batch\revisions"
 
 @rem destination
 @rem git ffmpeg batch repo
-set "destinationpath=C:\zonide\zip\CODE\git\vabbajack-sandvich-ffmpeg-batch-2\revisions\"
+set "destinationpath=C:\zonide\zip\CODE\git\vabbajack-sandvich-ffmpeg-batch-2\revisions"
 @@rem pause
 
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
 @rem destination
 @rem non repo
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\ffmpeg-batch\revisions\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\ffmpeg-batch\revisions"
 @rem paus
 
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
 @rem source
 @rem non repo
-set "sourcepath=C:\batch-scraps\"
+set "sourcepath=C:\batch-scraps"
 
 @rem destination
 @rem non repo
 @rem C:\batch-scraps
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\batch-scraps\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\batch-scraps"
 @rem paus
 
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 
 rem @rem destination
 rem @rem code bk
-rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\ffmpeg\revisions\"
+rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\ffmpeg\revisions"
 rem @@rem pause
 rem 
 rem echo "==================================================="
@@ -191,15 +197,15 @@ rem ================================================================
 @rem needs \ at the end
 @rem destination
 @rem git ffmpeg batch repo
-@rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\"
+@rem set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk"
 @rem for rename
 @rem set "destinationpath=%%~nf-2thirdslowerpitchspeed.mp3"
-@rem set "destionationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\"
-@rem set "destionationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\repo-bk\"
-@rem set "destionationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\repo-bk\"
+@rem set "destionationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk"
+@rem set "destionationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\repo-bk"
+@rem set "destionationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\repo-bk"
 @rem source
-set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\"
-set "destionationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\repo-bk\"
+set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk"
+set "destionationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\repo-bk"
 cd "!sourcepath!"
 md "!destinationpath!"
 for %%f in (*.bat) do (
@@ -210,7 +216,8 @@ echo "copying repo batches to batch-bk\batch-stuff\repo-bk"
 echo "==================================================="
 echo "file source - !filesourcepath!"
 echo "file destination - !destionationpath!"
-xcopy "!filesourcepath!" "!destionationpath!" /f /h /r /y /j /d
+@rem xcopy "!filesourcepath!" "!destionationpath!" /f /h /r /y /j /d
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 @rem pause
 )
@@ -236,7 +243,8 @@ echo "==================================================="
 echo "copying code-repo-folders.txt to non-repo batch-stuff\repo-bk"
 echo "==================================================="
 @rem xcopy "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\code-repo-folders.txt" "C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\repo-bk" /f /h /r /y /j /d
-xcopy "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\code-repo-folders.txt" "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\repo-bk" /f /h /r /y /j /d
+@rem xcopy "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\code-repo-folders.txt" "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\repo-bk" /f /h /r /y /j /d
+robocopy "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\code-repo-folders.txt" "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\repo-bk" /XO
 echo "==================================================="
 @rem ===================================================
 @rem ===================================================
@@ -245,35 +253,37 @@ rem coping the whole batch-stuff from non-repo to code-bk
 rem ================================================================
 
 @rem source
-set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\"
+set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff"
 
 @rem destination
 @rem git ffmpeg batch repo
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff"
 @@rem pause
 
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
 rem ================================================================
 
 @rem source
-set "sourcepath=C:\zonide\zip\music\"
+set "sourcepath=C:\zonide\zip\music"
 
 @rem destination
 @rem non repo
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\music\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\music"
 
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @@rem pause
 
@@ -307,11 +317,11 @@ set "mytimestamp=!mytimestamp: =!"
 
 @rem source
 @rem non repo
-set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zVabbajackSandvichModuleMaster\"
+set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zVabbajackSandvichModuleMaster"
 
 @rem destination
 @rem code bk
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zVabbajackSandvichModuleMaster-bk\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zVabbajackSandvichModuleMaster-bk"
 
 @rem this allows you to set a specific file if you want to
 @rem without changing anything else otherwise
@@ -325,24 +335,27 @@ set "finalpath=!finalpath:_=-!"
 echo "!finalpath!"
 md "!finalpath!"
 
-xcopy "!sourcepath!\!filename!" "!finalpath!" /f /h /r /y /j /d
+@rem xcopy "!sourcepath!\!filename!" "!finalpath!" /f /h /r /y /j /d
+robocopy "!sourcepath!" "!destinationpath!" /XO
 @rem pause
 
 @rem non repo
 @rem source
-set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zVabbajackSandvichModuleMaster-bk\"
+set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zVabbajackSandvichModuleMaster-bk"
 
 @rem code bk
 @rem destination
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\zVabbajackSandvichModuleMaster-bk\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\zVabbajackSandvichModuleMaster-bk"
 
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
+
 echo "==================================================="
-@@rem pause
+@rem pause
 
 @rem ===================================================
 
@@ -351,7 +364,7 @@ echo "==================================================="
 
 @rem explorer D:\zonide\gaming-stuff\tf2\tf2-custom\
 
-@@rem pause
+@rem pause
 
 @rem ===================================================
 
@@ -365,24 +378,24 @@ echo "==================================================="
 @rem setlocal EnableDelayedExpansion
 
 @rem make sure that the paths end in \
-@rem "C:\farts\" is correct
+@rem "C:\farts" is correct
 @rem "C:\farts" is incorrect
-@rem set "zdestpath=C:\zonide\non-zip\music\"
+@rem set "zdestpath=C:\zonide\non-zip\music"
 @rem C:\zonide\non-zip\2\
 @rem C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\
 
 @rem source
 @rem non repo
-set "zsrcpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\"
+set "zsrcpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio"
 echo "zsrcpath !zsrcpath!"
 set "zfile=code-repo-folders.txt"
 echo "zfile !zfile!"
 
 @rem destination
 @rem vabbajacksandvich-vs-code-bk
-set "zdestpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\"
+set "zdestpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk"
 
-@rem set "zdestpath=C:\test\"
+@rem set "zdestpath=C:\test"
 
 echo "==================================================="
 echo "zdestpath !zdestpath!"
@@ -402,7 +415,8 @@ for /f "usebackq delims=" %%a in ("!zsrcfilepath!") do (
 	
 	@rem destiation
 	echo "==================================================="
-	xcopy "%%a" "!zdestpath!%%a\" /f /h /r /y /j /d /i /e
+	@rem xcopy "%%a" "!zdestpath!%%a" /f /h /r /y /j /d /i /e
+	robocopy "%%a" "!zdestpath!%%a" /E /XO
 	echo "==================================================="
 	@rem pause
 )
@@ -429,21 +443,24 @@ echo "==================================================="
 set "sourcepath=C:\zonide\zonide.ahk"
 @rem code bk
 @rem destination
-set "destinationpath=C:\zonide\zip\CODE\ahk\"
-cd !sourcepath!
+set "destinationpath=C:\zonide\zip\CODE\ahk"
+@rem cd !sourcepath!
+cd "C:\zonide"
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
 @rem zonide.ahk
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
+robocopy "!sourcepath!" "!destinationpath!" /XO
 set "sourcepath=C:\zonide\zonide.exe"
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
 @rem zonide.exe
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
+robocopy "!sourcepath!" "!destinationpath!" /XO
 
 echo "==================================================="
 echo "==================================================="
@@ -463,16 +480,17 @@ echo "==================================================="
 @rem ===================================================
 @rem non repo
 @rem source
-set "sourcepath=C:\zonide\zip\CODE\ahk\"
+set "sourcepath=C:\zonide\zip\CODE\ahk"
 @rem code bk
 @rem destination
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\ahk\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\ahk"
 cd !sourcepath!
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 echo "==================================================="
 @rem pause
@@ -489,16 +507,17 @@ echo "==================================================="
 @rem ===================================================
 @rem non repo
 @rem source
-set "sourcepath=C:\zonide\zip\CODE\ahk-bk\"
+set "sourcepath=C:\zonide\zip\CODE\ahk-bk"
 @rem code bk
 @rem destination
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\ahk-bk\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\ahk-bk"
 cd !sourcepath!
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 @@rem pause
 @rem ===================================================
@@ -515,16 +534,17 @@ echo "==================================================="
 @rem ===================================================
 @rem non repo
 @rem source
-set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\ahk\"
+set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\ahk"
 @rem code bk
 @rem destination
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\ahk\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\ahk"
 cd !sourcepath!
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 @@rem pause
 @rem ===================================================
@@ -532,16 +552,17 @@ echo "==================================================="
 @rem ===================================================
 @rem non repo
 @rem source
-set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\ahk-bk\"
+set "sourcepath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\ahk-bk"
 @rem code bk
 @rem destination
-set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\ahk-bk\"
+set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\ahk-bk"
 cd !sourcepath!
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 @@rem pause
 @rem ===================================================

@@ -55,7 +55,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 @@rem pause
@@ -71,7 +72,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
@@ -83,7 +85,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
@@ -119,7 +122,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
@@ -132,7 +136,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
@@ -150,7 +155,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 
 rem @rem destination
@@ -210,7 +216,8 @@ echo "copying repo batches to batch-bk\batch-stuff\repo-bk"
 echo "==================================================="
 echo "file source - !filesourcepath!"
 echo "file destination - !destionationpath!"
-xcopy "!filesourcepath!" "!destionationpath!" /f /h /r /y /j /d
+@rem xcopy "!filesourcepath!" "!destionationpath!" /f /h /r /y /j /d
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 @rem pause
 )
@@ -236,7 +243,8 @@ echo "==================================================="
 echo "copying code-repo-folders.txt to non-repo batch-stuff\repo-bk"
 echo "==================================================="
 @rem xcopy "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\code-repo-folders.txt" "C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich-vs-code-bk\batch-bk\batch-stuff\repo-bk" /f /h /r /y /j /d
-xcopy "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\code-repo-folders.txt" "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\repo-bk" /f /h /r /y /j /d
+@rem xcopy "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\code-repo-folders.txt" "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\repo-bk" /f /h /r /y /j /d
+robocopy "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\code-repo-folders.txt" "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\batch-stuff\repo-bk" /XO
 echo "==================================================="
 @rem ===================================================
 @rem ===================================================
@@ -256,7 +264,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @rem pause
 
@@ -273,7 +282,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
 echo "==================================================="
 @@rem pause
 
@@ -325,7 +335,8 @@ set "finalpath=!finalpath:_=-!"
 echo "!finalpath!"
 md "!finalpath!"
 
-xcopy "!sourcepath!\!filename!" "!finalpath!" /f /h /r /y /j /d
+@rem xcopy "!sourcepath!\!filename!" "!finalpath!" /f /h /r /y /j /d
+robocopy "!sourcepath!" "!destinationpath!" /XO
 @rem pause
 
 @rem non repo
@@ -340,9 +351,11 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /E /XO
+
 echo "==================================================="
-@@rem pause
+@rem pause
 
 @rem ===================================================
 
@@ -351,7 +364,7 @@ echo "==================================================="
 
 @rem explorer D:\zonide\gaming-stuff\tf2\tf2-custom\
 
-@@rem pause
+@rem pause
 
 @rem ===================================================
 
@@ -402,7 +415,8 @@ for /f "usebackq delims=" %%a in ("!zsrcfilepath!") do (
 	
 	@rem destiation
 	echo "==================================================="
-	xcopy "%%a" "!zdestpath!%%a\" /f /h /r /y /j /d /i /e
+	@rem xcopy "%%a" "!zdestpath!%%a\" /f /h /r /y /j /d /i /e
+	robocopy "%%a" "!zdestpath!%%a\" /E /XO
 	echo "==================================================="
 	@rem pause
 )
@@ -429,21 +443,24 @@ echo "==================================================="
 set "sourcepath=C:\zonide\zonide.ahk"
 @rem code bk
 @rem destination
-set "destinationpath=C:\zonide\zip\CODE\ahk\"
-cd !sourcepath!
+set "destinationpath=C:\zonide\zip\CODE\ahk"
+@rem cd !sourcepath!
+cd "C:\zonide"
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
 @rem zonide.ahk
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
+robocopy "!sourcepath!" "!destinationpath!" /XO
 set "sourcepath=C:\zonide\zonide.exe"
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
 @rem zonide.exe
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
+robocopy "!sourcepath!" "!destinationpath!" /XO
 
 echo "==================================================="
 echo "==================================================="
@@ -472,7 +489,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 echo "==================================================="
 @rem pause
@@ -498,7 +516,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 @@rem pause
 @rem ===================================================
@@ -524,7 +543,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 @@rem pause
 @rem ===================================================
@@ -541,7 +561,8 @@ echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+@rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
+robocopy "!sourcepath!" "!destinationpath!" /XO
 echo "==================================================="
 @@rem pause
 @rem ===================================================

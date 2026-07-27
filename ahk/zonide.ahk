@@ -1,7 +1,7 @@
 
 ;=======================================
 ;2026-06-12-07-56-34-AM
-;adding ascii to test.ahk
+;adding ascii to zonide.ahk
 ;=======================================
 ;some login code¿
 ;
@@ -2678,15 +2678,15 @@
 ;Everything seems fine.
 ;Glances over.
 ;Stops mid-stride with one foot in the air.
-;"So... uhh... this some kind of new test?"
-;"Yeah, oh yeah, it's great, it's this newly untested thing, it might be some kind of breakthrough, starts trek-no-babbling."
+;"So... uhh... this some kind of new zonide?"
+;"Yeah, oh yeah, it's great, it's this newly unzonideed thing, it might be some kind of breakthrough, starts trek-no-babbling."
 ;"Hold on, stop with that... it's a new thing?"
 ;“Yeahhhh.."
 ;"And you're here..."
 ;“Yeahhhhhhh…"
 ;"Not in a lab... but... here... by the warp core..."
 ;"Yeahhhhhh, it's fine; we predicted it would be fine.”
-;“But.. its new… un… tested… Wait…. what does it do again?"
+;“But.. its new… un… zonideed… Wait…. what does it do again?"
 ;"Oh, it's the warp destabilization beam; it's fully self-contained."
 ;"Wait... aren't you that same brilliant engineer that chose the console type that explodes every time we get shot? You know.... like they skipped the second best version, that I made, that doesn't ever explode, and they went with that design…. that explodes... because... why again?"
 ;"Oh, its because..."
@@ -2701,8 +2701,8 @@
 ;next to
 ;the fucking
 ;warp core
-;testing
-;stupid shit that hasnt been tested
+;zonideing
+;stupid shit that hasnt been zonideed
 
 ;2026-06-30-01-32-31-AM
 ;new todo
@@ -2895,7 +2895,7 @@
 ;=====================================================================
 
 ;2026-04-11-01-06-58-AM
-;adding this to test2 since its asus specific
+;adding this to zonide2 since its asus specific
 ;audacity
 ;music-audacity-macro-filter-0
 ;shortcut key paths:
@@ -2964,7 +2964,7 @@
 
 ;=====================================================================
 
-;non test ahk todo
+;non zonide ahk todo
 ;dont want to put this in the junk file
 ;this is a potential thing for obs
 ;add a thing that generates ffmpeg cuts
@@ -3424,8 +3424,10 @@ global zdatetimetoglobalvar := ""
 ;ends in \
 ;default old path
 ;global zsoundpath := "C:\zonide\zip\ahk\sound\"
-;ahk working directory
-global zsoundpath := "C:\zonide\zip\CODE\ahk\sound\"
+;global zsoundpath := "C:\zonide\sound\"
+;zonide.ahk working directory
+;global zsoundpath := "C:\zonide\zip\CODE\ahk\sound\"
+global zsoundpath := "C:\zonide\sound\"
 
 ;2026-07-19-03-29-33-AM
 ;global debug log path
@@ -3437,8 +3439,10 @@ global zsoundpath := "C:\zonide\zip\CODE\ahk\sound\"
 ;global zdebuglogpath
 ;default
 ;global zdebuglogpath := "C:\zonide\zip\CODE\ahk\debuglogs\"
+;global zdebuglogpath := "C:\zonide\debuglogs\"
 ;this expects a slash at the end
-global zdebuglogpath := "C:\zonide\zip\CODE\ahk\debuglogs\"
+;global zdebuglogpath := "C:\zonide\zip\CODE\ahk\debuglogs\"
+global zdebuglogpath := "C:\zonide\debuglogs\"
 
 ;2026-07-27-16-41-17-PM
 ;this was for zdirectoryfilenamereformat()
@@ -3975,7 +3979,8 @@ return
 zopenahk()
 {
 ;Run "C:\windows\explorer.exe C:\zonide\zip\ahk\"
-Run "C:\windows\explorer.exe C:\zonide\zip\CODE\ahk"
+;Run "C:\windows\explorer.exe C:\zonide\zip\CODE\ahk\"
+Run "C:\windows\explorer.exe C:\zonide\ahk\"
 return
 }
 
@@ -4420,7 +4425,8 @@ return
 
 zloadlines()
 {
-global zbuf := fileread("C:\zonide\zip\ahk\filereadtest.txt")
+;global zbuf := fileread("C:\zonide\zip\ahk\filereadzonide.txt")
+global zbuf := fileread("C:\zonide\zonide-input.txt")
 global lines := StrSplit(zbuf, "`n")
 global zindex := 1
 global zindex2 := 0
@@ -4595,7 +4601,7 @@ global ytvi
 	}
 	if (ytvi = -1) {
 		;first run
-		ytvibox := inputbox("enter the number you want to start from", "test - youtube video index", "", "0")
+		ytvibox := inputbox("enter the number you want to start from", "zonide - youtube video index", "", "0")
 
 		ytvi := numfilter(ytvibox.value)
 		
@@ -5753,7 +5759,7 @@ zfilenameformatdashdotunderscorewithextention(zanumfilter, zfilenameextention)
 ;GpuPreference=1;
 
 ;ahk registry example
-;RegWrite "Test Value", "REG_SZ", "HKEY_LOCAL_MACHINE\SOFTWARE\TestKey", "MyValueName"
+;RegWrite "zonide Value", "REG_SZ", "HKEY_LOCAL_MACHINE\SOFTWARE\zonideKey", "MyValueName"
 
 ;RegWrite "GpuPreference=" zobstog, "REG_SZ", "HKEY_CURRENT_USER\SOFTWARE\Microsoft\DirectX\UserGpuPreferences", "C:\Program Files\obs-studio\bin\64bit\obs64.exe"
 
@@ -6420,10 +6426,11 @@ zahkco()
 	;type in the file name
 	;this gets by the directory not being right
 	;Open Script
-	;zendwindtext("C:\zonide\zip\ahk\test.ahk", "Open Script", 1000)
+	;zendwindtext("C:\zonide\zip\ahk\zonide.ahk", "Open Script", 1000)
 	;2026-07-14-20-00-22-PM
 	;changing over to code folder
-	zendwindtext("C:\zonide\zip\CODE\ahk\test.ahk", "Open Script", 1000)
+	;zendwindtext("C:\zonide\zip\CODE\ahk\zonide.ahk", "Open Script", 1000)
+	zendwindtext("C:\zonide\zonide.ahk", "Open Script", 1000)
 	;{Enter}
 	;send enter
 	;opens the file
@@ -6507,7 +6514,7 @@ return zfet
 ;=====================================================================
 
 ;directory exists
-;AttributeString := DirExist(FilePattern)
+;Attribuzonidering := DirExist(FilePattern)
 
 ;z directory exists
 ;ztempdirexists = zde(zdirstring)
@@ -6537,7 +6544,7 @@ return zdet
 ;to see if they exist
 
 ;FileCopy "C:\*.txt", "C:\My Folder"
-;AttributeString := FileExist(FilePattern)
+;Attribuzonidering := FileExist(FilePattern)
 
 ;going to have to write and execute the batch
 ;file every time with the new hex code
@@ -6913,18 +6920,18 @@ zdatetimetoglobal()
 	;using zpathendslashcheck the zdebuglogpath
 	;will always end in \
 	;this is leaking across passes
-	;zdebuglogpath  := zdebuglogpath . "test-ahk-debug-log-" . zdatetimetoglobalvar . ".txt"
+	;zdebuglogpath  := zdebuglogpath . "zonide-ahk-debug-log-" . zdatetimetoglobalvar . ".txt"
 	
 	;msgbox("zwritedebug - zdebuglogpath - " . zdebuglogpath)
 	
-	;zwritestringtofile(zdebuglogpath, zdebugstring)
+	;zwrizonideringtofile(zdebuglogpath, zdebugstring)
 	
 	;this way it doesnt reset the global with potential leaks
 	;doesnt work needs temp string
-	;zwritestringtofile(zdebuglogpath . "test-ahk-debug-log-" . zdatetimetoglobalvar . ".txt, zdebugstring)
-	ztempfilepath := zdebuglogpath . "test-ahk-debug-log-" . zdatetimetoglobalvar . ".txt"
+	;zwrizonideringtofile(zdebuglogpath . "zonide-ahk-debug-log-" . zdatetimetoglobalvar . ".txt, zdebugstring)
+	ztempfilepath := zdebuglogpath . "zonide-ahk-debug-log-" . zdatetimetoglobalvar . ".txt"
 	
-	zwritestringtofile(ztempfilepath, zdebugstring)
+	zwrizonideringtofile(ztempfilepath, zdebugstring)
 
 	;clear variables
 	;seems to be stacking for some reason?
@@ -6969,15 +6976,15 @@ return zpathstring
 ;this writes a string to a file
 ;this expects a properly formated path with filename
 ;zfilepath:
-;c:\test\test.txt
+;c:\zonide\zonide.txt
 ;zfilestring:
 ;just whatever crap you want to write
 
-zwritestringtofile(zfilepath, zfilestring)
+zwrizonideringtofile(zfilepath, zfilestring)
 {
 	
-	;msgbox("zwritestringtofile - zfilepath - " . zfilepath)
-	;msgbox("zwritestringtofile - zfilestring - " . zfilestring)
+	;msgbox("zwrizonideringtofile - zfilepath - " . zfilepath)
+	;msgbox("zwrizonideringtofile - zfilestring - " . zfilestring)
 
 	;this is copied from the batch write thing for hexbat
 	;zfilepath := "C:\zonide\zip\ahk\bat\hexbat.bat"
@@ -6989,12 +6996,12 @@ zwritestringtofile(zfilepath, zfilestring)
 	;zfilepath := zpathendslashcheck(zfilepath)
 	
 	if (zfilepath = "") {
-		msgbox("zwritestringtofile - zfilepath - no string")
+		msgbox("zwrizonideringtofile - zfilepath - no string")
 		return
 	}
 	
 	if (zfilestring = "") {
-		msgbox("zwritestringtofile - zfilestring - no string")
+		msgbox("zwrizonideringtofile - zfilestring - no string")
 		return
 	}
 
@@ -7026,9 +7033,9 @@ zwritestringtofile(zfilepath, zfilestring)
 	;zile := FileOpen(zfilepath, "rw")
 	;zile := FileOpen(zfilepath, "w")
 	;debug
-	;zfilepath := "C:\test\log.txt"
+	;zfilepath := "C:\zonide\log.txt"
 	;this worked and wrote the file
-	;zfilepath := "C:\test\log.txt"
+	;zfilepath := "C:\zonide\log.txt"
 	;its the fucking dashes
 	;trying ' surrounding the zfilepath
 	;zile := FileOpen(zfilepath, "rw`n")
@@ -7040,13 +7047,13 @@ zwritestringtofile(zfilepath, zfilestring)
 	
 	;might need this still
 	;zfilepath := StrReplace(zfilepath, "-", "`-")
-	;msgbox("zwritestringtofile - zfilepath - after dash filter - " . zfilepath)
+	;msgbox("zwrizonideringtofile - zfilepath - after dash filter - " . zfilepath)
 	
 	zile := FileOpen(zfilepath, "rw`n")
 		if !zile
 		{
 			;zwmsg(zfilepath)
-			msgbox("zwritestringtofile - zfilepath - file write error")
+			msgbox("zwrizonideringtofile - zfilepath - file write error")
 			return
 		}
 
@@ -7062,16 +7069,17 @@ return
 
 ;this is a macro for if statements
 
-;zendwindtext("C:\zonide\zip\ahk\test.ahk", "Open Script", 1000)
-;zendwindtext("", "C:\zonide\zip\ahk\test.ahk - Notepad", 1000)
-;C:\zonide\zip\ahk\test.ahk - Notepad
+;zendwindtext("C:\zonide\zip\ahk\zonide.ahk", "Open Script", 1000)
+;zendwindtext("", "C:\zonide\zip\ahk\zonide.ahk - Notepad", 1000)
+;C:\zonide\zip\ahk\zonide.ahk - Notepad
 
 zif()
 {
-;zendwindtext("", "C:\zonide\zip\ahk\test.ahk - Notepad", 1000)
+;zendwindtext("", "C:\zonide\zip\ahk\zonide.ahk - Notepad", 1000)
 ;ziftxt := "if () {`n}"
 ziftxt := "if ( = `"`") {`n}"
-zendwindtext(ziftxt, "C:\zonide\zip\ahk\test.ahk - Notepad", 1000)
+;zendwindtext(ziftxt, "C:\zonide\zip\ahk\zonide.ahk - Notepad", 1000)
+zendwindtext(ziftxt, "C:\zonide\zonide.ahk - Notepad", 1000)
 return
 }
 
@@ -7099,14 +7107,17 @@ zbatstr := ""
 zbatstr := zbatstr "`nrem this is a batch file to run image magick"
 zbatstr := zbatstr "`nrem for the purpose of generating a random"
 zbatstr := zbatstr "`nrem hex code image of a solid color at 184x184"
-zbatstr := zbatstr "`nrem C:\zonide\zip\ahk\heximage"
-zbatstr := zbatstr "`nchdir /d D:"
-zbatstr := zbatstr "`ncd C:\zonide\zip\ahk\heximage"
-zbatstr := zbatstr "`nconvert -size 184x184 xc:#" zrandhex " " zrhimgn ".png"
+;zbatstr := zbatstr "`nrem C:\zonide\zip\ahk\heximage"
+zbatstr := zbatstr "`nrem C:\zonide\"
+;zbatstr := zbatstr "`nchdir /d D:"
+;zbatstr := zbatstr "`ncd C:\zonide\zip\ahk\heximage"
+zbatstr := zbatstr "`ncd C:\zonide\"
+zbatstr := zbatstr "`nconvert -size 184x184 xc:#" . zrandhex . " " . zrhimgn . ".png"
 ;zbatstr := zbatstr "`npause"
 
 ;C:\zonide\zip\ahk\bat\hexbat.bat
-zpath := "C:\zonide\zip\ahk\bat\hexbat.bat"
+;zpath := "C:\zonide\zip\ahk\bat\hexbat.bat"
+zpath := "C:\zonide\hexbat.bat"
 
 ;open file:
 ;`n option: stand-alone `n to `r`n when writing
@@ -7126,7 +7137,8 @@ zile.Close()
 sleep 1000
 
 ;run the batchfile
-Run "C:\zonide\zip\ahk\bat\hexbat.bat"
+;Run "C:\zonide\zip\ahk\bat\hexbat.bat"
+Run "C:\zonide\hexbat.bat"
 
 ;wait for it to be done
 sleep 3000
@@ -7138,7 +7150,8 @@ sleep 3000
 ;move the file
 ;zfm(zsrcm, zdestm, zfmow)
 ;D:\zonide\steam-stuff
-zrhimgnffn := "C:\zonide\zip\ahk\heximage\" zrhimgn ".png"
+;zrhimgnffn := "C:\zonide\zip\ahk\heximage\" zrhimgn ".png"
+zrhimgnffn := "C:\zonide\" . zrhimgn . ".png"
 
 ;check to see if the png is there
 zrhimgnffnfe := zfe(zrhimgnffn)
@@ -7150,7 +7163,8 @@ if (zrhimgnffnfe = "") {
 
 ;if it is there move the file
 
-zfm(zrhimgnffn, "D:\zonide\steam-stuff")
+;zfm(zrhimgnffn, "D:\zonide\steam-stuff")
+zfm(zrhimgnffn, "C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\junk\steamstuff")
 ;set the clipboard to the hexcode
 A_Clipboard := zrandhex
 
@@ -7453,8 +7467,8 @@ zdtflwib()
 	global zdtflwibzfilelistoutputpath 
 	;uses this zftl2(zftldir, zftlext, zlf2dir2)
 	;InputBoxObj := InputBox(Prompt, Title, Options, Default)
-	;zdtflwibox1 := inputbox("directory to parse", "test - directory to file list", "", "D:\vc")
-	zdtflwibox1 := inputbox("directory to parse", "test - directory to file list", "", zdtflwibsearchpath)
+	;zdtflwibox1 := inputbox("directory to parse", "zonide - directory to file list", "", "D:\vc")
+	zdtflwibox1 := inputbox("directory to parse", "zonide - directory to file list", "", zdtflwibsearchpath)
 	;msgbox("zdtflwibox1.value = " zdtflwibox1.value)
 	if not (zdtflwibox1.result = "Cancel") {
 		if (zdtflwibox1.value = "") {
@@ -7466,8 +7480,8 @@ zdtflwib()
 		return
 	}
 	zdtflwibsearchpath := zdtflwibox1.value
-	;zdtflwibox2 := inputbox("file extention to parse. expects `*.extention", "test - directory to file list", "", "`*.mp4")
-	zdtflwibox2 := inputbox("file extention or wild cards to parse`nyou can use multiple wildcards like `*test`* and not just an extention like `*.mp4`nexpects `*.mp4 or `*blah`*", "test - directory to file list", "", zdtflwibsearchstring)
+	;zdtflwibox2 := inputbox("file extention to parse. expects `*.extention", "zonide - directory to file list", "", "`*.mp4")
+	zdtflwibox2 := inputbox("file extention or wild cards to parse`nyou can use multiple wildcards like `*zonide`* and not just an extention like `*.mp4`nexpects `*.mp4 or `*blah`*", "zonide - directory to file list", "", zdtflwibsearchstring)
 	;msgbox("zdtflwibox2.value = " zdtflwibox2.value)
 	if not (zdtflwibox2.result = "Cancel") {
 			if (zdtflwibox2.value = "") {
@@ -7480,8 +7494,8 @@ zdtflwib()
 	}
 	
 	zdtflwibsearchstring := zdtflwibox2.value
-	;zdtflwibox3 := inputbox("directory to output the list to", "test - directory to file list", "", "D:\vc")
-	zdtflwibox3 := inputbox("directory to output the list to. if this is left blank it will use the first path string.`n`nzdtflwibsearchpath - " zdtflwibsearchpath, "test - directory to file list", "", zdtflwibzfilelistoutputpath)
+	;zdtflwibox3 := inputbox("directory to output the list to", "zonide - directory to file list", "", "D:\vc")
+	zdtflwibox3 := inputbox("directory to output the list to. if this is left blank it will use the first path string.`n`nzdtflwibsearchpath - " zdtflwibsearchpath, "zonide - directory to file list", "", zdtflwibzfilelistoutputpath)
 	;msgbox("zdtflwibox3.value = " zdtflwibox3.value)
 	;assuming they want to just use the first directory value
 	;check the value of the box
@@ -7537,7 +7551,7 @@ zdirectoryfilenamereformat()
 	if (zdirectoryfilenamereformatsearchpath = "") {
 		zdirectoryfilenamereformatsearchpath := "C:\vc"
 	}
-	zdtflwibox1 := inputbox("this will rename every file in the specified directory`nno symbols besides - .`nspaces to dashes`nunderscores to dashes", "test - directory to file list", "", zdirectoryfilenamereformatsearchpath)
+	zdtflwibox1 := inputbox("this will rename every file in the specified directory`nno symbols besides - .`nspaces to dashes`nunderscores to dashes", "zonide - directory to file list", "", zdirectoryfilenamereformatsearchpath)
 	if not (zdtflwibox1.result = "Cancel") {
 		if (zdtflwibox1.value = "") {
 			zwmsg("zdtflwibox1.value = null")
@@ -7555,7 +7569,7 @@ zdirectoryfilenamereformat()
 	;setting the working directory to the current directory
 	;not helping or hurting so much?
 	;as much as making the screw ups dump in the same file
-	;which i plan on testing
+	;which i plan on zonideing
 	;SetWorkingDir, D:\My Folder\Temp
 	zdirectoryfilenamereformatsearchpath := zpathendslashcheck(zdirectoryfilenamereformatsearchpath)
 	SetWorkingDir(zdirectoryfilenamereformatsearchpath)
@@ -7597,11 +7611,11 @@ zdirectoryfilenamereformat()
 		;                        - ◘-◘ -
 		;                beep boop, son. beep boop
 		;======================================================
-		;which i didnt realize until i tested it twice
+		;which i didnt realize until i zonideed it twice
 		;which means, a formatted file name
 		;on the second pass
 		;gets time stamped... over top... of itself?
-		;havent really tested that
+		;havent really zonideed that
 		;figured out a solution instead
 		;======================================================
 		
@@ -7728,8 +7742,8 @@ zdirectoryfilenamereformat()
 				;destination after temp string
 				;zdestaftertempstring := zdirectoryfilenamereformatsearchpath . zfilelisttoglobaltable_filenameafterformat
 				
-				;DirCreate "C:\Test1\My Images\Folder2"
-				zetaftertempdirstring := zdirectoryfilenamereformatsearchpath . "testtemp"
+				;DirCreate "C:\zonide1\My Images\Folder2"
+				zetaftertempdirstring := zdirectoryfilenamereformatsearchpath . "zonidetemp"
 				
 				;z directory exists
 				;ztempdirexists = zde(zdirstring)
@@ -7966,7 +7980,7 @@ zffm()
 ;z write file
 ;zwfpath
 ;expects directory and filename
-;D:\vc\test.txt
+;D:\vc\zonide.txt
 ;zwfstr
 ;expects something other than nothing
 ;empty string will return the function
@@ -8312,7 +8326,7 @@ return
 
 ;=====================================================================
 ;2026-06-19-02-01-35-AM
-;adding to test.ahk from test2.ahk
+;adding to zonide.ahk from zonide2.ahk
 ;2026-04-25-09-14-14-AM
 ;when you hold alt in a program
 ;the under lined letters
@@ -8339,7 +8353,7 @@ return
 
 ;=====================================================================
 ;2026-06-19-02-01-35-AM
-;adding to test.ahk from test2.ahk
+;adding to zonide.ahk from zonide2.ahk
 ;2026-04-25-09-14-14-AM
 ;when you hold alt in a program
 ;the under lined letters
@@ -8725,7 +8739,7 @@ return
 
 ;this opens the auto hot key compiler
 ;might add a macro sequence to compile
-;and or set it to the test.ahk
+;and or set it to the zonide.ahk
 
 ;control shift a
 $^+a::
@@ -9802,13 +9816,13 @@ return
 ;
 
 ;if i moved each file first to a temp folder
-;within the directory like \temp or \testtemp
+;within the directory like \temp or \zonidetemp
 ;then it moves each formatted one
 ;to the temp folder
 ;then the same rename sub without changing anything
 ;would pick up that it needs a time stamp
 
-;i would have add a \testtemp\ string manipulator
+;i would have add a \zonidetemp\ string manipulator
 ;to the output file path after format
 ;for the destination rename thing
 
@@ -9876,7 +9890,7 @@ return
 
 ;2026-07-20-13-37-45-PM
 ;the debug write issue was this
-;zwritestringtofile
+;zwrizonideringtofile
 ;2026-07-20-13-27-53-PM
 ;it was this adding a slash to the end..
 ;stucking foopid
@@ -9886,7 +9900,7 @@ return
 ;2026-07-20-15-20-53-PM
 ;===========================
 ;write a time stamp end of file name trimmer
-;trims one test formatted timestamp off
+;trims one zonide formatted timestamp off
 ;looks for extention
 ;reads extention
 ;skips if there isnt one
