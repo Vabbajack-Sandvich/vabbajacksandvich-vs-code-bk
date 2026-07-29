@@ -53,10 +53,13 @@ setlocal EnableDelayedExpansion
 @rem          change these
 @rem ================================================
 
-set "zsrcpath=C:\zonide\non-zip\music\"
+@rem set "zsrcpath=C:\zonide\non-zip\music\"
+set "zsrcpath=C:\vc\t\"
 echo "zsrcpath !zsrcpath!"
 
-set "zdestpath=C:\zonide\non-zip\2\"
+@rem set "zdestpath=C:\zonide\non-zip\2\"
+set "zdestpath=C:\zonide\non-zip\music-bk\2\"
+@rem set "zdestpath=C:\vc\"
 echo "zdestpath !zdestpath!"
 
 set "zfile=zfilelist.txt"

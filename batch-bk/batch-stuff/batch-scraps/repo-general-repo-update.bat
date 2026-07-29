@@ -1,3 +1,9 @@
+setlocal EnableDelayedExpansion
+@echo off
+
+@rem robocopy doesnt like \ at the end of paths
+@rem xcopy likes \ at the end sometimes lol
+
 @rem 2026-07-04-21-43-54-PM
 @rem repo non repo update
 @rem this copies the files
@@ -18,9 +24,6 @@
 
 @rem ===================================================
 
-setlocal EnableDelayedExpansion
-
-@echo off
 
 @rem ===================================================
 
@@ -440,27 +443,33 @@ echo "==================================================="
 echo "==================================================="
 echo "zonide.ahk zonide.exe move"
 echo "==================================================="
-set "sourcepath=C:\zonide\zonide.ahk"
+@rem robocopy source destination filename
+@rem robocopy doesnt use slashes at the end
+@rem correct
+@rem C:\zonide
+@rem incorrect
+@rem C:\zonide\
+set "sourcepath=C:\zonide"
+set "zfilename=zonide.ahk"
 @rem code bk
 @rem destination
 set "destinationpath=C:\zonide\zip\CODE\ahk"
-@rem cd !sourcepath!
-cd "C:\zonide"
+cd !sourcepath!
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
-@rem zonide.ahk
 @rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
-robocopy "!sourcepath!" "!destinationpath!" /XO
-set "sourcepath=C:\zonide\zonide.exe"
+@rem zonide.ahk
+robocopy "!sourcepath!" "!destinationpath!" "!zfilename!" /XO
+set "zfilename=zonide.exe"
 echo "==================================================="
 echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
 @rem zonide.exe
 @rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d
-robocopy "!sourcepath!" "!destinationpath!" /XO
+robocopy "!sourcepath!" "!destinationpath!" "!zfilename!" /XO
 
 echo "==================================================="
 echo "==================================================="

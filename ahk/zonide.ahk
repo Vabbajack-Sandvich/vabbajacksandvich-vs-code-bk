@@ -7564,6 +7564,98 @@ zdirectoryfilenamereformat()
 	}
 
 	zdirectoryfilenamereformatsearchpath := zdtflwibox1.value
+	zdirectoryfilenamereformatsearchpath := strlower(zdirectoryfilenamereformatsearchpath)
+	
+	;2026-07-28-22-48-32-PM
+	;adding a base drive check
+	;was going to just do C:\
+	;i mean, this is meant to be used
+	;to where you dont need restrictions
+	;but that has a potential oops
+	;that i am likely to do myself
+	;so yeah
+	;thankfully it doesnt do sub folders
+	;right???
+	;but yeah
+	
+	;0 - default
+	;1 - was a base directory
+	zbasedirectorycheckpass := 0
+	
+	switch zdirectoryfilenamereformatsearchpath
+	{
+		case "a:\":
+			zbasedirectorycheckpass := 1
+		case "b:\":
+			zbasedirectorycheckpass := 1
+		case "c:\":
+			zbasedirectorycheckpass := 1
+		case "d:\":
+			zbasedirectorycheckpass := 1
+		case "e:\":
+			zbasedirectorycheckpass := 1
+		case "f:\":
+			zbasedirectorycheckpass := 1
+		case "g:\":
+			;g qizz
+			;fucking tupus
+			;g wizz
+			;wa wa wa wa wizzard
+			;i mised this fucking one
+			;writing the alphabet
+			;some person uses the g drive
+			;by mistake
+			;and they are used to it catching
+			;the base directory
+			;ooops
+			;○ - ○
+			zbasedirectorycheckpass := 1
+		case "h:\":
+			zbasedirectorycheckpass := 1
+		case "i:\":
+			zbasedirectorycheckpass := 1
+		case "j:\":
+			zbasedirectorycheckpass := 1
+		case "k:\":
+			zbasedirectorycheckpass := 1
+		case "l:\":
+			zbasedirectorycheckpass := 1
+		case "m:\":
+			zbasedirectorycheckpass := 1
+		case "n:\":
+			zbasedirectorycheckpass := 1
+		case "o:\":
+			zbasedirectorycheckpass := 1
+		case "p:\":
+			zbasedirectorycheckpass := 1
+		case "q:\":
+			zbasedirectorycheckpass := 1
+		case "r:\":
+			zbasedirectorycheckpass := 1
+		case "s:\":
+			zbasedirectorycheckpass := 1
+		case "t:\":
+			zbasedirectorycheckpass := 1
+		case "u:\":
+			zbasedirectorycheckpass := 1
+		case "v:\":
+			zbasedirectorycheckpass := 1
+		case "w:\":
+			zbasedirectorycheckpass := 1
+		case "x:\":
+			zbasedirectorycheckpass := 1
+		case "y:\":
+			zbasedirectorycheckpass := 1
+		case "z:\":
+			zbasedirectorycheckpass := 1
+	}
+	
+	if (zbasedirectorycheckpass = 1) {
+		;was a base directory
+		msgbox("no... mmmnmm... no...`nwere owl exterminators`n`n       ( @ Y @ )		`n		`n             ☻") ;"
+		;exit
+		return
+	}
 	
 	;2026-07-20-12-29-19-PM
 	;setting the working directory to the current directory
