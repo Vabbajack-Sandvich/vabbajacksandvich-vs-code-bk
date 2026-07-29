@@ -7652,8 +7652,13 @@ zdirectoryfilenamereformat()
 	
 	if (zbasedirectorycheckpass = 1) {
 		;was a base directory
-		msgbox("no... mmmnmm... no...`nwere owl exterminators`n`n       ( @ Y @ )		`n		`n             ☻") ;"
+		;msgbox("no... mmmnmm... no...`nwere owl exterminators`n`n       ( @ Y @ )		`n		`n             ☻") ;"
+		msgbox("base drive restricted`n`nno... mmmnmm... no...`nwere owl exterminators`n`n       ( @ Y @ )		`n		`n             ☻") ;"
+		;msgbox("base drive restricted")
 		;exit
+		suspend 1
+		#MaxThreadsPerHotkey 2
+		zgeneralemergencystop := 0		
 		return
 	}
 	
