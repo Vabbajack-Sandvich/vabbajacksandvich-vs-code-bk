@@ -4,9 +4,9 @@ rem its all over now
 rem that thing is over now
 rem this is to ping google
 ping google.com
-rem netstat -an
-rem netstat -an > c:\zonide\ip.txt
+netstat -an
+netstat -an > c:\zonide\ip.txt
 rem explorer C:\zonide\
-rem timeout /t 1 /nobreak
-rem start notepad.exe "C:\zonide\ip.txt"
+timeout /t 1 /nobreak
+start notepad.exe "C:\zonide\ip.txt"
 timeout /t 3 /nobreak
