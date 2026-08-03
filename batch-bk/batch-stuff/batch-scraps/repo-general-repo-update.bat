@@ -425,7 +425,8 @@ set "destinationpath=C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visua
 @rem this allows you to set a specific file if you want to
 @rem without changing anything else otherwise
 set "filename=vabbajacksandvich.vb"
-set "finalpath=!destinationpath!!mytimestamp!"
+@rem set "finalpath=!destinationpath!!mytimestamp!"
+set "finalpath=!destinationpath!\!mytimestamp!"
 set "finalpath=!finalpath: =_!"
 echo "!finalpath!"
 set "finalpath=!finalpath:__=_!"
@@ -435,7 +436,7 @@ echo "!finalpath!"
 md "!finalpath!"
 
 @rem xcopy "!sourcepath!\!filename!" "!finalpath!" /f /h /r /y /j /d
-robocopy "!sourcepath!" "!destinationpath!" /XO
+robocopy "!sourcepath!" "!finalpath!" "!filename!" /XO
 @rem pause
 
 @rem non repo
@@ -451,7 +452,7 @@ echo "sourcepath - !sourcepath!"
 echo "destinationpath - !destinationpath!"
 md "!destinationpath!"
 @rem xcopy "!sourcepath!" "!destinationpath!" /f /h /r /y /j /d /e
-robocopy "!sourcepath!" "!destinationpath!" /E /XO
+robocopy "!sourcepath!" "!finalpath!" "!filename!" /XO
 
 echo "==================================================="
 @rem pause
@@ -498,7 +499,8 @@ set "zdestpath=C:\zonide\zip\CODE\vabbajacksandvich-vs-code-bk\vabbajacksandvich
 
 echo "==================================================="
 echo "zdestpath !zdestpath!"
-set "zsrcfilepath=!zsrcpath!!zfile!"
+@rem set "zsrcfilepath=!zsrcpath!!zfile!"
+set "zsrcfilepath=!zsrcpath!\!zfile!"
 echo "zsrcfilepath !zsrcfilepath!"
 echo "==================================================="
 
@@ -515,7 +517,8 @@ for /f "usebackq delims=" %%a in ("!zsrcfilepath!") do (
 	@rem destiation
 	echo "==================================================="
 	@rem xcopy "%%a" "!zdestpath!%%a" /f /h /r /y /j /d /i /e
-	robocopy "%%a" "!zdestpath!%%a" /E /XO
+	@rem robocopy "%%a" "!zdestpath!%%a" /E /XO
+	robocopy "%%a" "!zdestpath!\%%a" /E /XO
 	echo "==================================================="
 	@rem pause
 )

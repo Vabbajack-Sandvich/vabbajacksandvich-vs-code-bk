@@ -65,7 +65,11 @@ Partial Class frmMain
         btDDrive = New Button()
         btAddPrefix = New Button()
         ckDeleteOnExistingRename = New CheckBox()
-        btOpenDirectory = New Button()
+        btOpenDirectoryDir = New Button()
+        btOpenDirectoryHist = New Button()
+        tmStartUp = New Timer(components)
+        btEDrive = New Button()
+        btFDrive = New Button()
         SuspendLayout()
         ' 
         ' btListDir
@@ -559,17 +563,57 @@ Partial Class frmMain
         ckDeleteOnExistingRename.Text = "Will Delete On Existing Rename"
         ckDeleteOnExistingRename.UseVisualStyleBackColor = False
         ' 
-        ' btOpenDirectory
+        ' btOpenDirectoryDir
         ' 
-        btOpenDirectory.BackColor = Color.Black
-        btOpenDirectory.Font = New Font("Segoe UI", 8F)
-        btOpenDirectory.ForeColor = Color.LimeGreen
-        btOpenDirectory.Location = New Point(209, 234)
-        btOpenDirectory.Name = "btOpenDirectory"
-        btOpenDirectory.Size = New Size(170, 30)
-        btOpenDirectory.TabIndex = 41
-        btOpenDirectory.Text = "Open Selected Directory"
-        btOpenDirectory.UseVisualStyleBackColor = False
+        btOpenDirectoryDir.BackColor = Color.Black
+        btOpenDirectoryDir.Font = New Font("Segoe UI", 8F)
+        btOpenDirectoryDir.ForeColor = Color.LimeGreen
+        btOpenDirectoryDir.Location = New Point(510, 383)
+        btOpenDirectoryDir.Name = "btOpenDirectoryDir"
+        btOpenDirectoryDir.Size = New Size(170, 30)
+        btOpenDirectoryDir.TabIndex = 41
+        btOpenDirectoryDir.Text = "Open Selected Directory"
+        btOpenDirectoryDir.UseVisualStyleBackColor = False
+        ' 
+        ' btOpenDirectoryHist
+        ' 
+        btOpenDirectoryHist.BackColor = Color.Black
+        btOpenDirectoryHist.Font = New Font("Segoe UI", 8F)
+        btOpenDirectoryHist.ForeColor = Color.LimeGreen
+        btOpenDirectoryHist.Location = New Point(510, 234)
+        btOpenDirectoryHist.Name = "btOpenDirectoryHist"
+        btOpenDirectoryHist.Size = New Size(170, 30)
+        btOpenDirectoryHist.TabIndex = 42
+        btOpenDirectoryHist.Text = "Open Selected Directory"
+        btOpenDirectoryHist.UseVisualStyleBackColor = False
+        ' 
+        ' tmStartUp
+        ' 
+        tmStartUp.Interval = 1000
+        ' 
+        ' btEDrive
+        ' 
+        btEDrive.BackColor = Color.Black
+        btEDrive.Font = New Font("Segoe UI", 8F)
+        btEDrive.ForeColor = Color.LimeGreen
+        btEDrive.Location = New Point(233, 11)
+        btEDrive.Name = "btEDrive"
+        btEDrive.Size = New Size(61, 36)
+        btEDrive.TabIndex = 43
+        btEDrive.Text = "E:\"
+        btEDrive.UseVisualStyleBackColor = False
+        ' 
+        ' btFDrive
+        ' 
+        btFDrive.BackColor = Color.Black
+        btFDrive.Font = New Font("Segoe UI", 8F)
+        btFDrive.ForeColor = Color.LimeGreen
+        btFDrive.Location = New Point(300, 12)
+        btFDrive.Name = "btFDrive"
+        btFDrive.Size = New Size(61, 36)
+        btFDrive.TabIndex = 44
+        btFDrive.Text = "F:\"
+        btFDrive.UseVisualStyleBackColor = False
         ' 
         ' frmMain
         ' 
@@ -577,7 +621,10 @@ Partial Class frmMain
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Black
         ClientSize = New Size(891, 834)
-        Controls.Add(btOpenDirectory)
+        Controls.Add(btFDrive)
+        Controls.Add(btEDrive)
+        Controls.Add(btOpenDirectoryHist)
+        Controls.Add(btOpenDirectoryDir)
         Controls.Add(ckDeleteOnExistingRename)
         Controls.Add(btAddPrefix)
         Controls.Add(btDDrive)
@@ -672,5 +719,9 @@ Partial Class frmMain
     Friend WithEvents btDDrive As Button
     Friend WithEvents btAddPrefix As Button
     Friend WithEvents ckDeleteOnExistingRename As CheckBox
-    Friend WithEvents btOpenDirectory As Button
+    Friend WithEvents btOpenDirectoryDir As Button
+    Friend WithEvents btOpenDirectoryHist As Button
+    Friend WithEvents tmStartUp As Timer
+    Friend WithEvents btEDrive As Button
+    Friend WithEvents btFDrive As Button
 End Class

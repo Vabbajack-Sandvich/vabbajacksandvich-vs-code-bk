@@ -57,14 +57,34 @@ zHandler:
         Me.Height = zFrmMainDefHeight
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        zListDir()
-        zListFiles()
+    Public zStartUpVar As Integer = 0
+
+    Public Sub zStartUp()
+        If zStartUpVar = 1 Then Exit Sub
+        '2026-08-03-07-41-58-AM
+        'was the old form load thing
+        'added it to a start up timer with a load global variable
+        'zStartUp = 1 or 0
         listHist.Items.Add("C:\")
         lbFn.Text = ""
         lbDirName.Text = ""
         lbSubDCount.Text = "0"
         Me.TopMost = True
+        zListDir()
+        zListFiles()
+        zStartUpVar = 1
+        tmStartUp.Enabled = False
+    End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'zListDir()
+        'zListFiles()
+        'listHist.Items.Add("C:\")
+        'lbFn.Text = ""
+        'lbDirName.Text = ""
+        'lbSubDCount.Text = "0"
+        'Me.TopMost = True
+
         'zDone()
         '2026-07-14-18-11-34-PM
         'disabling this
@@ -72,6 +92,8 @@ zHandler:
         'setting the appliction scaling in properties on windows explorer
         'on the file fixes it
         'zFrmMainSetDefaultSize()
+
+        tmStartUp.Enabled = True
     End Sub
 
     Public Sub zListDir()
@@ -91,6 +113,19 @@ zHandler:
             End If
             listDirectories.Items.Add(zDir)
         Next
+
+        If listHist.Items.Count = 0 Then Exit Sub
+        If listHist.SelectedIndex = -1 Then
+            listHist.SelectedIndex = 0
+            'Exit Sub
+        End If
+
+        If listDirectories.Items.Count = 0 Then Exit Sub
+        If listDirectories.SelectedIndex = -1 Then
+            listDirectories.SelectedIndex = 0
+            'Exit Sub
+        End If
+
         'zDone()
         'exit before zhandler
         Exit Sub
@@ -208,11 +243,21 @@ zHandler:
         If txtPath.Text = vbNullString Then
             txtPath.Text = "C:\"
         End If
-        If LCase(txtPath.Text) = "d:\" Then
-            MessageBox.Show("d:\ is restricted")
-            Exit Sub
-        ElseIf LCase(txtPath.Text) = "c:\" Then
-            MessageBox.Show("c:\ is restricted")
+
+        'If LCase(txtPath.Text) = "d:\" Then
+        '    MessageBox.Show("d:\ is restricted")
+        '    Exit Sub
+        'ElseIf LCase(txtPath.Text) = "c:\" Then
+        '    MessageBox.Show("c:\ is restricted")
+        '    Exit Sub
+        'End If
+
+        '2026-08-03-07-17-30-AM
+        'replacing with zCheckBasePath
+        txtPath.Text = LCase(txtPath.Text)
+
+        If zCheckBasePath(txtPath.Text) = 1 Then
+            MessageBox.Show(txtPath.Text & " is restricted")
             Exit Sub
         End If
 
@@ -326,13 +371,24 @@ zHandler:
         If txtPath.Text = vbNullString Then
             txtPath.Text = "C:\"
         End If
-        If LCase(txtPath.Text) = "d:\" Then
-            MessageBox.Show("d:\ is restricted")
-            Exit Sub
-        ElseIf LCase(txtPath.Text) = "c:\" Then
-            MessageBox.Show("c:\ is restricted")
+
+        'If LCase(txtPath.Text) = "d:\" Then
+        '    MessageBox.Show("d:\ is restricted")
+        '    Exit Sub
+        'ElseIf LCase(txtPath.Text) = "c:\" Then
+        '    MessageBox.Show("c:\ is restricted")
+        '    Exit Sub
+        'End If
+
+        '2026-08-03-07-17-30-AM
+        'replacing with zCheckBasePath
+        txtPath.Text = LCase(txtPath.Text)
+
+        If zCheckBasePath(txtPath.Text) = 1 Then
+            MessageBox.Show(txtPath.Text & " is restricted")
             Exit Sub
         End If
+
         'this adds extextion to the end of the file names
         'mp3 as default
         If txtExt.Text = vbNullString Then
@@ -462,13 +518,24 @@ zHandler:
         If txtPath.Text = vbNullString Then
             txtPath.Text = "C:\"
         End If
-        If LCase(txtPath.Text) = "d:\" Then
-            MessageBox.Show("d:\ is restricted")
-            Exit Sub
-        ElseIf LCase(txtPath.Text) = "c:\" Then
-            MessageBox.Show("c:\ is restricted")
+
+        'If LCase(txtPath.Text) = "d:\" Then
+        '    MessageBox.Show("d:\ is restricted")
+        '    Exit Sub
+        'ElseIf LCase(txtPath.Text) = "c:\" Then
+        '    MessageBox.Show("c:\ is restricted")
+        '    Exit Sub
+        'End If
+
+        '2026-08-03-07-17-30-AM
+        'replacing with zCheckBasePath
+        txtPath.Text = LCase(txtPath.Text)
+
+        If zCheckBasePath(txtPath.Text) = 1 Then
+            MessageBox.Show(txtPath.Text & " is restricted")
             Exit Sub
         End If
+
         If txtTrim.Text = vbNullString Then
             txtTrim.Text = " English Dubbed"
         End If
@@ -578,13 +645,24 @@ zHandler:
         If txtPath.Text = vbNullString Then
             txtPath.Text = "C:\"
         End If
-        If LCase(txtPath.Text) = "d:\" Then
-            MessageBox.Show("d:\ is restricted")
-            Exit Sub
-        ElseIf LCase(txtPath.Text) = "c:\" Then
-            MessageBox.Show("c:\ is restricted")
+
+        'If LCase(txtPath.Text) = "d:\" Then
+        '    MessageBox.Show("d:\ is restricted")
+        '    Exit Sub
+        'ElseIf LCase(txtPath.Text) = "c:\" Then
+        '    MessageBox.Show("c:\ is restricted")
+        '    Exit Sub
+        'End If
+
+        '2026-08-03-07-17-30-AM
+        'replacing with zCheckBasePath
+        txtPath.Text = LCase(txtPath.Text)
+
+        If zCheckBasePath(txtPath.Text) = 1 Then
+            MessageBox.Show(txtPath.Text & " is restricted")
             Exit Sub
         End If
+
         If txtTrim.Text = vbNullString Then
             txtTrim.Text = " English Dubbed"
         End If
@@ -681,13 +759,24 @@ zHandler:
         If txtPath.Text = vbNullString Then
             txtPath.Text = "C:\"
         End If
-        If LCase(txtPath.Text) = "d:\" Then
-            MessageBox.Show("d:\ is restricted")
-            Exit Sub
-        ElseIf LCase(txtPath.Text) = "c:\" Then
-            MessageBox.Show("c:\ is restricted")
+
+        'If LCase(txtPath.Text) = "d:\" Then
+        '    MessageBox.Show("d:\ is restricted")
+        '    Exit Sub
+        'ElseIf LCase(txtPath.Text) = "c:\" Then
+        '    MessageBox.Show("c:\ is restricted")
+        '    Exit Sub
+        'End If
+
+        '2026-08-03-07-17-30-AM
+        'replacing with zCheckBasePath
+        txtPath.Text = LCase(txtPath.Text)
+
+        If zCheckBasePath(txtPath.Text) = 1 Then
+            MessageBox.Show(txtPath.Text & " is restricted")
             Exit Sub
         End If
+
         If txtTrim.Text = vbNullString Then
             txtTrim.Text = " English Dubbed"
         End If
@@ -1030,6 +1119,83 @@ zHandler:
         zReplaceStringFiles()
     End Sub
 
+    Public Function zCheckBasePath(zPath As String) As Integer
+        '2026-08-03-07-08-28-AM
+        'this checks all the alphabetical base paths
+        'then returns 1 or 0 based on pass or fail
+        '0 is pass
+        '1 is fail
+        '1 means that it scanned all the possible ones
+        'matched with a base path
+        'a null input for zPath will return 1
+        'If LCase(txtPath.Text) = "d:\" Then
+        'used in all the places where this is used:
+        'MessageBox.Show("d:\ is restricted")
+        'replacing all those with this check function
+        Dim zPathPass As Integer
+        zPath = LCase(zPath)
+        Select Case zPath
+            Case ""
+                'null
+                zPathPass = 1
+            Case "a:\"
+                zPathPass = 1
+            Case "b:\"
+                zPathPass = 1
+            Case "c:\"
+                zPathPass = 1
+            Case "d:\"
+                zPathPass = 1
+            Case "e:\"
+                zPathPass = 1
+            Case "f:\"
+                zPathPass = 1
+            Case "g:\"
+                zPathPass = 1
+            Case "h:\"
+                zPathPass = 1
+            Case "i:\"
+                zPathPass = 1
+            Case "j:\"
+                zPathPass = 1
+            Case "k:\"
+                zPathPass = 1
+            Case "l:\"
+                zPathPass = 1
+            Case "m:\"
+                zPathPass = 1
+            Case "n:\"
+                zPathPass = 1
+            Case "o:\"
+                zPathPass = 1
+            Case "p:\"
+                zPathPass = 1
+            Case "q:\"
+                zPathPass = 1
+            Case "r:\"
+                zPathPass = 1
+            Case "s:\"
+                zPathPass = 1
+            Case "t:\"
+                zPathPass = 1
+            Case "u:\"
+                zPathPass = 1
+            Case "v:\"
+                zPathPass = 1
+            Case "w:\"
+                zPathPass = 1
+            Case "x:\"
+                zPathPass = 1
+            Case "y:\"
+                zPathPass = 1
+            Case "z:\"
+                zPathPass = 1
+        End Select
+
+        zCheckBasePath = zPathPass
+
+    End Function
+
     Public Sub zReplaceStringFiles()
         On Error GoTo zHandler
 
@@ -1045,21 +1211,34 @@ zHandler:
         If txtPath.Text = vbNullString Then
             txtPath.Text = "C:\"
         End If
-        If LCase(txtPath.Text) = "d:\" Then
-            MessageBox.Show("d:\ is restricted")
-            Exit Sub
-        ElseIf LCase(txtPath.Text) = "c:\" Then
-            MessageBox.Show("c:\ is restricted")
+
+        '2026-08-03-07-17-30-AM
+        'replacing with zCheckBasePath
+        'If LCase(txtPath.Text) = "d:\" Then
+        '    MessageBox.Show("d:\ is restricted")
+        '    Exit Sub
+        'ElseIf LCase(txtPath.Text) = "c:\" Then
+        '    MessageBox.Show("c:\ is restricted")
+        '    Exit Sub
+        'End If
+
+        txtPath.Text = LCase(txtPath.Text)
+
+        If zCheckBasePath(txtPath.Text) = 1 Then
+            MessageBox.Show(txtPath.Text & " is restricted")
             Exit Sub
         End If
+
         If txtMatch.Text = vbNullString Then
             txtMatch.Text = "Match"
             MessageBox.Show("the match field must have a value")
             Exit Sub
         End If
+
         'If txtReplace.Text = vbNullString Then
         'txtReplace.Text = "Replace"
         'End If
+
         If listFiles.Items.Count = 0 Then
             If ckMsg.Checked = True Then
                 MessageBox.Show("no files to match and replace in current directory")
@@ -1251,7 +1430,7 @@ zHandler:
     End Sub
 
     Private Sub btCDrive_Click(sender As Object, e As EventArgs) Handles btCDrive.Click
-        txtPath.Text = "C:\"
+        txtPath.Text = "c:\"
         zListDir()
         zListFiles()
         listHist.Items.Add(txtPath.Text)
@@ -1259,7 +1438,7 @@ zHandler:
     End Sub
 
     Private Sub btDDrive_Click(sender As Object, e As EventArgs) Handles btDDrive.Click
-        txtPath.Text = "D:\"
+        txtPath.Text = "d:\"
         zListDir()
         zListFiles()
         listHist.Items.Add(txtPath.Text)
@@ -1281,10 +1460,46 @@ zHandler:
 
     End Sub
 
-    Private Sub btOpenDirectory_Click(sender As Object, e As EventArgs) Handles btOpenDirectory.Click
+    Private Sub btOpenDirectory_Click(sender As Object, e As EventArgs) Handles btOpenDirectoryDir.Click
         If listDirectories.Items.Count = 0 Then Exit Sub
-        If listDirectories.SelectedIndex = -1 Then Exit Sub
+        If listDirectories.SelectedIndex = -1 Then
+            listDirectories.SelectedIndex = 0
+            'Exit Sub
+        End If
         zOpenWindowsDirectoryInExplorer(listDirectories.Items.Item(listDirectories.SelectedIndex))
 
+    End Sub
+
+    Private Sub btOpenDirectoryHist_Click(sender As Object, e As EventArgs) Handles btOpenDirectoryHist.Click
+        If listHist.Items.Count = 0 Then Exit Sub
+        If listHist.SelectedIndex = -1 Then
+            listHist.SelectedIndex = 0
+            'Exit Sub
+        End If
+        zOpenWindowsDirectoryInExplorer(listHist.Items.Item(listHist.SelectedIndex))
+
+    End Sub
+
+    Private Sub btEDrive_Click(sender As Object, e As EventArgs) Handles btEDrive.Click
+        txtPath.Text = "e:\"
+        zListDir()
+        zListFiles()
+        listHist.Items.Add(txtPath.Text)
+        listHist.SetSelected((listHist.Items.Count - 1), True)
+
+    End Sub
+
+    Private Sub btFDrive_Click(sender As Object, e As EventArgs) Handles btFDrive.Click
+        txtPath.Text = "f:\"
+        zListDir()
+        zListFiles()
+        listHist.Items.Add(txtPath.Text)
+        listHist.SetSelected((listHist.Items.Count - 1), True)
+
+    End Sub
+
+    Private Sub tmStartUp_Tick(sender As Object, e As EventArgs) Handles tmStartUp.Tick
+        Application.DoEvents()
+        zStartUp()
     End Sub
 End Class

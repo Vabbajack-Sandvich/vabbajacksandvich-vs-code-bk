@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("zFile"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Release"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6754c5a6d468db1ab242f16ce1a82137bc1a6ce8"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d7b6d4cb0ad38687cfc40f219ba621e546f4a26"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("zFile"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("zFile"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
