@@ -7708,6 +7708,9 @@ zdirectoryfilenamereformat()
 		;                        - ◘-◘ -
 		;                beep boop, son. beep boop
 		;======================================================
+		;looks like the damned robot from the bebop cola good
+		;sealab 2021 murphy soda machine episode
+		;======================================================
 		;which i didnt realize until i zonideed it twice
 		;which means, a formatted file name
 		;on the second pass
@@ -10002,3 +10005,15 @@ return
 ;reads extention
 ;skips if there isnt one
 ;
+
+;2026-08-02-01-55-55-AM
+;Ītzpāpālōtl
+;Ītzpāpalōtl[a] ('Obsidian Butterfly') was a goddess in Aztec religion.
+;the clawed butterfly
+;the bat
+;the butterfly with bat wings
+;the goddess of war and death
+;a sickly little girl
+;that you probably pushed out the way
+;Not only was Itzpapalotl considered one of the cihuateteo herself, but she was also one of the tzitzimime, star demons that threatened to devour people during solar eclipses.
+;Orizaba the Moth Fairy, a villain in Elena of Avalor, was inspired by Itzpapalotl.
