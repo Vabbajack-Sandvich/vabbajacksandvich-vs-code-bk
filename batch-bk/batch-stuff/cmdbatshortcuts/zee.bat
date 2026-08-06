@@ -10,6 +10,9 @@ rem wait for it to enable
 timeout /t 2 /nobreak
 
 rem call enet.bat
-call C:\enet2.bat
+
+rem 2026-08-03-16-32-04-PM
+rem this was enabled
+rem call C:\enet2.bat
 
 rem pause

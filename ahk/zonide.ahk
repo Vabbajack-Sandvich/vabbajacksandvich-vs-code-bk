@@ -7526,46 +7526,19 @@ return
 
 ;=====================================================================
 
-;2026-07-12-07-59-03-AM
-;zdirectoryfilenamereformat
-;zdirectory filename reformat
-;this pops up 1 input boxes
-;1 is the directory to parse
-;then runs a string filter on every
-;name in the directory
-;this is to add another option for file renaming
-;mostly on demand in whichever current directory
-;still have to copy and paste the directory
-;using f4 to select it
+;2026-08-06-03-43-45-AM
+;base drive check function
+;checks to see if a path is the base dirve or not
+;returns 1 if it is a base drive
 
-;2026-07-12-08-01-10-AM
-;side note
-;not doing it now
-;which i justnow thought that i could use that
-;in a macro to select the top winow path
-;and copy that for other use
-
-zdirectoryfilenamereformat()
+zbasedrivepathcheck(zbasepath)
 {
-	global zdirectoryfilenamereformatsearchpath
-	if (zdirectoryfilenamereformatsearchpath = "") {
-		zdirectoryfilenamereformatsearchpath := "C:\vc"
-	}
-	zdtflwibox1 := inputbox("this will rename every file in the specified directory`nno symbols besides - .`nspaces to dashes`nunderscores to dashes", "zonide - directory to file list", "", zdirectoryfilenamereformatsearchpath)
-	if not (zdtflwibox1.result = "Cancel") {
-		if (zdtflwibox1.value = "") {
-			zwmsg("zdtflwibox1.value = null")
-			suspend 1
-			return
-		}
-	}
-	else {
+
+	if (zbasepath = "") {
+		msgbox("zbasedrivepathcheck - zbasepath - empty string")
 		return
 	}
-
-	zdirectoryfilenamereformatsearchpath := zdtflwibox1.value
-	zdirectoryfilenamereformatsearchpath := strlower(zdirectoryfilenamereformatsearchpath)
-	
+	zbasepath := strlower(zbasepath)
 	;2026-07-28-22-48-32-PM
 	;adding a base drive check
 	;was going to just do C:\
@@ -7582,7 +7555,7 @@ zdirectoryfilenamereformat()
 	;1 - was a base directory
 	zbasedirectorycheckpass := 0
 	
-	switch zdirectoryfilenamereformatsearchpath
+	switch zbasepath
 	{
 		case "a:\":
 			zbasedirectorycheckpass := 1
@@ -7649,11 +7622,57 @@ zdirectoryfilenamereformat()
 		case "z:\":
 			zbasedirectorycheckpass := 1
 	}
+
+return zbasedirectorycheckpass
+}
+;=====================================================================
+
+;2026-07-12-07-59-03-AM
+;zdirectoryfilenamereformat
+;zdirectory filename reformat
+;this pops up 1 input boxes
+;1 is the directory to parse
+;then runs a string filter on every
+;name in the directory
+;this is to add another option for file renaming
+;mostly on demand in whichever current directory
+;still have to copy and paste the directory
+;using f4 to select it
+
+;2026-07-12-08-01-10-AM
+;side note
+;not doing it now
+;which i justnow thought that i could use that
+;in a macro to select the top winow path
+;and copy that for other use
+
+zdirectoryfilenamereformat()
+{
+	global zdirectoryfilenamereformatsearchpath
+	if (zdirectoryfilenamereformatsearchpath = "") {
+		zdirectoryfilenamereformatsearchpath := "C:\vc"
+	}
+	zdtflwibox1 := inputbox("this will rename every file in the specified directory`nno symbols besides - .`nspaces to dashes`nunderscores to dashes", "zonide - directory to file list", "", zdirectoryfilenamereformatsearchpath)
+	if not (zdtflwibox1.result = "Cancel") {
+		if (zdtflwibox1.value = "") {
+			zwmsg("zdtflwibox1.value = null")
+			suspend 1
+			return
+		}
+	}
+	else {
+		return
+	}
+
+	zdirectoryfilenamereformatsearchpath := zdtflwibox1.value
+	zdirectoryfilenamereformatsearchpath := strlower(zdirectoryfilenamereformatsearchpath)
+	
+	zbasedirectorycheckpass := zbasedrivepathcheck(zdirectoryfilenamereformatsearchpath)
 	
 	if (zbasedirectorycheckpass = 1) {
 		;was a base directory
 		;msgbox("no... mmmnmm... no...`nwere owl exterminators`n`n       ( @ Y @ )		`n		`n             ☻") ;"
-		msgbox("base drive restricted`n`nno... mmmnmm... no...`nwere owl exterminators`n`n       ( @ Y @ )		`n		`n             ☻") ;"
+		msgbox("`n`n" . zdirectoryfilenamereformatsearchpath . "`n`nbase drive restricted`n`nno... mmmnmm... no...`nwere owl exterminators`n`n       ( @ Y @ )		`n		`n             ☻") ;"
 		;msgbox("base drive restricted")
 		;exit
 		suspend 1
