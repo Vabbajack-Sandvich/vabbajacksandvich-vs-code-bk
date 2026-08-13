@@ -198,7 +198,7 @@ echo "file - %%f"
 @rem update to use lame encoder for mp3
 ffmpeg -y -i "%%f" -map_metadata -1 -vn -c:a libmp3lame "%%~nf.mp3"
 @rem delete m4a
-del /f /q "%%f"
+@rem del /f /q "%%f"
 )
 
 @rem dash and underscore to space then @remove double space Z times incase of 4 spaces then convert to either underscore or dash

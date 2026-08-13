@@ -664,6 +664,7 @@ Partial Class frmMain
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
         BackColor = Color.Black
         ClientSize = New Size(891, 834)
         Controls.Add(txtSubD1Out)
@@ -716,7 +717,6 @@ Partial Class frmMain
         Controls.Add(btForceLcase)
         Controls.Add(btReplaceSpaceUnderScore)
         ForeColor = Color.LimeGreen
-        FormBorderStyle = FormBorderStyle.FixedSingle
         MaximizeBox = False
         Name = "frmMain"
         SizeGripStyle = SizeGripStyle.Show
