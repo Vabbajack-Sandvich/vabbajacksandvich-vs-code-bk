@@ -4519,10 +4519,12 @@ return
 zcmdopen(zcmdstr)
 {
 	if not (zcmdstr) {
-		run "C:\Windows\System32\cmd.exe"
+		;run "C:\Windows\System32\cmd.exe"
+		Run("*RunAs cmd.exe")
 	}
 	else {
-		run "C:\Windows\System32\cmd.exe " zcmdstr
+		;run "C:\Windows\System32\cmd.exe " zcmdstr
+		Run("*RunAs cmd.exe " . zcmdstr)
 	}
 return
 }
@@ -7398,7 +7400,7 @@ zftl(zftldir, zftlext)
 	;zfl("D:\vc", "*.mp4")
 	zfl(zftldir, zftlext)
 	;convert the array in to a string with line breaks
-	zfastr := zsfa(zflal)
+	zfastr := zstringfromarray(zflal)
 	;msgbox "zfastr - " zfastr
 	;write the string to file
 	zwf(zftldir "\zfilelist.txt", zfastr)
@@ -7434,7 +7436,7 @@ zftl2(zftldir, zftlext, zlf2dir2)
 	;zfl("D:\vc", "*.mp4")
 	zfl(zftldir, zftlext)
 	;convert the array in to a string with line breaks
-	zfastr := zsfa(zflal)
+	zfastr := zstringfromarray(zflal)
 	;msgbox "zfastr - " zfastr
 	;write the string to file
 	zwf(zlf2dir2 "\zfilelist.txt", zfastr)
@@ -7675,9 +7677,11 @@ zdirectoryfilenamereformat()
 		msgbox("`n`n" . zdirectoryfilenamereformatsearchpath . "`n`nbase drive restricted`n`nno... mmmnmm... no...`nwere owl exterminators`n`n       ( @ Y @ )		`n		`n             ☻") ;"
 		;msgbox("base drive restricted")
 		;exit
-		suspend 1
-		#MaxThreadsPerHotkey 2
-		zgeneralemergencystop := 0		
+		
+		;suspend 1
+		;#MaxThreadsPerHotkey 2
+		;zgeneralemergencystop := 0		
+		zemergencystopgeneralreset()
 		return
 	}
 	
@@ -7934,9 +7938,11 @@ zdirectoryfilenamereformat()
 			;2 - in use
 			;global zgeneralemergencystop
 			if (zgeneralemergencystop = 1) {
-				zgeneralemergencystop := 0
-				suspend 1
-				#MaxThreadsPerHotkey 2
+				;suspend 1
+				;#MaxThreadsPerHotkey 2
+				;zgeneralemergencystop := 0
+				;SetWorkingDir("C:\zonide\")
+				zemergencystopgeneralreset()
 				msgbox("file renamer - emergency stop")
 				return
 			}
@@ -7958,12 +7964,34 @@ zdirectoryfilenamereformat()
 		;adding a non zwmsg message box as a default done alert
 		msgbox("zdirectoryfilenamereformat - `n`nzdirectoryfilenamereformatsearchpath - " . zdirectoryfilenamereformatsearchpath . "`n`n`ndone")
 	}
-suspend 1
-#MaxThreadsPerHotkey 2
-zgeneralemergencystop := 0
+	
+;suspend 1
+;#MaxThreadsPerHotkey 2
+;zgeneralemergencystop := 0
+;SetWorkingDir("C:\zonide\")
+zemergencystopgeneralreset()
+
 return
 }
 
+
+;=====================================================================
+
+;2026-08-15-20-53-54-PM
+;this handles the exit for
+;and general reset
+;zdirectoryfilenamereformat()
+;control f
+;$^f::
+
+zemergencystopgeneralreset()
+{
+suspend 1
+#MaxThreadsPerHotkey 2
+zgeneralemergencystop := 0
+SetWorkingDir("C:\zonide\")
+return
+}
 
 ;=====================================================================
 ;i need to make something that
@@ -8139,7 +8167,9 @@ return
 ;ArrayObj.Length := Length
 ; z string from array
 
-zsfa(zsfaa)
+;zsfa(zsfaa)
+;2026-08-15-20-36-06-PM
+zstringfromarray(zsfaa)
 {
 	;msgbox "zsfa"
 	if (zsfaa.length = 0) {
@@ -8221,7 +8251,11 @@ return
 ;then clears the clipboard
 ;then loads its with the modified string
 
-ztccswap()
+;2026-08-15-20-44-48-PM
+;ztccswap()
+;going to try to do all clipboard stuff
+;with a clipboard prefix
+zclipboardtitlefilterswap()
 {
 ;check the clipboard
 zcswapstr := A_Clipboard
@@ -8236,7 +8270,6 @@ zswapoutstr := strtitle(zswapoutstr)
 A_Clipboard := zswapoutstr
 ztoasty()
 return
-
 }
 
 ;=====================================================================
@@ -8341,7 +8374,9 @@ return
 ;then replace the clipboard contents
 ;with the new string
 
-zstdcbslc()
+;2026-08-15-21-02-18-PM
+;zstdcbslc()
+zclipboardspacetodash()
 {
 ;strreplace(zfnsfn, " ", "-")
 zstdcbslcstr := A_Clipboard
@@ -8920,7 +8955,9 @@ return
 $+^c::
 {
 ;disabled for now
-;zcmdopen()
+;2026-08-15-20-47-39-PM
+;renabling
+zcmdopen("")
 return
 }
 
@@ -8933,7 +8970,9 @@ return
 
 $!c::
 {
-ztccswap()
+;2026-08-15-20-46-12-PM
+;ztccswap()
+zclipboardtitlefilterswap()
 suspend 1
 return
 }
@@ -8976,7 +9015,9 @@ $^d::
 ;disabled for now
 ;zdpresslooptoggle()
 ;2026-06-09-20-52-58-PM
-zstdcbslc()
+;zstdcbslc()
+;2026-08-15-21-02-18-PM
+zclipboardspacetodash()
 suspend 1
 return
 }
@@ -9039,8 +9080,15 @@ $^f::
 ;2 is default
 
 	;uncommented
-	#MaxThreadsPerHotkey 2
-
+	;#MaxThreadsPerHotkey 2
+	
+	zemergencystopgeneralreset()
+	;this does this
+	;suspend 1
+	;#MaxThreadsPerHotkey 2
+	;zgeneralemergencystop := 0
+	;SetWorkingDir("C:\zonide\")
+	
 return
 }
 
