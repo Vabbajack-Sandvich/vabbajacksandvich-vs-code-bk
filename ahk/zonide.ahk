@@ -3758,7 +3758,7 @@ return
 ;and sprint the back thumb button
 
 ;shift and forward mouse button
-zmouse2backthumbbuttontoggle()
+zmouse2forwardthumbbuttontoggle()
 {
 global zautodrive
 	if (zautodrive = 1) {
@@ -3786,9 +3786,9 @@ return
 ;XButton2 - thumb button forward 5
 ;for 7 days to die initially
 ;toggles the auto hold down mouse 1
-;the same as control g
-
+;the same as shift g
 ;was control g
+
 zholdmouse1toggle()
 {
 global hm1
@@ -7201,11 +7201,13 @@ global zsoundpath
 	;msgbox "zsd - " zsd
 	;2026-07-17-20-30-44-PM
 	;added the global sound path
-	zsd := zsoundpath . zsd
+	zsdtemp := zsoundpath . zsd
+	;zsd := zsoundpath . zsd
+	zsd := zsdtemp
 	zfesd := zfe(zsd)
 	if not (zfesd = "") {
 		if (zsfx = "1") {
-			soundplay zsd, 1
+			soundplay(zsd, 1)
 		}
 	}
 return
@@ -8572,9 +8574,9 @@ return
 ;XButton2 - thumb button forward 5
 ;for 7 days to die initially
 ;toggles the auto hold down mouse 1
-;the same as control g
-
+;the same as shift g
 ;was control g
+
 $XButton2::
 {
 zholdmouse1toggle()
@@ -8598,14 +8600,17 @@ return
 ;XButton2 - thumb button forward 5
 ;for 7 days to die initially
 ;toggles the auto hold down mouse 2 move forward
-;and sprint the back thumb button
-
+;and the back thumb button
 
 ;shift and forward mouse button
+;right button toggle up or down
+;for mouse2 move forward games
 $+XButton2::
 {
 ;disabling this for now
-;zmouse2backthumbbuttontoggle()
+;2026-08-18-19-13-54-PM
+;reenabling this for 7 days to die
+zmouse2forwardthumbbuttontoggle()
 return
 }
 
@@ -9589,7 +9594,9 @@ return
 ;control z
 $^z::
 {
-zfftf2automedic()
+;2026-08-18-19-17-57-PM
+;disabling this
+;zfftf2automedic()
 return
 }
 

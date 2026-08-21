@@ -10,6 +10,11 @@ rem for %%f in (*.mp4) do ffmpeg -y -i "%%f" -c:v libx264 -b:v 340k -preset ultr
 
 rem for %%f in (*.mp4) do ffmpeg  -y -i "%%f" -codec copy "%%~nf.mkv"
 
-for %%f in (*.mkv) do (
+for %%f in (*.ts) do (
 ffmpeg  -y -i "%%f" -codec copy "%%~nf.mp4"
+@rem pause
+@rem delete original mp3
+echo "deleting - %%f"
+del /f /q "%%f"
+timeout /t 1 /nobreak
 )
