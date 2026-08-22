@@ -6515,6 +6515,108 @@ return zfet
 
 ;=====================================================================
 
+;from the documentation for fileexist returns
+;R = READONLY
+;A = ARCHIVE
+;S = SYSTEM
+;H = HIDDEN
+;N = NORMAL
+;D = DIRECTORY
+;O = OFFLINE
+;C = COMPRESSED
+;T = TEMPORARY
+;L = REPARSE_POINT (typically a symbolic link)
+;If the file has no attributes (rare), "X" is returned.
+;If no file or folder is found, an empty string is returned.
+
+;z file exists
+;with we aint found shit
+;no messagebox
+zfenm(zsrcfe)
+{
+
+	;2026-07-17-19-24-47-PM
+	;adding this chart
+	;Return Value
+	;Type: String
+	;This function returns the attributes of the first matching file or folder.
+	;This string is a subset of RASHNDOCTL, where each letter means the
+	;following:
+	;R = READONLY
+	;A = ARCHIVE
+	;S = SYSTEM
+	;H = HIDDEN
+	;N = NORMAL
+	;D = DIRECTORY
+	;O = OFFLINE
+	;C = COMPRESSED
+	;T = TEMPORARY
+	;L = REPARSE_POINT (typically a symbolic link)
+	;If the file has no attributes (rare), "X" is returned. If no file or
+	;folder is found, an empty string is returned.
+
+	zfet := FileExist(zsrcfe)
+;	if (zfet = "") {
+;		zwmsg("WE AINT FOUND SHIT - " zsrcfe)
+;	}
+;msgbox "zfet - " zfet
+return zfet
+}
+
+;=====================================================================
+
+;from the documentation for fileexist returns
+;R = READONLY
+;A = ARCHIVE
+;S = SYSTEM
+;H = HIDDEN
+;N = NORMAL
+;D = DIRECTORY
+;O = OFFLINE
+;C = COMPRESSED
+;T = TEMPORARY
+;L = REPARSE_POINT (typically a symbolic link)
+;If the file has no attributes (rare), "X" is returned.
+;If no file or folder is found, an empty string is returned.
+
+;z file exists
+;with we aint found shit
+;no sound message box
+zfenosoundmsg(zsrcfe)
+{
+
+	;2026-07-17-19-24-47-PM
+	;adding this chart
+	;Return Value
+	;Type: String
+	;This function returns the attributes of the first matching file or folder.
+	;This string is a subset of RASHNDOCTL, where each letter means the
+	;following:
+	;R = READONLY
+	;A = ARCHIVE
+	;S = SYSTEM
+	;H = HIDDEN
+	;N = NORMAL
+	;D = DIRECTORY
+	;O = OFFLINE
+	;C = COMPRESSED
+	;T = TEMPORARY
+	;L = REPARSE_POINT (typically a symbolic link)
+	;If the file has no attributes (rare), "X" is returned. If no file or
+	;folder is found, an empty string is returned.
+
+	zfet := FileExist(zsrcfe)
+	if (zfet = "") {
+		;zwmsg("WE AINT FOUND SHIT - " zsrcfe)
+		msgbox("file not found - " zsrcfe)
+	}
+;msgbox "zfet - " zfet
+return zfet
+}
+
+
+;=====================================================================
+
 ;directory exists
 ;Attribuzonidering := DirExist(FilePattern)
 
@@ -7190,6 +7292,12 @@ return
 ;in the sound path to the function
 ;global zsoundpath := "C:\zonide\zip\CODE\ahk\"
 
+;this expects just a sound file in the soundpath
+;incorrect
+;zsound zsoundpath . "duck.mp3"
+;correct
+;zsound "duck.mp3"
+
 zsound(zsd)
 {
 global zsfx
@@ -7200,16 +7308,24 @@ global zsoundpath
 	}
 	;msgbox "zsd - " zsd
 	;2026-07-17-20-30-44-PM
+	;debug
+	;msgbox("zsound`nzsoundpath`n" . zsoundpath . "`nzsd`n" . zsd)
 	;added the global sound path
 	zsdtemp := zsoundpath . zsd
 	;zsd := zsoundpath . zsd
 	zsd := zsdtemp
-	zfesd := zfe(zsd)
+	;zfesd := zfe(zsd)
+	;changing this to a no message zfe
+	;caused a recursion error
+	;if the error sound wasnt there
+	zfesd := zfenosoundmsg(zsd)
 	if not (zfesd = "") {
 		if (zsfx = "1") {
 			soundplay(zsd, 1)
 		}
 	}
+;clearing zsd
+zsd := ""
 return
 }
 
@@ -7217,11 +7333,9 @@ return
 ;plays quack sound with less typing
 zquack()
 {
-;zsound "C:\zonide\zip\ahk\sound\duck.mp3"
-zsound zsoundpath . "sound\duck.mp3"
+zsound "duck.mp3"
 return
 }
-
 
 ;=====================================================================
 
@@ -7239,10 +7353,11 @@ global zsfx
 		zsfx := 1
 		;zsound "C:\zonide\zip\ahk\sound\we-aint-found-shit.mp3"
 		;zsound "C:\zonide\zip\ahk\sound\duck.mp3"
-		zsound zsoundpath . "duck.mp3"
+		;zsound zsoundpath . "duck.mp3"
+		zquack()
 	}
 	if (zmsg = "1") {
-		msgbox("zsfx = " zsfx)
+		msgbox("ztogsfx - zsfx = " zsfx)
 	}
 return
 }
@@ -8403,7 +8518,8 @@ zsuspend()
 {
 suspend 1
 ;zsound "C:\zonide\zip\ahk\sound\zelda-29db-rev-off.wav"
-zsound zsoundpath . "zelda-29db-rev-off.wav"
+;zsound zsoundpath . "zelda-29db-rev-off.wav"
+zsound "zelda-29db-rev-off.wav"
 zwmsg("is suspended toggle - " A_IsSuspended)
 return
 }
@@ -8462,7 +8578,8 @@ return
 ztoasty()
 {
 ;zsound "C:\zonide\zip\ahk\sound\toasty.mp3"
-zsound zsoundpath . "toasty.mp3"
+;zsound zsoundpath . "toasty.mp3"
+zsound "toasty.mp3"
 return
 }
 
@@ -8475,7 +8592,8 @@ return
 zwafs()
 {
 ;zsound "C:\zonide\zip\ahk\sound\we-aint-found-shit.mp3"
-zsound zsoundpath . "we-aint-found-shit.mp3"
+;zsound zsoundpath . "we-aint-found-shit.mp3"
+zsound "we-aint-found-shit.mp3"
 return
 }
 
@@ -10091,3 +10209,19 @@ return
 ;that you probably pushed out the way
 ;Not only was Itzpapalotl considered one of the cihuateteo herself, but she was also one of the tzitzimime, star demons that threatened to devour people during solar eclipses.
 ;Orizaba the Moth Fairy, a villain in Elena of Avalor, was inspired by Itzpapalotl.
+
+;zsound "C:\zonide\zip\ahk\sound\duck.mp3"
+;msgbox("zquack - zsound`nzsoundpath`n" . zsoundpath)
+;2026-08-21-20-09-42-PM
+;recursion bug fix
+;was sending the entire sound path to zsound
+;for just zquack was the problem
+;ended up fixing other stuff in the process
+;like a recursion bug i didnt know existed
+;if the message box error file sound
+;thing didnt exist
+;and the sound was turned on
+;it was calling zfe from quack from the message box
+;oops
+;because it would try to find the duck.mp3
+;every time
