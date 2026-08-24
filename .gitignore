@@ -19,6 +19,9 @@ node_modules/
 *.pyc
 *.mp3
 *.mp4
+/junk/gaming-stuff/minecraft/java/mods/manual/jdk-21.0.8_windows-x64_bin.msi
+/junk/gaming-stuff/minecraft/java/mods/manual/Optimum Realism R3.4.0 64x [Kappa, BSL,etc] WIP.zip.disabled
+
 
 # ==========================================
 # 3. Environment Variables & Secrets
