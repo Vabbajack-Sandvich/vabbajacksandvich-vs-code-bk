@@ -30,3 +30,4 @@ rem call "repo-general-repo-update.bat" > "%specifiedfolder%%mytimestamp%.txt 2>
 rem just call the batch in the cmd thing
 cd C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\junk\bat
 call bk-7days.bat
+

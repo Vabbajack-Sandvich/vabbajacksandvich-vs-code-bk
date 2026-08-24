@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("zBlocker"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6754c5a6d468db1ab242f16ce1a82137bc1a6ce8"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c97c302e66de71b8cc13be66efd9aaa45bcc3a72"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("zBlocker"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("zBlocker"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

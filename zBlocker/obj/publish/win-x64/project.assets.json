@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0-windows10.0.17763": {
-      "Microsoft.NET.ILLink.Tasks/8.0.16": {
+      "Microsoft.NET.ILLink.Tasks/8.0.26": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -10,7 +10,7 @@
       }
     },
     "net8.0-windows10.0.17763/win-x64": {
-      "Microsoft.NET.ILLink.Tasks/8.0.16": {
+      "Microsoft.NET.ILLink.Tasks/8.0.26": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -19,10 +19,10 @@
     }
   },
   "libraries": {
-    "Microsoft.NET.ILLink.Tasks/8.0.16": {
-      "sha512": "0H1QaKpVibe++Zx6EYJQGhrpfz2bBPGiQ7Rpsmx8I3+oKv+ZRRIfVfmcj50KuZlhhRE6V02y5bUjP+V2oPM2ng==",
+    "Microsoft.NET.ILLink.Tasks/8.0.26": {
+      "sha512": "o7/yVssM2r9Wyln2s9edBd5ANZXqdSdBI+g7JqXkyJmXrhs2WsJp25K5yPnYrTgdKBCjKB8bg+O2oew4sgzFaA==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.16",
+      "path": "microsoft.net.illink.tasks/8.0.26",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -36,7 +36,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.16.nupkg.sha512",
+        "microsoft.net.illink.tasks.8.0.26.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -73,28 +73,23 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows10.0.17763": [
-      "Microsoft.NET.ILLink.Tasks >= 8.0.16"
+      "Microsoft.NET.ILLink.Tasks >= 8.0.26"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zonid\\.nuget\\packages\\": {},
-    "d:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\zonid\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\zonide\\CODE\\visualstudio\\zBlocker\\zBlocker.vbproj",
+      "projectUniqueName": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zBlocker\\zBlocker.vbproj",
       "projectName": "zBlocker",
-      "projectPath": "D:\\zonide\\CODE\\visualstudio\\zBlocker\\zBlocker.vbproj",
+      "projectPath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zBlocker\\zBlocker.vbproj",
       "packagesPath": "C:\\Users\\zonid\\.nuget\\packages\\",
-      "outputPath": "D:\\zonide\\CODE\\visualstudio\\zBlocker\\obj\\publish\\win-x64\\",
+      "outputPath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zBlocker\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "d:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\zonid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -102,7 +97,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -130,7 +124,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.16, )",
+            "version": "[8.0.26, )",
             "autoReferenced": true
           }
         },
@@ -148,15 +142,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[8.0.16, 8.0.16]"
+            "version": "[8.0.26, 8.0.26]"
           },
           {
             "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
-            "version": "[8.0.16, 8.0.16]"
+            "version": "[8.0.26, 8.0.26]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[8.0.16, 8.0.16]"
+            "version": "[8.0.26, 8.0.26]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -164,7 +158,7 @@
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[8.0.16, 8.0.16]"
+            "version": "[8.0.26, 8.0.26]"
           }
         ],
         "frameworkReferences": {
@@ -178,7 +172,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

@@ -17,6 +17,8 @@ node_modules/
 *.dll
 *.so
 *.pyc
+*.mp3
+*.mp4
 
 # ==========================================
 # 3. Environment Variables & Secrets
