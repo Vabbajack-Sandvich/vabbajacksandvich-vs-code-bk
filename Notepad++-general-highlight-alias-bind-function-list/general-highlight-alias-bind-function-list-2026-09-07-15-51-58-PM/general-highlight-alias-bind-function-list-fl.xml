@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ==========================================================================\
+|
+|   To learn how to make your own language parser, please check the following
+|   link:
+|       https://npp-user-manual.org/docs/function-list/
+|
+\=========================================================================== -->
+<NotepadPlus>
+	<functionList>
+		<!-- ========================================= [ general-highlight-alias-bind-function-list ] -->
+		<!-- File format used for: .CFG        -->
+
+		<parser
+			displayName="general-highlight-alias-bind-function-list"
+			id="general-highlight-alias-bind-function-list"
+		>
+		
+		
+		<!-- 
+		old working one
+		<function mainExpr="^[alias|bind]+\s{1}\x22{1}[\-*\+*\_*\=*\\*\/*A-Z*a-z*\d*]*\x22{1}"
+			/>
+		-->
+
+		<function mainExpr="^[alias|bind]+\s{1}\x22*[\-*\+*\_*\=*\\*\/*A-Z*a-z*\d*\'*\`*\,*\.*\[*\]*\(*\)*\-*]*\x22*"
+			/>
+
+		</parser>
+	</functionList>
+</NotepadPlus>

@@ -11,6 +11,7 @@ node_modules/
 /ahk-bk/ahk-2026-07-14-20-22-20-PM/ahk/gitrepo-bk/1.0/gitrepo/
 /ahk-bk/ahk-2026-07-14-20-22-20-PM/ahk/gitrepo-bk/1.1/gitrepo/
 /ahk-bk/ahk-2026-07-14-20-22-20-PM/ahk/gitrepo-bk/1.2/gitrepo/
+/ahk-bk-old/old-git-repo-bk/gitrepo/
 
 # ==========================================
 # 2. Build Outputs & Compiled Code & paths
@@ -27,6 +28,8 @@ node_modules/
 *.pyc
 *.mp3
 *.mp4
+/junk/gaming-stuff/minecraft/java/mods/manual/jdk-21.0.8_windows-x64_bin.msi
+/junk/gaming-stuff/minecraft/java/mods/manual/Optimum Realism R3.4.0 64x [Kappa, BSL,etc] WIP.zip.disabled
 
 # ==========================================
 # 3. Environment Variables & Secrets

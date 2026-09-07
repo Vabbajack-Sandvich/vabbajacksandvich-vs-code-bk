@@ -498,7 +498,11 @@ https://github.com/Vabbajack-Sandvich/vabbajacksandvich-vs-code-bk/tree/main/Not
 
 Download:
 
+<!--
 https://github.com/Vabbajack-Sandvich/vabbajacksandvich-vs-code-bk/blob/main/Notepad%2B%2B-general-highlight-alias-bind-function-list/general-highlight-alias-bind-function-list-2026-08-15-21-58-36-PM.rar
+-->
+
+https://github.com/Vabbajack-Sandvich/vabbajacksandvich-vs-code-bk/blob/main/Notepad%2B%2B-general-highlight-alias-bind-function-list/general-highlight-alias-bind-function-list-2026-09-07-15-51-58-PM.rar
 
 # Batch File Based Time-Stamped Folder Back Up
 

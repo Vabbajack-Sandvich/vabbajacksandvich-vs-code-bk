@@ -14,5 +14,6 @@ rem call enet.bat
 rem 2026-08-03-16-32-04-PM
 rem this was enabled
 rem call C:\enet2.bat
+call enet2.bat
 
 rem pause
