@@ -1,5 +1,5 @@
 
-rem netsh interface ipv4 set address name="Ethernet" static 192.168.18.215 255.255.255.0 192.168.18.1
+rem netsh interface ipv4 set address name="Ethernet" static 192.168.18.222 255.255.255.0 192.168.18.1
 
 netsh interface ipv4 set address name="Ethernet" static 192.168.18.124 255.255.255.0 192.168.18.1
 
