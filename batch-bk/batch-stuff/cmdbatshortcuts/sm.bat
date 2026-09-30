@@ -30,4 +30,6 @@ rem call "repo-general-repo-update.bat" > "%specifiedfolder%%mytimestamp%.txt 2>
 rem just call the batch in the cmd thing
 cd C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\junk\bat
 call bk-scrapmechanic-full-folder.bat
+rem explorer "%finalpath%"
+rem explorer "C:\zonide\zip\gamebackups\scrapmechanic\wholeappdatafolder\"
 

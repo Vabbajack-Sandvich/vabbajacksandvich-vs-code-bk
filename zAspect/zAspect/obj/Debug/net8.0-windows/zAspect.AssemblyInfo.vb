@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("zAspect"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5d0118e4e6c85b95a7ce89ed54061dadff86c93"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("zAspect"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("zAspect"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

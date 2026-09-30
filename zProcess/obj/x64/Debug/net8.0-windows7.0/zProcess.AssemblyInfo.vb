@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("zProcess"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+053b86b0cdb42d29ba1708e6eb19c0e866d099da"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5d0118e4e6c85b95a7ce89ed54061dadff86c93"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("zProcess"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("zProcess"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

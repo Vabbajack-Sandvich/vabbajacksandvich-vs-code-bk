@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zonid\\source\\repos\\zAspect\\",
+  "WorkspaceRootPath": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|c:\\users\\zonid\\source\\repos\\zaspect\\zaspect\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|solutionrelative:zaspect\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|c:\\users\\zonid\\source\\repos\\zaspect\\zaspect\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zaspect\\zaspect\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|solutionrelative:zaspect\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|c:\\users\\zonid\\source\\repos\\zaspect\\zaspect\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zaspect\\zaspect\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|solutionrelative:zaspect\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zaspect\\zaspect\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|solutionrelative:zaspect\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|c:\\users\\zonid\\source\\repos\\zaspect\\zaspect\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zaspect\\zaspect\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{C53F5F47-7779-4C61-8851-CCC49A3AC284}|zAspect\\zAspect.vbproj|solutionrelative:zaspect\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
@@ -26,15 +26,15 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Application.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\zonid\\source\\repos\\zAspect\\zAspect\\My Project\\Application.Designer.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\zAspect\\My Project\\Application.Designer.vb",
               "RelativeDocumentMoniker": "zAspect\\My Project\\Application.Designer.vb",
-              "ToolTip": "C:\\Users\\zonid\\source\\repos\\zAspect\\zAspect\\My Project\\Application.Designer.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\zAspect\\My Project\\Application.Designer.vb",
               "RelativeToolTip": "zAspect\\My Project\\Application.Designer.vb",
               "ViewState": "AgIAABIAAAAAAAAAAAAAwBwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -44,9 +44,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "vabbajacksandvich.vb",
-              "DocumentMoniker": "C:\\Users\\zonid\\source\\repos\\zAspect\\zAspect\\vabbajacksandvich.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\zAspect\\vabbajacksandvich.vb",
               "RelativeDocumentMoniker": "zAspect\\vabbajacksandvich.vb",
-              "ToolTip": "C:\\Users\\zonid\\source\\repos\\zAspect\\zAspect\\vabbajacksandvich.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\zAspect\\vabbajacksandvich.vb",
               "RelativeToolTip": "zAspect\\vabbajacksandvich.vb",
               "ViewState": "AgIAALUCAAAAAAAAAAAawNcCAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -54,24 +54,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.vb",
-              "DocumentMoniker": "C:\\Users\\zonid\\source\\repos\\zAspect\\zAspect\\Form1.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\zAspect\\Form1.vb",
               "RelativeDocumentMoniker": "zAspect\\Form1.vb",
-              "ToolTip": "C:\\Users\\zonid\\source\\repos\\zAspect\\zAspect\\Form1.vb",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\zAspect\\Form1.vb",
               "RelativeToolTip": "zAspect\\Form1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-06-03T04:27:02.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\zonid\\source\\repos\\zAspect\\zAspect\\Form1.vb",
+              "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\zAspect\\Form1.vb",
               "RelativeDocumentMoniker": "zAspect\\Form1.vb",
-              "ToolTip": "C:\\Users\\zonid\\source\\repos\\zAspect\\zAspect\\Form1.vb [Design]",
+              "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zAspect\\zAspect\\Form1.vb [Design]",
               "RelativeToolTip": "zAspect\\Form1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-06-03T03:57:53.692Z",
