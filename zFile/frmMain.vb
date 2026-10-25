@@ -325,8 +325,8 @@ zHandler:
                 zFnameExt = Strings.Right(zFname2, 4)
                 zFname3 = txtExt.Text & zFname2
                 If zFname <> vbNullString And zFnameExt <> txtExt.Text Then
-                    If ckSpaceToUnderscore.Checked = True Then
-                        zFname2 = zSpaceToUnderscore(zFname2)
+                    If ckSpaceToDash.Checked = True Then
+                        zFname2 = zSpaceToDash(zFname2)
                     End If
                     If ckForceLcase.Checked = True Then
                         'My.Computer.FileSystem.RenameFile(zFname, LCase(zFname2 & txtExt.Text))
@@ -359,8 +359,15 @@ zHandler:
             'zListDir()
             'zListFiles()
             'need a timer here to wait for the file system to refresh
-            tmRefresh.Enabled = True
+
             zDone()
+
+            '2026-10-24-08-54-11-AM
+            'changing this to just a few second delay
+            'tmRefresh.Enabled = True
+
+            zPauseRefreshFilesDirectories()
+
             Exit Sub
         End If
         'exit before zhandler
@@ -452,8 +459,8 @@ zHandler:
                 zFnameExt = Strings.Right(zFname2, 4)
                 zFname3 = zFname2 & txtExt.Text
                 If zFname <> vbNullString And zFnameExt <> txtExt.Text Then
-                    If ckSpaceToUnderscore.Checked = True Then
-                        zFname2 = zSpaceToUnderscore(zFname2)
+                    If ckSpaceToDash.Checked = True Then
+                        zFname2 = zSpaceToDash(zFname2)
                     End If
                     If ckForceLcase.Checked = True Then
                         If My.Computer.FileSystem.FileExists(txtPath.Text & "\" & zFname3) = False Then
@@ -481,8 +488,15 @@ zHandler:
             'zListDir()
             'zListFiles()
             'need a timer here to wait for the file system to refresh
-            tmRefresh.Enabled = True
+
             zDone()
+
+            '2026-10-24-08-54-11-AM
+            'changing this to just a few second delay
+            'tmRefresh.Enabled = True
+
+            zPauseRefreshFilesDirectories()
+
             Exit Sub
         End If
         'exit before zhandler
@@ -510,8 +524,14 @@ zHandler:
         zListFiles()
     End Sub
 
+    Public Sub zPauseRefreshFilesDirectories()
+        '2026-10-24-09-15-19-AM
+        zPause()
+        zRefreshFilesAndDirectories()
+    End Sub
+
     Private Sub tmRefresh_Tick(sender As Object, e As EventArgs) Handles tmRefresh.Tick
-        'Application.DoEvents()
+        Application.DoEvents()
         'zListDir()
         'zListFiles()
         zRefreshFilesAndDirectories()
@@ -601,8 +621,8 @@ zHandler:
 
                 'If ckSpaceToUnderscore.Checked = True Then
 
-                'zFname2 = zSpaceToUnderscore(zFname)
-                'zFname2 = zSpaceToUnderscore(zFname)
+                'zFname2 = zSpaceToDash(zFname)
+                'zFname2 = zSpaceToDash(zFname)
                 ' End If
 
                 ' If ckForceLcase.Checked = True Then
@@ -626,10 +646,15 @@ zHandler:
             Next
             'zListDir()
             'zListFiles()
-            'need a timer here to wait for the file system to refresh
-            tmRefresh.Enabled = True
-            'add message thing there
+
             zDone()
+
+            '2026-10-24-08-54-11-AM
+            'changing this to just a few second delay
+            'tmRefresh.Enabled = True
+
+            zPauseRefreshFilesDirectories()
+
             Exit Sub
         End If
         'exit before error handler
@@ -728,7 +753,7 @@ zHandler:
 
                 'If ckSpaceToUnderscore.Checked = True Then
 
-                zFname2 = zSpaceToUnderscore(zFname)
+                zFname2 = zSpaceToDash(zFname)
                 ' End If
 
                 If ckForceLcase.Checked = True Then
@@ -743,10 +768,15 @@ zHandler:
             Next
             'zListDir()
             'zListFiles()
-            'need a timer here to wait for the file system to refresh
-            tmRefresh.Enabled = True
-            'add message thing there
+
             zDone()
+
+            '2026-10-24-08-54-11-AM
+            'changing this to just a few second delay
+            'tmRefresh.Enabled = True
+
+            zPauseRefreshFilesDirectories()
+
             Exit Sub
         End If
         'exit before error handler
@@ -843,8 +873,8 @@ zHandler:
                 'On Error GoTo zHandler
 
                 If zFname <> vbNullString And zFname3 <> vbNullString And zFname2 <> zFname3 Then
-                    If ckSpaceToUnderscore.Checked = True Then
-                        zFname3 = zSpaceToUnderscore(zFname3)
+                    If ckSpaceToDash.Checked = True Then
+                        zFname3 = zSpaceToDash(zFname3)
                     End If
                     If ckForceLcase.Checked = True Then
                         If My.Computer.FileSystem.FileExists(txtPath.Text & "\" & zFname3) = False Then
@@ -871,10 +901,15 @@ zHandler:
             Next
             'zListDir()
             'zListFiles()
-            'need a timer here to wait for the file system to refresh
-            tmRefresh.Enabled = True
-            'add message thing there
+
             zDone()
+
+            '2026-10-24-08-54-11-AM
+            'changing this to just a few second delay
+            'tmRefresh.Enabled = True
+
+            zPauseRefreshFilesDirectories()
+
             Exit Sub
         End If
         'exit before error handler
@@ -1296,13 +1331,12 @@ zHandler:
                     Exit Sub
                 End If
 
-
                 zFname = listFiles.Items.Item(zFindex).ToString
                 zFname2 = Mid(zFname, Len(txtPath.Text) + 2)
                 zFname3 = Strings.Replace(zFname2, txtMatch.Text, txtReplace.Text)
                 If zFname <> vbNullString And zFname3 <> vbNullString And zFname2 <> zFname3 Then
-                    If ckSpaceToUnderscore.Checked = True Then
-                        zFname3 = zSpaceToUnderscore(zFname3)
+                    If ckSpaceToDash.Checked = True Then
+                        zFname3 = zSpaceToDash(zFname3)
                     End If
                     If ckForceLcase.Checked = True Then
                         If My.Computer.FileSystem.FileExists(txtPath.Text & "\" & zFname3) = False Then
@@ -1326,10 +1360,15 @@ zHandler:
             Next
             'zListDir()
             'zListFiles()
-            'need a timer here to wait for the file system to refresh
-            tmRefresh.Enabled = True
+
             zDone()
-            'exit before zhandler
+
+            '2026-10-24-08-54-11-AM
+            'changing this to just a few second delay
+            'tmRefresh.Enabled = True
+
+            zPauseRefreshFilesDirectories()
+
             Exit Sub
         End If
         'exit before zhandler
@@ -1532,5 +1571,11 @@ zHandler:
     Private Sub tmStartUp_Tick(sender As Object, e As EventArgs) Handles tmStartUp.Tick
         Application.DoEvents()
         zStartUp()
+    End Sub
+
+    Private Sub btTestButton_Click(sender As Object, e As EventArgs) Handles btTestButton.Click
+        MsgBox("start test")
+        zPause()
+        MsgBox("end test")
     End Sub
 End Class

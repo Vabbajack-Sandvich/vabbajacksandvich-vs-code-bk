@@ -5206,6 +5206,32 @@ Module vabbajacksandvich
         Next
         zSpaceToUnderscore = zNfos
     End Function
+
+    Public Function zSpaceToDash(zStUStr As String) As String
+        If zStUStr = vbNullString Then Exit Function
+        'changes spaces in a string to dash -
+        Dim zNfi As Long
+        Dim zNfos As String
+        Dim zNfl As Long
+        Dim zNfis As String
+        zNfl = Len(zStUStr)
+        For zNfi = 1 To zNfl
+            Application.DoEvents()
+            zNfis = Mid(zStUStr, zNfi, 1)
+            Select Case zNfis
+                Case " "
+                    'character was a space
+                    'change it to dash
+                    zNfos = zNfos & "-"
+                Case Else
+                    'anything besides a space
+                    'just add whatever it was
+                    zNfos = zNfos & zNfis
+            End Select
+        Next
+        zSpaceToDash = zNfos
+    End Function
+
     Public Function zRemoveDoubleSpace(zTmpIStr As String) As String
         'this removes all double spaces and returns the modified string
         'with only a single space
@@ -7495,7 +7521,12 @@ Module vabbajacksandvich
 
     End Function
 
-
+    Public Function zPause(Optional zPauseTime As Integer = 10000) As Task
+        '2026-10-24-08-59-09-AM
+        'adding a pause function
+        'if nothing is specified it has a default of 10 seconds
+        System.Threading.Thread.Sleep(zPauseTime)
+    End Function
 
     '==================================================================================================
     'junk-reddt-shitty-daystrum-2026-07-04-13-53-18-pm.txt

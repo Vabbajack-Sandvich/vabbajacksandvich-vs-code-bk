@@ -327,6 +327,10 @@ zErrorHandler:
         'copilotapp.exe
         lstProcessKillList.Items.Add("copilotapp")
 
+        '2026-10-23-19-53-19-PM
+        'copilotapp_proxy.exe
+        lstProcessKillList.Items.Add("copilotapp_proxy")
+
         '2026-07-10-22-28-38-PM
         'lstProcessKillList.Items.Add("sihost")
 
