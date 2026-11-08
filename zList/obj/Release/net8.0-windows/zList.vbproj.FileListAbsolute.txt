@@ -1,0 +1,17 @@
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\bin\Release\net8.0-windows\zList.exe
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\bin\Release\net8.0-windows\zList.deps.json
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\bin\Release\net8.0-windows\zList.runtimeconfig.json
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\bin\Release\net8.0-windows\zList.dll
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\bin\Release\net8.0-windows\zList.pdb
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.Form1.resources
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.vbproj.GenerateResource.cache
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.GeneratedMSBuildEditorConfig.editorconfig
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.AssemblyInfoInputs.cache
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.AssemblyInfo.vb
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.vbproj.CoreCompileInputs.cache
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.sourcelink.json
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.dll
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\refint\zList.dll
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.pdb
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\zList.genruntimeconfig.cache
+C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk\visualstudio\zList\obj\Release\net8.0-windows\ref\zList.dll
