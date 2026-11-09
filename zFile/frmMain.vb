@@ -40,14 +40,15 @@ zHandler:
         zDone()
     End Sub
 
-    Public zFrmMainDefWidth As Integer = 927
-    Public zFrmMainDefHeight As Integer = 477
-    'frmMain default size
-    'width 927
-    'height 477
+    Public zFrmMainDefWidth As Integer = 943
+    Public zFrmMainDefHeight As Integer = 897
 
-    Public zFrmMainMaxWidth As Integer = 927
-    Public zFrmMainMaxHeight As Integer = 905
+    'frmMain default size
+    'width 943
+    'height 897
+
+    Public zFrmMainMaxWidth As Integer = 943
+    Public zFrmMainMaxHeight As Integer = 897
     'frmMain max size
     'width 927
     'height 905
@@ -92,6 +93,7 @@ zHandler:
         'setting the appliction scaling in properties on windows explorer
         'on the file fixes it
         'zFrmMainSetDefaultSize()
+        Me.Height = Me.Height * 0.66
 
         tmStartUp.Enabled = True
     End Sub

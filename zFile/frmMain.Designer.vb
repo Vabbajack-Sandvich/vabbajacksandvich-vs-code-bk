@@ -80,7 +80,7 @@ Partial Class frmMain
         ' btListDir
         ' 
         btListDir.BackColor = Color.Black
-        btListDir.Font = New Font("Segoe UI", 8.0F)
+        btListDir.Font = New Font("Segoe UI", 8F)
         btListDir.ForeColor = Color.LimeGreen
         btListDir.Location = New Point(695, 39)
         btListDir.Name = "btListDir"
@@ -123,7 +123,7 @@ Partial Class frmMain
         ' btListFiles
         ' 
         btListFiles.BackColor = Color.Black
-        btListFiles.Font = New Font("Segoe UI", 8.0F)
+        btListFiles.Font = New Font("Segoe UI", 8F)
         btListFiles.ForeColor = Color.LimeGreen
         btListFiles.Location = New Point(695, 75)
         btListFiles.Name = "btListFiles"
@@ -146,7 +146,7 @@ Partial Class frmMain
         ' 
         lbHistory.AutoSize = True
         lbHistory.BackColor = Color.Black
-        lbHistory.Font = New Font("Segoe UI", 8.0F)
+        lbHistory.Font = New Font("Segoe UI", 8F)
         lbHistory.ForeColor = Color.LimeGreen
         lbHistory.Location = New Point(9, 88)
         lbHistory.Name = "lbHistory"
@@ -168,7 +168,7 @@ Partial Class frmMain
         ' 
         lbDirectories.AutoSize = True
         lbDirectories.BackColor = Color.Black
-        lbDirectories.Font = New Font("Segoe UI", 8.0F)
+        lbDirectories.Font = New Font("Segoe UI", 8F)
         lbDirectories.ForeColor = Color.LimeGreen
         lbDirectories.Location = New Point(8, 269)
         lbDirectories.Name = "lbDirectories"
@@ -180,7 +180,7 @@ Partial Class frmMain
         ' 
         lbFiles.AutoSize = True
         lbFiles.BackColor = Color.Black
-        lbFiles.Font = New Font("Segoe UI", 8.0F)
+        lbFiles.Font = New Font("Segoe UI", 8F)
         lbFiles.ForeColor = Color.LimeGreen
         lbFiles.Location = New Point(12, 448)
         lbFiles.Name = "lbFiles"
@@ -191,7 +191,7 @@ Partial Class frmMain
         ' btClearHistory
         ' 
         btClearHistory.BackColor = Color.Black
-        btClearHistory.Font = New Font("Segoe UI", 8.0F)
+        btClearHistory.Font = New Font("Segoe UI", 8F)
         btClearHistory.ForeColor = Color.LimeGreen
         btClearHistory.Location = New Point(695, 111)
         btClearHistory.Name = "btClearHistory"
@@ -203,7 +203,7 @@ Partial Class frmMain
         ' btAddExt
         ' 
         btAddExt.BackColor = Color.Black
-        btAddExt.Font = New Font("Segoe UI", 8.0F)
+        btAddExt.Font = New Font("Segoe UI", 8F)
         btAddExt.ForeColor = Color.LimeGreen
         btAddExt.Location = New Point(695, 180)
         btAddExt.Name = "btAddExt"
@@ -235,7 +235,7 @@ Partial Class frmMain
         ' btTrim
         ' 
         btTrim.BackColor = Color.Black
-        btTrim.Font = New Font("Segoe UI", 8.0F)
+        btTrim.Font = New Font("Segoe UI", 8F)
         btTrim.ForeColor = Color.LimeGreen
         btTrim.Location = New Point(695, 284)
         btTrim.Name = "btTrim"
@@ -252,7 +252,7 @@ Partial Class frmMain
         ' 
         lbFn.AutoSize = True
         lbFn.BackColor = Color.Black
-        lbFn.Font = New Font("Segoe UI", 8.0F)
+        lbFn.Font = New Font("Segoe UI", 8F)
         lbFn.ForeColor = Color.LimeGreen
         lbFn.Location = New Point(50, 448)
         lbFn.Name = "lbFn"
@@ -264,7 +264,7 @@ Partial Class frmMain
         ' 
         lbDirName.AutoSize = True
         lbDirName.BackColor = Color.Black
-        lbDirName.Font = New Font("Segoe UI", 8.0F)
+        lbDirName.Font = New Font("Segoe UI", 8F)
         lbDirName.ForeColor = Color.LimeGreen
         lbDirName.Location = New Point(85, 269)
         lbDirName.Name = "lbDirName"
@@ -277,7 +277,7 @@ Partial Class frmMain
         ' 
         lbSubDCount.AutoSize = True
         lbSubDCount.BackColor = Color.Black
-        lbSubDCount.Font = New Font("Segoe UI", 8.0F)
+        lbSubDCount.Font = New Font("Segoe UI", 8F)
         lbSubDCount.ForeColor = Color.LimeGreen
         lbSubDCount.Location = New Point(115, 610)
         lbSubDCount.Name = "lbSubDCount"
@@ -289,7 +289,7 @@ Partial Class frmMain
         ' 
         lbSubD1.AutoSize = True
         lbSubD1.BackColor = Color.Black
-        lbSubD1.Font = New Font("Segoe UI", 8.0F)
+        lbSubD1.Font = New Font("Segoe UI", 8F)
         lbSubD1.ForeColor = Color.LimeGreen
         lbSubD1.Location = New Point(9, 610)
         lbSubD1.Name = "lbSubD1"
@@ -311,7 +311,7 @@ Partial Class frmMain
         ' 
         ckSubDExt.AutoSize = True
         ckSubDExt.BackColor = Color.Black
-        ckSubDExt.Font = New Font("Segoe UI", 8.0F)
+        ckSubDExt.Font = New Font("Segoe UI", 8F)
         ckSubDExt.ForeColor = Color.LimeGreen
         ckSubDExt.Location = New Point(789, 646)
         ckSubDExt.Name = "ckSubDExt"
@@ -325,7 +325,7 @@ Partial Class frmMain
         ckTrim.AutoSize = True
         ckTrim.BackColor = Color.Black
         ckTrim.Enabled = False
-        ckTrim.Font = New Font("Segoe UI", 8.0F)
+        ckTrim.Font = New Font("Segoe UI", 8F)
         ckTrim.ForeColor = Color.LimeGreen
         ckTrim.Location = New Point(697, 617)
         ckTrim.Name = "ckTrim"
@@ -338,7 +338,7 @@ Partial Class frmMain
         ' btSubD
         ' 
         btSubD.BackColor = Color.Black
-        btSubD.Font = New Font("Segoe UI", 8.0F)
+        btSubD.Font = New Font("Segoe UI", 8F)
         btSubD.ForeColor = Color.LimeGreen
         btSubD.Location = New Point(696, 733)
         btSubD.Name = "btSubD"
@@ -353,7 +353,7 @@ Partial Class frmMain
         ckMsg.BackColor = Color.Black
         ckMsg.Checked = True
         ckMsg.CheckState = CheckState.Checked
-        ckMsg.Font = New Font("Segoe UI", 8.0F)
+        ckMsg.Font = New Font("Segoe UI", 8F)
         ckMsg.ForeColor = Color.LimeGreen
         ckMsg.Location = New Point(696, 675)
         ckMsg.Name = "ckMsg"
@@ -365,7 +365,7 @@ Partial Class frmMain
         ' btClearSub
         ' 
         btClearSub.BackColor = Color.Black
-        btClearSub.Font = New Font("Segoe UI", 8.0F)
+        btClearSub.Font = New Font("Segoe UI", 8F)
         btClearSub.ForeColor = Color.LimeGreen
         btClearSub.Location = New Point(696, 769)
         btClearSub.Name = "btClearSub"
@@ -387,7 +387,7 @@ Partial Class frmMain
         ' btReplace
         ' 
         btReplace.BackColor = Color.Black
-        btReplace.Font = New Font("Segoe UI", 8.0F)
+        btReplace.Font = New Font("Segoe UI", 8F)
         btReplace.ForeColor = Color.LimeGreen
         btReplace.Location = New Point(695, 424)
         btReplace.Name = "btReplace"
@@ -400,7 +400,7 @@ Partial Class frmMain
         ' 
         lbMatch.AutoSize = True
         lbMatch.BackColor = Color.Black
-        lbMatch.Font = New Font("Segoe UI", 8.0F)
+        lbMatch.Font = New Font("Segoe UI", 8F)
         lbMatch.ForeColor = Color.LimeGreen
         lbMatch.Location = New Point(695, 317)
         lbMatch.Name = "lbMatch"
@@ -422,7 +422,7 @@ Partial Class frmMain
         ' 
         lbReplace.AutoSize = True
         lbReplace.BackColor = Color.Black
-        lbReplace.Font = New Font("Segoe UI", 8.0F)
+        lbReplace.Font = New Font("Segoe UI", 8F)
         lbReplace.ForeColor = Color.LimeGreen
         lbReplace.Location = New Point(695, 369)
         lbReplace.Name = "lbReplace"
@@ -434,7 +434,7 @@ Partial Class frmMain
         ' 
         ckReplace.AutoSize = True
         ckReplace.BackColor = Color.Black
-        ckReplace.Font = New Font("Segoe UI", 8.0F)
+        ckReplace.Font = New Font("Segoe UI", 8F)
         ckReplace.ForeColor = Color.LimeGreen
         ckReplace.Location = New Point(696, 646)
         ckReplace.Name = "ckReplace"
@@ -449,7 +449,7 @@ Partial Class frmMain
         ckOnTop.BackColor = Color.Black
         ckOnTop.Checked = True
         ckOnTop.CheckState = CheckState.Checked
-        ckOnTop.Font = New Font("Segoe UI", 8.0F)
+        ckOnTop.Font = New Font("Segoe UI", 8F)
         ckOnTop.ForeColor = Color.LimeGreen
         ckOnTop.Location = New Point(696, 9)
         ckOnTop.Name = "ckOnTop"
@@ -462,7 +462,7 @@ Partial Class frmMain
         ' 
         ckForceLcase.AutoSize = True
         ckForceLcase.BackColor = Color.Black
-        ckForceLcase.Font = New Font("Segoe UI", 8.0F)
+        ckForceLcase.Font = New Font("Segoe UI", 8F)
         ckForceLcase.ForeColor = Color.LimeGreen
         ckForceLcase.Location = New Point(789, 675)
         ckForceLcase.Name = "ckForceLcase"
@@ -475,7 +475,7 @@ Partial Class frmMain
         ' 
         ckSpaceToDash.AutoSize = True
         ckSpaceToDash.BackColor = Color.Black
-        ckSpaceToDash.Font = New Font("Segoe UI", 8.0F)
+        ckSpaceToDash.Font = New Font("Segoe UI", 8F)
         ckSpaceToDash.ForeColor = Color.LimeGreen
         ckSpaceToDash.Location = New Point(696, 704)
         ckSpaceToDash.Name = "ckSpaceToDash"
@@ -487,7 +487,7 @@ Partial Class frmMain
         ' btForceLcase
         ' 
         btForceLcase.BackColor = Color.Black
-        btForceLcase.Font = New Font("Segoe UI", 8.0F)
+        btForceLcase.Font = New Font("Segoe UI", 8F)
         btForceLcase.ForeColor = Color.LimeGreen
         btForceLcase.Location = New Point(695, 519)
         btForceLcase.Name = "btForceLcase"
@@ -499,7 +499,7 @@ Partial Class frmMain
         ' btReplaceSpaceUnderScore
         ' 
         btReplaceSpaceUnderScore.BackColor = Color.Black
-        btReplaceSpaceUnderScore.Font = New Font("Segoe UI", 8.0F)
+        btReplaceSpaceUnderScore.Font = New Font("Segoe UI", 8F)
         btReplaceSpaceUnderScore.ForeColor = Color.LimeGreen
         btReplaceSpaceUnderScore.Location = New Point(696, 460)
         btReplaceSpaceUnderScore.Name = "btReplaceSpaceUnderScore"
@@ -512,7 +512,7 @@ Partial Class frmMain
         ' 
         ckEstop.AutoSize = True
         ckEstop.BackColor = Color.Black
-        ckEstop.Font = New Font("Segoe UI", 8.0F)
+        ckEstop.Font = New Font("Segoe UI", 8F)
         ckEstop.ForeColor = Color.LimeGreen
         ckEstop.Location = New Point(695, 805)
         ckEstop.Name = "ckEstop"
@@ -524,7 +524,7 @@ Partial Class frmMain
         ' btCDrive
         ' 
         btCDrive.BackColor = Color.Black
-        btCDrive.Font = New Font("Segoe UI", 8.0F)
+        btCDrive.Font = New Font("Segoe UI", 8F)
         btCDrive.ForeColor = Color.LimeGreen
         btCDrive.Location = New Point(97, 11)
         btCDrive.Name = "btCDrive"
@@ -536,7 +536,7 @@ Partial Class frmMain
         ' btDDrive
         ' 
         btDDrive.BackColor = Color.Black
-        btDDrive.Font = New Font("Segoe UI", 8.0F)
+        btDDrive.Font = New Font("Segoe UI", 8F)
         btDDrive.ForeColor = Color.LimeGreen
         btDDrive.Location = New Point(166, 11)
         btDDrive.Name = "btDDrive"
@@ -548,7 +548,7 @@ Partial Class frmMain
         ' btAddPrefix
         ' 
         btAddPrefix.BackColor = Color.Black
-        btAddPrefix.Font = New Font("Segoe UI", 8.0F)
+        btAddPrefix.Font = New Font("Segoe UI", 8F)
         btAddPrefix.ForeColor = Color.LimeGreen
         btAddPrefix.Location = New Point(695, 215)
         btAddPrefix.Name = "btAddPrefix"
@@ -560,7 +560,7 @@ Partial Class frmMain
         ' ckDeleteOnExistingRename
         ' 
         ckDeleteOnExistingRename.BackColor = Color.Black
-        ckDeleteOnExistingRename.Font = New Font("Segoe UI", 8.0F)
+        ckDeleteOnExistingRename.Font = New Font("Segoe UI", 8F)
         ckDeleteOnExistingRename.ForeColor = Color.LimeGreen
         ckDeleteOnExistingRename.Location = New Point(696, 560)
         ckDeleteOnExistingRename.Name = "ckDeleteOnExistingRename"
@@ -572,7 +572,7 @@ Partial Class frmMain
         ' btOpenDirectoryDir
         ' 
         btOpenDirectoryDir.BackColor = Color.Black
-        btOpenDirectoryDir.Font = New Font("Segoe UI", 8.0F)
+        btOpenDirectoryDir.Font = New Font("Segoe UI", 8F)
         btOpenDirectoryDir.ForeColor = Color.LimeGreen
         btOpenDirectoryDir.Location = New Point(510, 434)
         btOpenDirectoryDir.Name = "btOpenDirectoryDir"
@@ -584,7 +584,7 @@ Partial Class frmMain
         ' btOpenDirectoryHist
         ' 
         btOpenDirectoryHist.BackColor = Color.Black
-        btOpenDirectoryHist.Font = New Font("Segoe UI", 8.0F)
+        btOpenDirectoryHist.Font = New Font("Segoe UI", 8F)
         btOpenDirectoryHist.ForeColor = Color.LimeGreen
         btOpenDirectoryHist.Location = New Point(510, 255)
         btOpenDirectoryHist.Name = "btOpenDirectoryHist"
@@ -600,7 +600,7 @@ Partial Class frmMain
         ' btEDrive
         ' 
         btEDrive.BackColor = Color.Black
-        btEDrive.Font = New Font("Segoe UI", 8.0F)
+        btEDrive.Font = New Font("Segoe UI", 8F)
         btEDrive.ForeColor = Color.LimeGreen
         btEDrive.Location = New Point(233, 11)
         btEDrive.Name = "btEDrive"
@@ -612,7 +612,7 @@ Partial Class frmMain
         ' btFDrive
         ' 
         btFDrive.BackColor = Color.Black
-        btFDrive.Font = New Font("Segoe UI", 8.0F)
+        btFDrive.Font = New Font("Segoe UI", 8F)
         btFDrive.ForeColor = Color.LimeGreen
         btFDrive.Location = New Point(300, 12)
         btFDrive.Name = "btFDrive"
@@ -664,7 +664,7 @@ Partial Class frmMain
         ' btTestButton
         ' 
         btTestButton.BackColor = Color.Black
-        btTestButton.Font = New Font("Segoe UI", 8.0F)
+        btTestButton.Font = New Font("Segoe UI", 8F)
         btTestButton.ForeColor = Color.LimeGreen
         btTestButton.Location = New Point(431, 11)
         btTestButton.Name = "btTestButton"
@@ -676,11 +676,11 @@ Partial Class frmMain
         ' 
         ' frmMain
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        AutoSize = True
+        AutoScroll = True
         BackColor = Color.Black
-        ClientSize = New Size(891, 834)
+        ClientSize = New Size(925, 850)
         Controls.Add(btTestButton)
         Controls.Add(txtSubD1Out)
         Controls.Add(txtFilesOut)

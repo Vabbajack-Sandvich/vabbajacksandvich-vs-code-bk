@@ -83,7 +83,7 @@ echo "!filename!"
 
 rem ffmpeg -framerate 60 -y -i "%%~nf_frame_%04d.jpg" -c:v libx264 -pix_fmt yuv420p %%~nf_frame-to-vid.mp4
 
-ffmpeg -framerate 4 -y -i "!filename!" -c:v libx264 -pix_fmt yuv420p %%~nf_frame-to-vid-2-fps.mp4
+ffmpeg -framerate 4 -y -i "!filename!" -c:v libx264 -pix_fmt yuv420p %%~nf_frame-to-vid-4-fps.mp4
 
 rem timeout /t 1 /nobreak
 rem timeout /t 2 /nobreak
