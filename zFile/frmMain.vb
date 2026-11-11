@@ -66,14 +66,15 @@ zHandler:
         'was the old form load thing
         'added it to a start up timer with a load global variable
         'zStartUp = 1 or 0
-        listHist.Items.Add("C:\")
+        ListHist.Items.Add("C:\")
         lbFn.Text = ""
         lbDirName.Text = ""
-        lbSubDCount.Text = "0"
+        'lbSubDCount.Text = "0"
         Me.TopMost = True
         zListDir()
         zListFiles()
         zStartUpVar = 1
+        zUpdateListSelectionsToNotHaveNoSelection()
         tmStartUp.Enabled = False
     End Sub
 
@@ -98,6 +99,34 @@ zHandler:
         tmStartUp.Enabled = True
     End Sub
 
+    Public Sub zUpdateListLabelCounts()
+        lbDirectoriesCount.Text = ListDirectories.Items.Count
+        lbFilesCount.Text = ListFiles.Items.Count
+        lbSubD1Count.Text = ListSubD1.Items.Count
+    End Sub
+
+    Public Sub zUpdateListSelectionsToNotHaveNoSelection()
+        If ListHist.Items.Count <> 0 Then
+            ListHist.SelectedIndex = 0
+            zUpdateTextBoxWithListEntry(ListHist, txtHistoryOut, 1, 0)
+        End If
+        If ListDirectories.Items.Count <> 0 Then
+            ListDirectories.SelectedIndex = 0
+            zUpdateLabelWithListEntryLastPathOrFile(ListDirectories, lbDirName, txtPath)
+            zUpdateTextBoxWithListEntry(ListDirectories, txtDirectoryOut, 1, 0)
+        End If
+        If ListFiles.Items.Count <> 0 Then
+            ListFiles.SelectedIndex = 0
+            zUpdateLabelWithListEntryLastPathOrFile(ListFiles, lbFn, txtPath)
+            zUpdateTextBoxWithListEntry(ListFiles, txtFilesOut, 1, 0)
+        End If
+        If ListSubD1.Items.Count <> 0 Then
+            ListSubD1.SelectedIndex = 0
+            zUpdateLabelWithListEntryLastPathOrFile(ListSubD1, lbFn, txtPath)
+            zUpdateTextBoxWithListEntry(ListSubD1, txtSubD1Out, 1, 0)
+        End If
+    End Sub
+
     Public Sub zListDir()
         On Error GoTo zHandler
         If System.IO.Directory.Exists(txtPath.Text) = False Then
@@ -106,29 +135,32 @@ zHandler:
             Exit Sub
         End If
 
-        listDirectories.Items.Clear()
+        ListDirectories.Items.Clear()
 
         For Each zDir As String In System.IO.Directory.GetDirectories(txtPath.Text)
             Application.DoEvents()
             If zLStop = True Then
                 Exit Sub
             End If
-            listDirectories.Items.Add(zDir)
+            ListDirectories.Items.Add(zDir)
         Next
 
-        If listHist.Items.Count = 0 Then Exit Sub
-        If listHist.SelectedIndex = -1 Then
-            listHist.SelectedIndex = 0
+        If ListHist.Items.Count = 0 Then Exit Sub
+        If ListHist.SelectedIndex = -1 Then
+            ListHist.SelectedIndex = 0
             'Exit Sub
         End If
 
-        If listDirectories.Items.Count = 0 Then Exit Sub
-        If listDirectories.SelectedIndex = -1 Then
-            listDirectories.SelectedIndex = 0
+        If ListDirectories.Items.Count = 0 Then Exit Sub
+        If ListDirectories.SelectedIndex = -1 Then
+            ListDirectories.SelectedIndex = 0
             'Exit Sub
         End If
 
         'zDone()
+
+        zUpdateListLabelCounts()
+
         'exit before zhandler
         Exit Sub
 zHandler:
@@ -153,7 +185,7 @@ zHandler:
             Exit Sub
         End If
 
-        listFiles.Items.Clear()
+        ListFiles.Items.Clear()
 
         For Each zFile As String In System.IO.Directory.GetFiles(txtPath.Text)
             Application.DoEvents()
@@ -161,8 +193,9 @@ zHandler:
                 Exit Sub
             End If
 
-            listFiles.Items.Add(zFile)
+            ListFiles.Items.Add(zFile)
         Next
+        zUpdateListLabelCounts()
         'zDone()
         'exit before zhandler
         Exit Sub
@@ -182,10 +215,10 @@ zHandler:
 
     Private Sub btListFiles_DoubleClick(sender As Object, e As EventArgs) Handles btListFiles.DoubleClick
         'Debug.Print(listFiles.SelectedItem.ToString)
-        txtPath.Text = listFiles.SelectedItem.ToString
+        txtPath.Text = ListFiles.SelectedItem.ToString
     End Sub
 
-    Private Sub listDirectories_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listDirectories.SelectedIndexChanged
+    Private Sub listDirectories_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListDirectories.SelectedIndexChanged
         '2026-08-06-19-08-45-PM
         'made functions that do this
         'added them to the vabbajack sandvich module
@@ -205,48 +238,48 @@ zHandler:
         ''zFname2 = Strings.Replace(zFname, txtPath.Text, "")
         'lbDirName.Text = zFname2
 
-        zUpdateLabelWithListEntryLastPathOrFile(listDirectories, lbDirName, txtPath)
+        zUpdateLabelWithListEntryLastPathOrFile(ListDirectories, lbDirName, txtPath)
         'zUpdateTextBoxWithListEntryLastPathOrFile(listDirectories, txtDirectoryOut, txtPath)
-        zUpdateTextBoxWithListEntry(listDirectories, txtDirectoryOut, 1, 0)
+        zUpdateTextBoxWithListEntry(ListDirectories, txtDirectoryOut, 1, 0)
 
     End Sub
 
-    Private Sub listDirectories_DoubleClick(sender As Object, e As EventArgs) Handles listDirectories.DoubleClick
+    Private Sub listDirectories_DoubleClick(sender As Object, e As EventArgs) Handles ListDirectories.DoubleClick
         'Debug.Print(listDirectories.SelectedItem.ToString)
-        If listDirectories.SelectedItem = Nothing Then Exit Sub
-        txtPath.Text = listDirectories.SelectedItem.ToString
+        If ListDirectories.SelectedItem = Nothing Then Exit Sub
+        txtPath.Text = ListDirectories.SelectedItem.ToString
         zListDir()
         zListFiles()
-        listHist.Items.Add(txtPath.Text)
-        listHist.SetSelected((listHist.Items.Count - 1), True)
+        ListHist.Items.Add(txtPath.Text)
+        ListHist.SetSelected((ListHist.Items.Count - 1), True)
 
-        zUpdateLabelWithListEntryLastPathOrFile(listDirectories, lbDirName, txtPath)
+        zUpdateLabelWithListEntryLastPathOrFile(ListDirectories, lbDirName, txtPath)
         'zUpdateTextBoxWithListEntryLastPathOrFile(listDirectories, txtDirectoryOut, txtPath)
-        zUpdateTextBoxWithListEntry(listDirectories, txtDirectoryOut, 1, 0)
+        zUpdateTextBoxWithListEntry(ListDirectories, txtDirectoryOut, 1, 0)
 
     End Sub
 
-    Private Sub listHist_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listHist.SelectedIndexChanged
+    Private Sub listHist_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListHist.SelectedIndexChanged
         'zUpdateLabelWithListEntryLastPathOrFile(listHist, lbDirName, txtPath)
         'zUpdateTextBoxWithListEntryLastPathOrFile(listDirectories, txtDirectoryOut, txtPath)
-        zUpdateTextBoxWithListEntry(listHist, txtHistoryOut, 1, 0)
+        zUpdateTextBoxWithListEntry(ListHist, txtHistoryOut, 1, 0)
 
     End Sub
 
-    Private Sub listHist_DoubleClick(sender As Object, e As EventArgs) Handles listHist.DoubleClick
-        If listHist.SelectedItem = Nothing Then Exit Sub
-        txtPath.Text = listHist.SelectedItem.ToString
+    Private Sub listHist_DoubleClick(sender As Object, e As EventArgs) Handles ListHist.DoubleClick
+        If ListHist.SelectedItem = Nothing Then Exit Sub
+        txtPath.Text = ListHist.SelectedItem.ToString
         zListDir()
         zListFiles()
         'zUpdateLabelWithListEntryLastPathOrFile(listHist, lbDirName, txtPath)
         'zUpdateTextBoxWithListEntryLastPathOrFile(listDirectories, txtDirectoryOut, txtPath)
-        zUpdateTextBoxWithListEntry(listHist, txtHistoryOut, 1, 0)
+        zUpdateTextBoxWithListEntry(ListHist, txtHistoryOut, 1, 0)
 
     End Sub
 
     Private Sub btClearHistory_Click(sender As Object, e As EventArgs) Handles btClearHistory.Click
-        listHist.Items.Clear()
-        listHist.Items.Add("C:\")
+        ListHist.Items.Clear()
+        ListHist.Items.Add("C:\")
         'zDone()
     End Sub
 
@@ -288,7 +321,7 @@ zHandler:
         If txtExt.Text = vbNullString Then
             txtExt.Text = ".mp3"
         End If
-        If listFiles.Items.Count = 0 Then
+        If ListFiles.Items.Count = 0 Then
             If ckMsg.Checked = True Then
                 MessageBox.Show("no files to add extention to in current directory")
             End If
@@ -314,7 +347,7 @@ zHandler:
             Dim zFname2 As String
             Dim zFnameExt As String
             Dim zFname3 As String
-            For zFindex As Long = 0 To listFiles.Items.Count - 1
+            For zFindex As Long = 0 To ListFiles.Items.Count - 1
                 'Debug.Print(listFiles.Items.Item(zFindex).ToString)
                 'My.Computer.FileSystem.RenameFile("C:\Test.txt", "SecondTest.txt")
                 Application.DoEvents()
@@ -322,7 +355,7 @@ zHandler:
                     Exit Sub
                 End If
 
-                zFname = listFiles.Items.Item(zFindex).ToString
+                zFname = ListFiles.Items.Item(zFindex).ToString
                 zFname2 = Mid(zFname, Len(txtPath.Text) + 2)
                 zFnameExt = Strings.Right(zFname2, 4)
                 zFname3 = txtExt.Text & zFname2
@@ -423,7 +456,7 @@ zHandler:
         If txtExt.Text = vbNullString Then
             txtExt.Text = ".mp3"
         End If
-        If listFiles.Items.Count = 0 Then
+        If ListFiles.Items.Count = 0 Then
             If ckMsg.Checked = True Then
                 MessageBox.Show("no files to add extention to in current directory")
             End If
@@ -448,7 +481,7 @@ zHandler:
             Dim zFname2 As String
             Dim zFnameExt As String
             Dim zFname3 As String
-            For zFindex As Long = 0 To listFiles.Items.Count - 1
+            For zFindex As Long = 0 To ListFiles.Items.Count - 1
                 'Debug.Print(listFiles.Items.Item(zFindex).ToString)
                 'My.Computer.FileSystem.RenameFile("C:\Test.txt", "SecondTest.txt")
                 Application.DoEvents()
@@ -456,7 +489,7 @@ zHandler:
                     Exit Sub
                 End If
 
-                zFname = listFiles.Items.Item(zFindex).ToString
+                zFname = ListFiles.Items.Item(zFindex).ToString
                 zFname2 = Mid(zFname, Len(txtPath.Text) + 2)
                 zFnameExt = Strings.Right(zFname2, 4)
                 zFname3 = zFname2 & txtExt.Text
@@ -528,7 +561,8 @@ zHandler:
 
     Public Sub zPauseRefreshFilesDirectories()
         '2026-10-24-09-15-19-AM
-        zPause()
+        'zPause()
+        zPause(1)
         zRefreshFilesAndDirectories()
     End Sub
 
@@ -581,7 +615,7 @@ zHandler:
         If txtTrim.Text = vbNullString Then
             txtTrim.Text = " English Dubbed"
         End If
-        If listFiles.Items.Count = 0 Then
+        If ListFiles.Items.Count = 0 Then
             If ckMsg.Checked = True Then
                 MessageBox.Show("no files to work with in current directory")
             End If
@@ -607,7 +641,7 @@ zHandler:
             Dim zFname As String
             Dim zFname2 As String
             'Dim zFname3 As String
-            For zFindex As Long = 0 To listFiles.Items.Count - 1
+            For zFindex As Long = 0 To ListFiles.Items.Count - 1
                 'Debug.Print(listFiles.Items.Item(zFindex).ToString)
                 'My.Computer.FileSystem.RenameFile("C:\Test.txt", "SecondTest.txt")
                 Application.DoEvents()
@@ -616,7 +650,7 @@ zHandler:
                 End If
 
 
-                zFname = listFiles.Items.Item(zFindex).ToString
+                zFname = ListFiles.Items.Item(zFindex).ToString
                 zFname2 = Mid(zFname, Len(txtPath.Text) + 2)
                 'zFname3 = Strings.Replace(zFname2, txtTrim.Text, "")
                 'If zFname <> vbNullString And zFname3 <> vbNullString And zFname2 <> zFname3 Then
@@ -713,7 +747,7 @@ zHandler:
         If txtTrim.Text = vbNullString Then
             txtTrim.Text = " English Dubbed"
         End If
-        If listFiles.Items.Count = 0 Then
+        If ListFiles.Items.Count = 0 Then
             If ckMsg.Checked = True Then
                 MessageBox.Show("no files to work with in current directory")
             End If
@@ -739,7 +773,7 @@ zHandler:
             Dim zFname As String
             Dim zFname2 As String
             'Dim zFname3 As String
-            For zFindex As Long = 0 To listFiles.Items.Count - 1
+            For zFindex As Long = 0 To ListFiles.Items.Count - 1
                 'Debug.Print(listFiles.Items.Item(zFindex).ToString)
                 'My.Computer.FileSystem.RenameFile("C:\Test.txt", "SecondTest.txt")
 
@@ -748,7 +782,7 @@ zHandler:
                     Exit Sub
                 End If
 
-                zFname = listFiles.Items.Item(zFindex).ToString
+                zFname = ListFiles.Items.Item(zFindex).ToString
                 'zFname2 = Mid(zFname, Len(txtPath.Text) + 2)
                 'zFname3 = Strings.Replace(zFname2, txtTrim.Text, "")
                 'If zFname <> vbNullString And zFname3 <> vbNullString And zFname2 <> zFname3 Then
@@ -832,7 +866,7 @@ zHandler:
         If txtTrim.Text = vbNullString Then
             txtTrim.Text = " English Dubbed"
         End If
-        If listFiles.Items.Count = 0 Then
+        If ListFiles.Items.Count = 0 Then
             If ckMsg.Checked = True Then
                 MessageBox.Show("no files to trim in current directory")
             End If
@@ -859,7 +893,7 @@ zHandler:
             Dim zFname2 As String
             Dim zFname3 As String
 
-            For zFindex As Long = 0 To listFiles.Items.Count - 1
+            For zFindex As Long = 0 To ListFiles.Items.Count - 1
                 'Debug.Print(listFiles.Items.Item(zFindex).ToString)
                 'My.Computer.FileSystem.RenameFile("C:\Test.txt", "SecondTest.txt")
 
@@ -868,7 +902,7 @@ zHandler:
                     Exit Sub
                 End If
 
-                zFname = listFiles.Items.Item(zFindex).ToString
+                zFname = ListFiles.Items.Item(zFindex).ToString
                 zFname2 = Mid(zFname, Len(txtPath.Text) + 2)
                 zFname3 = Strings.Replace(zFname2, txtTrim.Text, "")
 
@@ -937,7 +971,7 @@ zHandler:
         End If
     End Sub
 
-    Private Sub listFiles_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listFiles.SelectedIndexChanged
+    Private Sub listFiles_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListFiles.SelectedIndexChanged
         'If listFiles.SelectedItem = Nothing Then Exit Sub
         'If txtPath.Text = vbNullString Then Exit Sub
         'Dim zFname As String
@@ -954,8 +988,8 @@ zHandler:
         ''zFname2 = Strings.Replace(zFname, txtPath.Text, "")
         'lbFn.Text = zFname2
 
-        zUpdateLabelWithListEntryLastPathOrFile(listFiles, lbFn, txtPath)
-        zUpdateTextBoxWithListEntry(listFiles, txtFilesOut, 1, 0)
+        zUpdateLabelWithListEntryLastPathOrFile(ListFiles, lbFn, txtPath)
+        zUpdateTextBoxWithListEntry(ListFiles, txtFilesOut, 1, 0)
 
     End Sub
 
@@ -985,13 +1019,13 @@ zHandler:
         'zListDir()
         'zListFiles()
 
-        If listDirectories.Items.Count = 0 Then
+        If ListDirectories.Items.Count = 0 Then
             MessageBox.Show("no sub directories in current directory")
             Exit Sub
         End If
 
-        listSubD1.Items.Clear()
-        listFiles.Items.Clear()
+        ListSubD1.Items.Clear()
+        ListFiles.Items.Clear()
 
         If LCase(txtPath.Text) = "c:\" Then
             MessageBox.Show("yeah we arent doing the entire drive")
@@ -1034,8 +1068,8 @@ zHandler:
                 Exit Sub
             End If
 
-            If listDirectories.Items.Count > 0 Then
-                For zSDI = 0 To listDirectories.Items.Count - 1
+            If ListDirectories.Items.Count > 0 Then
+                For zSDI = 0 To ListDirectories.Items.Count - 1
                     Application.DoEvents()
                     If zLStop = True Then
                         Exit Sub
@@ -1043,23 +1077,23 @@ zHandler:
 
                     'go through every directory in the main directory list
                     'zdn is the current directory name
-                    zDn = listDirectories.Items.Item(zSDI)
-                    If listSubD1.Items.Count = 0 Then
+                    zDn = ListDirectories.Items.Item(zSDI)
+                    If ListSubD1.Items.Count = 0 Then
                         'if its the first entry dont bother with the dedeuplication check
                         'just add it to the subdirectories list
-                        listSubD1.Items.Add(zDn)
+                        ListSubD1.Items.Add(zDn)
                     Else
                         'the list has stuff in it to deduplicate against
                         'this shouldnt be necessary but just incase
                         zDD = False
-                        For zSDI2 = 0 To listSubD1.Items.Count - 1
+                        For zSDI2 = 0 To ListSubD1.Items.Count - 1
                             Application.DoEvents()
                             If zLStop = True Then
                                 Exit Sub
                             End If
 
                             'zsdn is the current directory name via zSDI2 index
-                            zSdn = listSubD1.Items.Item(zSDI2)
+                            zSdn = ListSubD1.Items.Item(zSDI2)
                             If zSdn = zDn Then
                                 'a match was found so set the dedupe flag to true
                                 zDD = True
@@ -1070,22 +1104,23 @@ zHandler:
                         If zDD = False Then
                             'there were no duplicates
                             'add the entry to the sub directory list box
-                            listSubD1.Items.Add(zDn)
+                            ListSubD1.Items.Add(zDn)
                         End If
                     End If
                 Next
             End If
             'update the label count
-            lbSubDCount.Text = listSubD1.Items.Count
+            'lbSubDCount.Text = ListSubD1.Items.Count
+            zUpdateListLabelCounts()
             'proceed to next entry in the sub directory list box
-            If zSDI3 < listSubD1.Items.Count Then
-                txtPath.Text = listSubD1.Items.Item(zSDI3)
+            If zSDI3 < ListSubD1.Items.Count Then
+                txtPath.Text = ListSubD1.Items.Item(zSDI3)
                 zListDir()
                 'zListFiles()
             End If
             'incriment the sub directory index
             zSDI3 = zSDI3 + 1
-            If zSDI3 > listSubD1.Items.Count Then
+            If zSDI3 > ListSubD1.Items.Count Then
                 zSdStop = True
             End If
         Loop Until zSdStop = True
@@ -1093,9 +1128,9 @@ zHandler:
         'add the main directory to the sub directory list
         'for when the extention and trim stuff happens
 
-        listSubD1.Items.Add(zStartingPath)
+        ListSubD1.Items.Add(zStartingPath)
 
-        listFiles.Items.Clear()
+        ListFiles.Items.Clear()
 
         'then do trim
 
@@ -1118,14 +1153,14 @@ zHandler:
 
         If ckReplace.Checked = True Then
             'iterate through sub directory box
-            For zSDI = 0 To listSubD1.Items.Count - 1
+            For zSDI = 0 To ListSubD1.Items.Count - 1
                 Application.DoEvents()
                 If zLStop = True Then
                     Exit Sub
                 End If
 
                 'set path
-                txtPath.Text = listSubD1.Items.Item(zSDI)
+                txtPath.Text = ListSubD1.Items.Item(zSDI)
                 'list directories
                 zListDir()
                 'list files
@@ -1139,14 +1174,14 @@ zHandler:
 
         If ckSubDExt.Checked = True Then
             'iterate through sub directory box
-            For zSDI = 0 To listSubD1.Items.Count - 1
+            For zSDI = 0 To ListSubD1.Items.Count - 1
                 Application.DoEvents()
                 If zLStop = True Then
                     Exit Sub
                 End If
 
                 'set path
-                txtPath.Text = listSubD1.Items.Item(zSDI)
+                txtPath.Text = ListSubD1.Items.Item(zSDI)
                 'list directories
                 zListDir()
                 'list files
@@ -1172,8 +1207,9 @@ zHandler:
         Application.DoEvents()
         zRefreshFilesAndDirectories()
 
-        listSubD1.Items.Clear()
-        lbSubDCount.Text = "0"
+        ListSubD1.Items.Clear()
+        'lbSubDCount.Text = "0"
+        zUpdateListLabelCounts()
     End Sub
 
     Private Sub btReplace_Click(sender As Object, e As EventArgs) Handles btReplace.Click
@@ -1300,7 +1336,7 @@ zHandler:
         'txtReplace.Text = "Replace"
         'End If
 
-        If listFiles.Items.Count = 0 Then
+        If ListFiles.Items.Count = 0 Then
             If ckMsg.Checked = True Then
                 MessageBox.Show("no files to match and replace in current directory")
             End If
@@ -1325,7 +1361,7 @@ zHandler:
             Dim zFname As String
             Dim zFname2 As String
             Dim zFname3 As String
-            For zFindex As Long = 0 To listFiles.Items.Count - 1
+            For zFindex As Long = 0 To ListFiles.Items.Count - 1
                 'Debug.Print(listFiles.Items.Item(zFindex).ToString)
                 'My.Computer.FileSystem.RenameFile("C:\Test.txt", "SecondTest.txt")
                 Application.DoEvents()
@@ -1333,7 +1369,7 @@ zHandler:
                     Exit Sub
                 End If
 
-                zFname = listFiles.Items.Item(zFindex).ToString
+                zFname = ListFiles.Items.Item(zFindex).ToString
                 zFname2 = Mid(zFname, Len(txtPath.Text) + 2)
                 zFname3 = Strings.Replace(zFname2, txtMatch.Text, txtReplace.Text)
                 If zFname <> vbNullString And zFname3 <> vbNullString And zFname2 <> zFname3 Then
@@ -1397,30 +1433,30 @@ zHandler:
         End If
     End Sub
 
-    Private Sub listHist_KeyPress(sender As Object, e As KeyPressEventArgs) Handles listHist.KeyPress
+    Private Sub listHist_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ListHist.KeyPress
 
     End Sub
 
-    Private Sub listHist_KeyUp(sender As Object, e As KeyEventArgs) Handles listHist.KeyUp
+    Private Sub listHist_KeyUp(sender As Object, e As KeyEventArgs) Handles ListHist.KeyUp
         'Debug.Print(e.KeyCode)
         'exit Sub
         If e.KeyCode = 13 Then
-            If listHist.SelectedItem = Nothing Then Exit Sub
-            txtPath.Text = listHist.SelectedItem.ToString
+            If ListHist.SelectedItem = Nothing Then Exit Sub
+            txtPath.Text = ListHist.SelectedItem.ToString
             zListDir()
             zListFiles()
         End If
     End Sub
 
-    Private Sub listDirectories_KeyUp(sender As Object, e As KeyEventArgs) Handles listDirectories.KeyUp
+    Private Sub listDirectories_KeyUp(sender As Object, e As KeyEventArgs) Handles ListDirectories.KeyUp
         If e.KeyCode = 13 Then
             'Debug.Print(listDirectories.SelectedItem.ToString)
-            If listDirectories.SelectedItem = Nothing Then Exit Sub
-            txtPath.Text = listDirectories.SelectedItem.ToString
+            If ListDirectories.SelectedItem = Nothing Then Exit Sub
+            txtPath.Text = ListDirectories.SelectedItem.ToString
             zListDir()
             zListFiles()
-            listHist.Items.Add(txtPath.Text)
-            listHist.SetSelected((listHist.Items.Count - 1), True)
+            ListHist.Items.Add(txtPath.Text)
+            ListHist.SetSelected((ListHist.Items.Count - 1), True)
         End If
     End Sub
 
@@ -1437,8 +1473,8 @@ zHandler:
             End If
             zListDir()
             zListFiles()
-            listHist.Items.Add(txtPath.Text)
-            listHist.SetSelected(listHist.Items.Count - 1, True)
+            ListHist.Items.Add(txtPath.Text)
+            ListHist.SetSelected(ListHist.Items.Count - 1, True)
         End If
     End Sub
 
@@ -1462,7 +1498,7 @@ zHandler:
         End If
     End Sub
 
-    Private Sub listSubD1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listSubD1.SelectedIndexChanged
+    Private Sub listSubD1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListSubD1.SelectedIndexChanged
         ''If listDirectories.SelectedItem = Nothing Then Exit Sub
         'If listSubD1.SelectedItem = Nothing Then Exit Sub
         'If txtPath.Text = vbNullString Then Exit Sub
@@ -1481,23 +1517,23 @@ zHandler:
         ''zFname2 = Strings.Replace(zFname, txtPath.Text, "")
         'lbDirName.Text = zFname2
 
-        zUpdateLabelWithListEntryLastPathOrFile(listSubD1, lbFn, txtPath)
-        zUpdateTextBoxWithListEntry(listSubD1, txtSubD1Out, 1, 0)
+        zUpdateLabelWithListEntryLastPathOrFile(ListSubD1, lbFn, txtPath)
+        zUpdateTextBoxWithListEntry(ListSubD1, txtSubD1Out, 1, 0)
 
     End Sub
 
-    Private Sub listSubD1_DoubleClick(sender As Object, e As EventArgs) Handles listSubD1.DoubleClick
+    Private Sub listSubD1_DoubleClick(sender As Object, e As EventArgs) Handles ListSubD1.DoubleClick
         'Debug.Print(listDirectories.SelectedItem.ToString)
         'If listDirectories.SelectedItem = Nothing Then Exit Sub
-        If listSubD1.SelectedItem = Nothing Then Exit Sub
-        txtPath.Text = listSubD1.SelectedItem.ToString
+        If ListSubD1.SelectedItem = Nothing Then Exit Sub
+        txtPath.Text = ListSubD1.SelectedItem.ToString
         zListDir()
         zListFiles()
-        listHist.Items.Add(txtPath.Text)
-        listHist.SetSelected((listHist.Items.Count - 1), True)
+        ListHist.Items.Add(txtPath.Text)
+        ListHist.SetSelected((ListHist.Items.Count - 1), True)
 
-        zUpdateLabelWithListEntryLastPathOrFile(listSubD1, lbFn, txtPath)
-        zUpdateTextBoxWithListEntry(listSubD1, txtSubD1Out, 1, 0)
+        zUpdateLabelWithListEntryLastPathOrFile(ListSubD1, lbFn, txtPath)
+        zUpdateTextBoxWithListEntry(ListSubD1, txtSubD1Out, 1, 0)
 
     End Sub
 
@@ -1505,16 +1541,16 @@ zHandler:
         txtPath.Text = "c:\"
         zListDir()
         zListFiles()
-        listHist.Items.Add(txtPath.Text)
-        listHist.SetSelected((listHist.Items.Count - 1), True)
+        ListHist.Items.Add(txtPath.Text)
+        ListHist.SetSelected((ListHist.Items.Count - 1), True)
     End Sub
 
     Private Sub btDDrive_Click(sender As Object, e As EventArgs) Handles btDDrive.Click
         txtPath.Text = "d:\"
         zListDir()
         zListFiles()
-        listHist.Items.Add(txtPath.Text)
-        listHist.SetSelected((listHist.Items.Count - 1), True)
+        ListHist.Items.Add(txtPath.Text)
+        ListHist.SetSelected((ListHist.Items.Count - 1), True)
 
     End Sub
 
@@ -1533,22 +1569,22 @@ zHandler:
     End Sub
 
     Private Sub btOpenDirectory_Click(sender As Object, e As EventArgs) Handles btOpenDirectoryDir.Click
-        If listDirectories.Items.Count = 0 Then Exit Sub
-        If listDirectories.SelectedIndex = -1 Then
-            listDirectories.SelectedIndex = 0
+        If ListDirectories.Items.Count = 0 Then Exit Sub
+        If ListDirectories.SelectedIndex = -1 Then
+            ListDirectories.SelectedIndex = 0
             'Exit Sub
         End If
-        zOpenWindowsDirectoryInExplorer(listDirectories.Items.Item(listDirectories.SelectedIndex))
+        zOpenWindowsDirectoryInExplorer(ListDirectories.Items.Item(ListDirectories.SelectedIndex))
 
     End Sub
 
     Private Sub btOpenDirectoryHist_Click(sender As Object, e As EventArgs) Handles btOpenDirectoryHist.Click
-        If listHist.Items.Count = 0 Then Exit Sub
-        If listHist.SelectedIndex = -1 Then
-            listHist.SelectedIndex = 0
+        If ListHist.Items.Count = 0 Then Exit Sub
+        If ListHist.SelectedIndex = -1 Then
+            ListHist.SelectedIndex = 0
             'Exit Sub
         End If
-        zOpenWindowsDirectoryInExplorer(listHist.Items.Item(listHist.SelectedIndex))
+        zOpenWindowsDirectoryInExplorer(ListHist.Items.Item(ListHist.SelectedIndex))
 
     End Sub
 
@@ -1556,8 +1592,8 @@ zHandler:
         txtPath.Text = "e:\"
         zListDir()
         zListFiles()
-        listHist.Items.Add(txtPath.Text)
-        listHist.SetSelected((listHist.Items.Count - 1), True)
+        ListHist.Items.Add(txtPath.Text)
+        ListHist.SetSelected((ListHist.Items.Count - 1), True)
 
     End Sub
 
@@ -1565,8 +1601,8 @@ zHandler:
         txtPath.Text = "f:\"
         zListDir()
         zListFiles()
-        listHist.Items.Add(txtPath.Text)
-        listHist.SetSelected((listHist.Items.Count - 1), True)
+        ListHist.Items.Add(txtPath.Text)
+        ListHist.SetSelected((ListHist.Items.Count - 1), True)
 
     End Sub
 

@@ -24,13 +24,13 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         btListDir = New Button()
-        listDirectories = New ListBox()
+        ListDirectories = New ListBox()
         txtPath = New TextBox()
         lbPath = New Label()
         btListFiles = New Button()
-        listFiles = New ListBox()
+        ListFiles = New ListBox()
         lbHistory = New Label()
-        listHist = New ListBox()
+        ListHist = New ListBox()
         lbDirectories = New Label()
         lbFiles = New Label()
         btClearHistory = New Button()
@@ -41,9 +41,8 @@ Partial Class frmMain
         tmRefresh = New Timer(components)
         lbFn = New Label()
         lbDirName = New Label()
-        lbSubDCount = New Label()
         lbSubD1 = New Label()
-        listSubD1 = New ListBox()
+        ListSubD1 = New ListBox()
         ckSubDExt = New CheckBox()
         ckTrim = New CheckBox()
         btSubD = New Button()
@@ -75,6 +74,9 @@ Partial Class frmMain
         txtFilesOut = New TextBox()
         txtSubD1Out = New TextBox()
         btTestButton = New Button()
+        lbDirectoriesCount = New Label()
+        lbFilesCount = New Label()
+        lbSubD1Count = New Label()
         SuspendLayout()
         ' 
         ' btListDir
@@ -89,15 +91,15 @@ Partial Class frmMain
         btListDir.Text = "List Directories"
         btListDir.UseVisualStyleBackColor = False
         ' 
-        ' listDirectories
+        ' ListDirectories
         ' 
-        listDirectories.BackColor = Color.Black
-        listDirectories.ForeColor = Color.LimeGreen
-        listDirectories.FormattingEnabled = True
-        listDirectories.Location = New Point(9, 291)
-        listDirectories.Name = "listDirectories"
-        listDirectories.Size = New Size(671, 104)
-        listDirectories.TabIndex = 2
+        ListDirectories.BackColor = Color.Black
+        ListDirectories.ForeColor = Color.LimeGreen
+        ListDirectories.FormattingEnabled = True
+        ListDirectories.Location = New Point(9, 291)
+        ListDirectories.Name = "ListDirectories"
+        ListDirectories.Size = New Size(671, 104)
+        ListDirectories.TabIndex = 2
         ' 
         ' txtPath
         ' 
@@ -132,15 +134,15 @@ Partial Class frmMain
         btListFiles.Text = "List Files"
         btListFiles.UseVisualStyleBackColor = False
         ' 
-        ' listFiles
+        ' ListFiles
         ' 
-        listFiles.BackColor = Color.Black
-        listFiles.ForeColor = Color.LimeGreen
-        listFiles.FormattingEnabled = True
-        listFiles.Location = New Point(9, 470)
-        listFiles.Name = "listFiles"
-        listFiles.Size = New Size(671, 104)
-        listFiles.TabIndex = 3
+        ListFiles.BackColor = Color.Black
+        ListFiles.ForeColor = Color.LimeGreen
+        ListFiles.FormattingEnabled = True
+        ListFiles.Location = New Point(9, 470)
+        ListFiles.Name = "ListFiles"
+        ListFiles.Size = New Size(671, 104)
+        ListFiles.TabIndex = 3
         ' 
         ' lbHistory
         ' 
@@ -154,15 +156,15 @@ Partial Class frmMain
         lbHistory.TabIndex = 6
         lbHistory.Text = "History"
         ' 
-        ' listHist
+        ' ListHist
         ' 
-        listHist.BackColor = Color.Black
-        listHist.ForeColor = Color.LimeGreen
-        listHist.FormattingEnabled = True
-        listHist.Location = New Point(9, 111)
-        listHist.Name = "listHist"
-        listHist.Size = New Size(671, 104)
-        listHist.TabIndex = 1
+        ListHist.BackColor = Color.Black
+        ListHist.ForeColor = Color.LimeGreen
+        ListHist.FormattingEnabled = True
+        ListHist.Location = New Point(9, 111)
+        ListHist.Name = "ListHist"
+        ListHist.Size = New Size(671, 104)
+        ListHist.TabIndex = 1
         ' 
         ' lbDirectories
         ' 
@@ -170,7 +172,7 @@ Partial Class frmMain
         lbDirectories.BackColor = Color.Black
         lbDirectories.Font = New Font("Segoe UI", 8F)
         lbDirectories.ForeColor = Color.LimeGreen
-        lbDirectories.Location = New Point(8, 269)
+        lbDirectories.Location = New Point(11, 243)
         lbDirectories.Name = "lbDirectories"
         lbDirectories.Size = New Size(74, 19)
         lbDirectories.TabIndex = 8
@@ -182,7 +184,7 @@ Partial Class frmMain
         lbFiles.BackColor = Color.Black
         lbFiles.Font = New Font("Segoe UI", 8F)
         lbFiles.ForeColor = Color.LimeGreen
-        lbFiles.Location = New Point(12, 448)
+        lbFiles.Location = New Point(9, 421)
         lbFiles.Name = "lbFiles"
         lbFiles.Size = New Size(35, 19)
         lbFiles.TabIndex = 9
@@ -254,7 +256,7 @@ Partial Class frmMain
         lbFn.BackColor = Color.Black
         lbFn.Font = New Font("Segoe UI", 8F)
         lbFn.ForeColor = Color.LimeGreen
-        lbFn.Location = New Point(50, 448)
+        lbFn.Location = New Point(8, 448)
         lbFn.Name = "lbFn"
         lbFn.Size = New Size(65, 19)
         lbFn.TabIndex = 15
@@ -266,24 +268,11 @@ Partial Class frmMain
         lbDirName.BackColor = Color.Black
         lbDirName.Font = New Font("Segoe UI", 8F)
         lbDirName.ForeColor = Color.LimeGreen
-        lbDirName.Location = New Point(85, 269)
+        lbDirName.Location = New Point(10, 269)
         lbDirName.Name = "lbDirName"
         lbDirName.Size = New Size(105, 19)
         lbDirName.TabIndex = 16
         lbDirName.Text = "Directory Name"
-        lbDirName.Visible = False
-        ' 
-        ' lbSubDCount
-        ' 
-        lbSubDCount.AutoSize = True
-        lbSubDCount.BackColor = Color.Black
-        lbSubDCount.Font = New Font("Segoe UI", 8F)
-        lbSubDCount.ForeColor = Color.LimeGreen
-        lbSubDCount.Location = New Point(115, 610)
-        lbSubDCount.Name = "lbSubDCount"
-        lbSubDCount.Size = New Size(134, 19)
-        lbSubDCount.TabIndex = 19
-        lbSubDCount.Text = "Sub Directory Count"
         ' 
         ' lbSubD1
         ' 
@@ -291,21 +280,21 @@ Partial Class frmMain
         lbSubD1.BackColor = Color.Black
         lbSubD1.Font = New Font("Segoe UI", 8F)
         lbSubD1.ForeColor = Color.LimeGreen
-        lbSubD1.Location = New Point(9, 610)
+        lbSubD1.Location = New Point(7, 606)
         lbSubD1.Name = "lbSubD1"
         lbSubD1.Size = New Size(101, 19)
         lbSubD1.TabIndex = 18
         lbSubD1.Text = "Sub Directories"
         ' 
-        ' listSubD1
+        ' ListSubD1
         ' 
-        listSubD1.BackColor = Color.Black
-        listSubD1.ForeColor = Color.LimeGreen
-        listSubD1.FormattingEnabled = True
-        listSubD1.Location = New Point(9, 632)
-        listSubD1.Name = "listSubD1"
-        listSubD1.Size = New Size(671, 124)
-        listSubD1.TabIndex = 4
+        ListSubD1.BackColor = Color.Black
+        ListSubD1.ForeColor = Color.LimeGreen
+        ListSubD1.FormattingEnabled = True
+        ListSubD1.Location = New Point(8, 628)
+        ListSubD1.Name = "ListSubD1"
+        ListSubD1.Size = New Size(671, 124)
+        ListSubD1.TabIndex = 4
         ' 
         ' ckSubDExt
         ' 
@@ -625,7 +614,7 @@ Partial Class frmMain
         ' 
         txtHistoryOut.BackColor = Color.Black
         txtHistoryOut.ForeColor = Color.LimeGreen
-        txtHistoryOut.Location = New Point(8, 222)
+        txtHistoryOut.Location = New Point(8, 213)
         txtHistoryOut.Name = "txtHistoryOut"
         txtHistoryOut.Size = New Size(672, 27)
         txtHistoryOut.TabIndex = 45
@@ -635,7 +624,7 @@ Partial Class frmMain
         ' 
         txtDirectoryOut.BackColor = Color.Black
         txtDirectoryOut.ForeColor = Color.LimeGreen
-        txtDirectoryOut.Location = New Point(8, 401)
+        txtDirectoryOut.Location = New Point(8, 391)
         txtDirectoryOut.Name = "txtDirectoryOut"
         txtDirectoryOut.Size = New Size(672, 27)
         txtDirectoryOut.TabIndex = 46
@@ -645,7 +634,7 @@ Partial Class frmMain
         ' 
         txtFilesOut.BackColor = Color.Black
         txtFilesOut.ForeColor = Color.LimeGreen
-        txtFilesOut.Location = New Point(8, 580)
+        txtFilesOut.Location = New Point(9, 571)
         txtFilesOut.Name = "txtFilesOut"
         txtFilesOut.Size = New Size(672, 27)
         txtFilesOut.TabIndex = 47
@@ -655,7 +644,7 @@ Partial Class frmMain
         ' 
         txtSubD1Out.BackColor = Color.Black
         txtSubD1Out.ForeColor = Color.LimeGreen
-        txtSubD1Out.Location = New Point(8, 769)
+        txtSubD1Out.Location = New Point(7, 750)
         txtSubD1Out.Name = "txtSubD1Out"
         txtSubD1Out.Size = New Size(672, 27)
         txtSubD1Out.TabIndex = 48
@@ -674,6 +663,42 @@ Partial Class frmMain
         btTestButton.UseVisualStyleBackColor = False
         btTestButton.Visible = False
         ' 
+        ' lbDirectoriesCount
+        ' 
+        lbDirectoriesCount.AutoSize = True
+        lbDirectoriesCount.BackColor = Color.Black
+        lbDirectoriesCount.Font = New Font("Segoe UI", 8F)
+        lbDirectoriesCount.ForeColor = Color.LimeGreen
+        lbDirectoriesCount.Location = New Point(97, 243)
+        lbDirectoriesCount.Name = "lbDirectoriesCount"
+        lbDirectoriesCount.Size = New Size(17, 19)
+        lbDirectoriesCount.TabIndex = 50
+        lbDirectoriesCount.Text = "0"
+        ' 
+        ' lbFilesCount
+        ' 
+        lbFilesCount.AutoSize = True
+        lbFilesCount.BackColor = Color.Black
+        lbFilesCount.Font = New Font("Segoe UI", 8F)
+        lbFilesCount.ForeColor = Color.LimeGreen
+        lbFilesCount.Location = New Point(45, 421)
+        lbFilesCount.Name = "lbFilesCount"
+        lbFilesCount.Size = New Size(17, 19)
+        lbFilesCount.TabIndex = 51
+        lbFilesCount.Text = "0"
+        ' 
+        ' lbSubD1Count
+        ' 
+        lbSubD1Count.AutoSize = True
+        lbSubD1Count.BackColor = Color.Black
+        lbSubD1Count.Font = New Font("Segoe UI", 8F)
+        lbSubD1Count.ForeColor = Color.LimeGreen
+        lbSubD1Count.Location = New Point(114, 606)
+        lbSubD1Count.Name = "lbSubD1Count"
+        lbSubD1Count.Size = New Size(17, 19)
+        lbSubD1Count.TabIndex = 52
+        lbSubD1Count.Text = "0"
+        ' 
         ' frmMain
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -681,6 +706,9 @@ Partial Class frmMain
         AutoScroll = True
         BackColor = Color.Black
         ClientSize = New Size(925, 850)
+        Controls.Add(lbSubD1Count)
+        Controls.Add(lbFilesCount)
+        Controls.Add(lbDirectoriesCount)
         Controls.Add(btTestButton)
         Controls.Add(txtSubD1Out)
         Controls.Add(txtFilesOut)
@@ -708,9 +736,8 @@ Partial Class frmMain
         Controls.Add(btSubD)
         Controls.Add(ckTrim)
         Controls.Add(ckSubDExt)
-        Controls.Add(lbSubDCount)
         Controls.Add(lbSubD1)
-        Controls.Add(listSubD1)
+        Controls.Add(ListSubD1)
         Controls.Add(lbDirName)
         Controls.Add(lbFn)
         Controls.Add(txtTrim)
@@ -720,13 +747,13 @@ Partial Class frmMain
         Controls.Add(btClearHistory)
         Controls.Add(lbFiles)
         Controls.Add(lbDirectories)
-        Controls.Add(listHist)
+        Controls.Add(ListHist)
         Controls.Add(lbHistory)
-        Controls.Add(listFiles)
+        Controls.Add(ListFiles)
         Controls.Add(btListFiles)
         Controls.Add(lbPath)
         Controls.Add(txtPath)
-        Controls.Add(listDirectories)
+        Controls.Add(ListDirectories)
         Controls.Add(btListDir)
         Controls.Add(btClearSub)
         Controls.Add(btForceLcase)
@@ -742,13 +769,13 @@ Partial Class frmMain
     End Sub
 
     Friend WithEvents btListDir As Button
-    Friend WithEvents listDirectories As ListBox
+    Friend WithEvents ListDirectories As ListBox
     Friend WithEvents txtPath As TextBox
     Friend WithEvents lbPath As Label
     Friend WithEvents btListFiles As Button
-    Friend WithEvents listFiles As ListBox
+    Friend WithEvents ListFiles As ListBox
     Friend WithEvents lbHistory As Label
-    Friend WithEvents listHist As ListBox
+    Friend WithEvents ListHist As ListBox
     Friend WithEvents lbDirectories As Label
     Friend WithEvents lbFiles As Label
     Friend WithEvents btClearHistory As Button
@@ -759,9 +786,8 @@ Partial Class frmMain
     Friend WithEvents tmRefresh As Timer
     Friend WithEvents lbFn As Label
     Friend WithEvents lbDirName As Label
-    Friend WithEvents lbSubDCount As Label
     Friend WithEvents lbSubD1 As Label
-    Friend WithEvents listSubD1 As ListBox
+    Friend WithEvents ListSubD1 As ListBox
     Friend WithEvents ckSubDExt As CheckBox
     Friend WithEvents ckTrim As CheckBox
     Friend WithEvents btSubD As Button
@@ -793,4 +819,7 @@ Partial Class frmMain
     Friend WithEvents txtFilesOut As TextBox
     Friend WithEvents txtSubD1Out As TextBox
     Friend WithEvents btTestButton As Button
+    Friend WithEvents lbDirectoriesCount As Label
+    Friend WithEvents lbFilesCount As Label
+    Friend WithEvents lbSubD1Count As Label
 End Class

@@ -7,7 +7,6 @@ rem with specified durations
 rem ===========================
 rem example of images.txt format
 rem ===========================
-rem ffconcat version 1.0
 rem file 'slide_a.png'
 rem duration 3.0
 rem file 'slide_b.jpg'
