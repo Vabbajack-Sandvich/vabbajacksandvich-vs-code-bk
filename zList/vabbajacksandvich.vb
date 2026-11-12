@@ -3644,12 +3644,15 @@
 
 '===================================================
 
+Imports System.IO
 Imports System.Net
 Imports System.Runtime.CompilerServices
+Imports System.Runtime.InteropServices
 Imports System.Text
 Imports System.Windows.Forms.AxHost
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
 Imports System.Xml
+Imports zWindowList.vabbajacksandvich
 
 Module vabbajacksandvich
     '-------------------------------------
@@ -7528,6 +7531,220 @@ Module vabbajacksandvich
         'if nothing is specified it has a default of 10 seconds
         System.Threading.Thread.Sleep(zPauseTime)
     End Function
+
+    'Imports System.IO
+
+    Public Class zExplorerHelper
+        '2026-11-11-19-03-52-PM
+        Public Shared Function GetOpenExplorerPaths() As List(Of String)
+            Dim paths As New List(Of String)()
+
+            ' Create an instance of the Shell.Application COM object
+            Dim shellType As Type = Type.GetTypeFromProgID("Shell.Application")
+            Dim shell As Object = Activator.CreateInstance(shellType)
+
+            ' Retrieve the collection of open Shell windows
+            Dim windows As Object = shell.Windows()
+
+            For Each window As Object In windows
+                Application.DoEvents()
+                Try
+                    ' Check the process name to ensure it is File Explorer (explorer.exe)
+                    ' This filters out legacy Internet Explorer instances if any exist
+                    Dim fullName As String = window.FullName.ToString()
+                    If Path.GetFileNameWithoutExtension(fullName).Equals("explorer", StringComparison.OrdinalIgnoreCase) Then
+
+                        ' LocationURL returns a file URI (e.g., "file:///C:/Users/Name/Documents")
+                        Dim locationUrl As String = window.LocationURL.ToString()
+
+                        If Not String.IsNullOrEmpty(locationUrl) Then
+                            ' Convert the URI into a standard local file path
+                            Dim localPath As String = New Uri(locationUrl).LocalPath
+                            paths.Add(localPath)
+                        Else
+                            ' Special folders like "This PC" or "Recycle Bin" have an empty LocationURL
+                            ' You can fall back to LocationName for the window title
+                            paths.Add($"[Special Folder] {window.LocationName}")
+                        End If
+                    End If
+                Catch ex As Exception
+                    ' Ignore windows that might close while iterating or lack valid properties
+                End Try
+            Next
+
+            Return paths
+        End Function
+
+        'adding this
+        <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
+        Private Shared Function FindWindow(lpClassName As String, lpWindowName As String) As IntPtr
+        End Function
+
+        <DllImport("user32.dll")>
+        Private Shared Function SetForegroundWindow(hWnd As IntPtr) As Boolean
+        End Function
+
+        <DllImport("user32.dll")>
+        Private Shared Function ShowWindow(hWnd As IntPtr, nCmdShow As Integer) As Boolean
+        End Function
+
+        <DllImport("user32.dll")>
+        Private Shared Function IsIconic(hWnd As IntPtr) As Boolean
+        End Function
+
+        Private Const SW_RESTORE As Integer = 9
+
+        Public Shared Sub BringExplorerToFront(folderTitle As String)
+            ' "CabinetWClass" is the standard window class for File Explorer windows
+            Dim hWnd As IntPtr = FindWindow("CabinetWClass", folderTitle)
+
+            If hWnd <> IntPtr.Zero Then
+                ' If the window is minimized, restore it first
+                If IsIconic(hWnd) Then
+                    ShowWindow(hWnd, SW_RESTORE)
+                End If
+
+                ' Bring the window to the foreground
+                SetForegroundWindow(hWnd)
+            Else
+                MessageBox.Show("window not found")
+            End If
+        End Sub
+
+
+    End Class
+
+    Public Sub zGetActiveExplorerWindowsAddToListbox(zGAWListBox As ListBox)
+        '2026-11-11-19-03-52-PM
+        'expects the listbox to be there
+        'will crash if its not right
+
+        zGAWListBox.Items.Clear()
+
+        Dim openFolders As List(Of String) = zExplorerHelper.GetOpenExplorerPaths()
+
+        For Each folderPath As String In openFolders
+            Application.DoEvents()
+            'Console.WriteLine(folderPath)
+            zGAWListBox.Items.Add(folderPath)
+        Next
+
+    End Sub
+
+    Public Sub zBringExplorerWindowToFront(zBEWTFString As String)
+        '2026-11-11-19-20-23-PM
+        'expects a string to match to the window title
+        If zBEWTFString = "" Then Exit Sub
+        'Brings an open File Explorer window titled "Documents" to the front
+        'zExplorerHelper.BringExplorerToFront("Documents")
+        zExplorerHelper.BringExplorerToFront(zBEWTFString)
+
+    End Sub
+
+    Public Sub zCloseAllExplorerWindows()
+        '2026-11-11-19-30-36-PM
+        ' Create an instance of the Shell.Application COM object
+        Dim shellApp As Object = CreateObject("Shell.Application")
+
+        ' Loop through all open Shell windows
+        For Each win As Object In shellApp.Windows()
+            Application.DoEvents()
+            Try
+                ' Verify the window is File Explorer (and not an old Internet Explorer instance)
+                If IO.Path.GetFileNameWithoutExtension(win.FullName).ToLower() = "explorer" Then
+                    win.Quit()
+                End If
+            Catch ex As Exception
+                ' Handle or ignore windows that cannot be accessed
+            End Try
+        Next
+    End Sub
+
+    Public Sub zCloseExplorerWindowByPath(targetPath As String)
+        ' Normalize path by removing trailing backslashes for accurate comparison
+        Dim cleanTarget As String = targetPath.TrimEnd("\"c)
+
+        Dim shellApp As Object = CreateObject("Shell.Application")
+        Dim windows As Object = shellApp.Windows()
+
+        ' Iterate backwards when closing items in a collection
+        For i As Integer = windows.Count - 1 To 0 Step -1
+            Application.DoEvents()
+            Dim win As Object = windows.Item(i)
+            Try
+                If win IsNot Nothing AndAlso win.Document IsNot Nothing Then
+                    ' Verify it is a File Explorer window (not a legacy IE/web object)
+                    If TypeName(win.Document) = "IShellFolderViewDual3" OrElse TypeName(win.Document) = "IShellFolderViewDual2" Then
+                        Dim currentPath As String = win.Document.Folder.Self.Path.ToString().TrimEnd("\"c)
+
+                        If String.Equals(currentPath, cleanTarget, StringComparison.OrdinalIgnoreCase) Then
+                            win.Quit()
+                        End If
+                    End If
+                End If
+            Catch ex As Exception
+                ' Ignore windows that do not expose a standard folder path (e.g., Control Panel, This PC)
+            End Try
+        Next
+    End Sub
+
+    Public Sub zLoadOpenWindowsAddToListbox(zLOWATLListbox As ListBox)
+        '2026-11-11-20-07-24-PM
+        'expects listbox to exist or will crash
+
+        zLOWATLListbox.Items.Clear()
+
+        ' Get all processes running on the local machine
+        For Each proc As Process In Process.GetProcesses()
+            Application.DoEvents()
+            ' Ensure the process has a graphical user interface and a non-empty title
+            If proc.MainWindowHandle <> IntPtr.Zero AndAlso Not String.IsNullOrWhiteSpace(proc.MainWindowTitle) Then
+                zLOWATLListbox.Items.Add(proc.MainWindowTitle)
+            End If
+        Next
+    End Sub
+
+    'Imports System.Runtime.InteropServices
+    'Imports System.Text
+
+    Delegate Function EnumWindowsProc(hWnd As IntPtr, lParam As IntPtr) As Boolean
+
+    <DllImport("user32.dll")>
+    Public Function EnumWindows(lpEnumFunc As EnumWindowsProc, lParam As IntPtr) As Boolean
+    End Function
+
+    <DllImport("user32.dll")>
+    Public Function IsWindowVisible(hWnd As IntPtr) As Boolean
+    End Function
+
+    <DllImport("user32.dll", CharSet:=CharSet.Unicode)>
+    Public Function GetWindowText(hWnd As IntPtr, lpString As StringBuilder, nMaxCount As Integer) As Integer
+    End Function
+
+    <DllImport("user32.dll")>
+    Public Function GetWindowTextLength(hWnd As IntPtr) As Integer
+    End Function
+
+    Public Sub zAddOpenWindowsToListBoxUsingWindowsAPI(zAOWTLBUWAListbox As ListBox)
+        '2026-11-11-20-28-24-PM
+        'expects listbox to exist or it will crash
+        zAOWTLBUWAListbox.Items.Clear()
+        EnumWindows(Function(hWnd, lParam)
+                        If IsWindowVisible(hWnd) Then
+                            Dim length As Integer = GetWindowTextLength(hWnd)
+                            If length > 0 Then
+                                Dim sb As New StringBuilder(length + 1)
+                                GetWindowText(hWnd, sb, sb.Capacity)
+                                Dim title As String = sb.ToString()
+                                If Not String.IsNullOrWhiteSpace(title) Then
+                                    zAOWTLBUWAListbox.Items.Add(title)
+                                End If
+                            End If
+                        End If
+                        Return True
+                    End Function, IntPtr.Zero)
+    End Sub
+
 
     '==================================================================================================
     'junk-reddt-shitty-daystrum-2026-07-04-13-53-18-pm.txt

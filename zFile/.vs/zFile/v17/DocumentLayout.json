@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|zFile.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|zFile.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zfile\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|zFile.vbproj|solutionrelative:vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|zFile.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zfile\\frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|zFile.vbproj|solutionrelative:frmmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|zFile.vbproj|c:\\zonide\\zip\\code\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zfile\\vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{B7FD56E7-C611-4A5B-9A8B-A46DA9FF1E37}|zFile.vbproj|solutionrelative:vabbajacksandvich.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
@@ -38,13 +38,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "vabbajacksandvich.vb",
               "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\vabbajacksandvich.vb",
               "RelativeDocumentMoniker": "vabbajacksandvich.vb",
               "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\vabbajacksandvich.vb",
               "RelativeToolTip": "vabbajacksandvich.vb",
-              "ViewState": "AgIAAFAUAAAAAAAAAAAYwGIUAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAFAUAAAAAAAAAAAYwGIUAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-10-24T12:57:22.101Z",
               "EditorCaption": ""
@@ -72,13 +72,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "frmMain.vb",
               "DocumentMoniker": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\frmMain.vb",
               "RelativeDocumentMoniker": "frmMain.vb",
               "ToolTip": "C:\\zonide\\zip\\CODE\\vabbajacksandvich-code-non-repo-bk\\visualstudio\\zFile\\frmMain.vb",
               "RelativeToolTip": "frmMain.vb",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAowPAAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAIIFAAAAAAAAAAAYwJkFAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2026-08-28T12:56:47.224Z",
               "EditorCaption": ""

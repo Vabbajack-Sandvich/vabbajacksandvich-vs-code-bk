@@ -1025,6 +1025,7 @@
 
 
 
+
 '
 '
 '
@@ -3629,8 +3630,6 @@
 'then have the new changes appened back here from each project
 'unless there is a way to use 1 file for each one like it used to be
 'but i havent found it yet
-'//2026-07-25-09-43-42-AM
-'//these bitches are witches that need scritches for itches
 
 '===================================================
 '                   ideas and todo
@@ -3650,6 +3649,7 @@ Imports System.Runtime.CompilerServices
 Imports System.Text
 Imports System.Windows.Forms.AxHost
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
+Imports System.Xml
 
 Module vabbajacksandvich
     '-------------------------------------
@@ -5206,6 +5206,32 @@ Module vabbajacksandvich
         Next
         zSpaceToUnderscore = zNfos
     End Function
+
+    Public Function zSpaceToDash(zStUStr As String) As String
+        If zStUStr = vbNullString Then Exit Function
+        'changes spaces in a string to dash -
+        Dim zNfi As Long
+        Dim zNfos As String
+        Dim zNfl As Long
+        Dim zNfis As String
+        zNfl = Len(zStUStr)
+        For zNfi = 1 To zNfl
+            Application.DoEvents()
+            zNfis = Mid(zStUStr, zNfi, 1)
+            Select Case zNfis
+                Case " "
+                    'character was a space
+                    'change it to dash
+                    zNfos = zNfos & "-"
+                Case Else
+                    'anything besides a space
+                    'just add whatever it was
+                    zNfos = zNfos & zNfis
+            End Select
+        Next
+        zSpaceToDash = zNfos
+    End Function
+
     Public Function zRemoveDoubleSpace(zTmpIStr As String) As String
         'this removes all double spaces and returns the modified string
         'with only a single space
@@ -7329,8 +7355,178 @@ Module vabbajacksandvich
 
     End Function
 
+    Public Function zUpdateTextBoxWithListEntry(zlistDirectories As ListBox, ztxtDirName As TextBox, Optional zSetCaretToEnd As Integer = 0, Optional zSetTextBoxFocus As Integer = 0)
+        '2026-08-06-19-00-31-PM
+        'this expects the controls to be valid controls
+        'will crash if they arent valid controls
+        'this sets the contents of a list box
+        'to a selected item from a text box
 
+        'zSetCaretToEnd optional
+        '0 or nothing ignore
+        '1 sets the cursor of the text box
+        'to the end
 
+        'zSetTextBoxFocus optional
+        '0 or nothing ignore
+        '1 sets focus to the text box
+
+        'If zlistDirectories.SelectedItem = Nothing Or zlistDirectories.Items.Count = 0 Then
+
+        If zlistDirectories.SelectedItem = Nothing Then
+            ztxtDirName.Text = ""
+            If zSetTextBoxFocus = 1 Then
+                ztxtDirName.Focus()
+            End If
+            Exit Function
+        End If
+
+        If zlistDirectories.Items.Count = 0 Then
+            ztxtDirName.Text = ""
+            If zSetTextBoxFocus = 1 Then
+                ztxtDirName.Focus()
+            End If
+            Exit Function
+        End If
+
+        'If zlistDirectories.Items.Count = 0 Then Exit Function
+
+        'If txtPath.Text = vbNullString Then Exit Function
+
+        Dim zFname As String
+        'Dim zFname2 As String
+        'Dim zPl As Integer
+        zFname = zlistDirectories.SelectedItem.ToString
+        'Debug.Print(Len(txtPath.Text))
+        'this filters out the path
+        'zPl = Len(ztxtPath.Text)
+        'If zPl = 3 Then
+        '    zFname2 = Mid(zFname, Len(ztxtPath.Text) + 1)
+        'Else
+        '    zFname2 = Mid(zFname, Len(ztxtPath.Text) + 2)
+        'End If
+        'zFname2 = Strings.Replace(zFname, txtPath.Text, "")
+        'lbDirName.Text = zFname2
+
+        ztxtDirName.Text = zFname
+
+        If zSetCaretToEnd = 1 Then
+            If Len(ztxtDirName.Text) > 0 Then
+                ztxtDirName.SelectionStart = Len(ztxtDirName.Text)
+            End If
+        End If
+
+        If zSetTextBoxFocus = 1 Then
+            ztxtDirName.Focus()
+        End If
+
+    End Function
+
+    Public Function zUpdateTextBoxWithListEntryLastPathOrFile(zlistDirectories As ListBox, ztxtDirName As TextBox, ztxtPath As TextBox, Optional zSetCaretToEnd As Integer = 0, Optional zSetTextBoxFocus As Integer = 0)
+        '2026-08-06-19-00-31-PM
+        'this expects the controls to be valid controls
+        'will crash if they arent valid controls
+        'this sets the contents of a list box
+        'to a selected item from a text box
+        'this also filters out the last path entry
+        'like c:\test\test.txt
+        'would return test.txt
+
+        'zSetCaretToEnd optional
+        '0 or nothing ignore
+        '1 sets the cursor of the text box
+        'to the end
+
+        'If zlistDirectories.SelectedItem = Nothing Then
+        'If zlistDirectories.SelectedItem = Nothing Or zlistDirectories.Items.Count = 0 Then
+
+        If zlistDirectories.SelectedItem = Nothing Then
+            ztxtDirName.Text = ""
+            If zSetTextBoxFocus = 1 Then
+                ztxtDirName.Focus()
+            End If
+            Exit Function
+        End If
+
+        If zlistDirectories.Items.Count = 0 Then
+            ztxtDirName.Text = ""
+            If zSetTextBoxFocus = 1 Then
+                ztxtDirName.Focus()
+            End If
+            Exit Function
+        End If
+
+        'If zlistDirectories.SelectedItem = Nothing Then Exit Function
+
+        If ztxtPath.Text = vbNullString Then Exit Function
+
+        Dim zFname As String
+        Dim zFname2 As String
+        Dim zPl As Integer
+
+        zFname = zlistDirectories.SelectedItem.ToString
+
+        'Debug.Print(Len(txtPath.Text))
+
+        zPl = Len(ztxtPath.Text)
+        If zPl = 3 Then
+            zFname2 = Mid(zFname, Len(ztxtPath.Text) + 1)
+        Else
+            zFname2 = Mid(zFname, Len(ztxtPath.Text) + 2)
+        End If
+
+        'zFname2 = Strings.Replace(zFname, txtPath.Text, "")
+        'lbDirName.Text = zFname2
+
+        ztxtDirName.Text = zFname2
+
+        If zSetCaretToEnd = 1 Then
+            If Len(ztxtDirName.Text) > 0 Then
+                ztxtDirName.SelectionStart = Len(ztxtDirName.Text)
+            End If
+        End If
+
+        If zSetTextBoxFocus = 1 Then
+            ztxtDirName.Focus()
+        End If
+
+    End Function
+
+    Public Function zUpdateLabelWithListEntryLastPathOrFile(zlistDirectories As ListBox, zlbDirName As Label, ztxtPath As TextBox)
+        '2026-08-06-19-00-31-PM
+        'this expects the controls to be valid controls
+        'will crash if they arent valid controls
+        'this sets the contents of a list box
+        'to a selected item from a text box
+        'this also filters out the last path entry
+        'like c:\test\test.txt
+        'would return test.txt
+
+        If zlistDirectories.SelectedItem = Nothing Then Exit Function
+        If ztxtPath.Text = vbNullString Then Exit Function
+        Dim zFname As String
+        Dim zFname2 As String
+        Dim zPl As Integer
+        zFname = zlistDirectories.SelectedItem.ToString
+        'Debug.Print(Len(txtPath.Text))
+        zPl = Len(ztxtPath.Text)
+        If zPl = 3 Then
+            zFname2 = Mid(zFname, Len(ztxtPath.Text) + 1)
+        Else
+            zFname2 = Mid(zFname, Len(ztxtPath.Text) + 2)
+        End If
+        'zFname2 = Strings.Replace(zFname, txtPath.Text, "")
+        zlbDirName.Text = zFname2
+        'ztxtDirName.Text = zFname2
+
+    End Function
+
+    Public Function zPause(Optional zPauseTime As Integer = 10000) As Task
+        '2026-10-24-08-59-09-AM
+        'adding a pause function
+        'if nothing is specified it has a default of 10 seconds
+        System.Threading.Thread.Sleep(zPauseTime)
+    End Function
 
     '==================================================================================================
     'junk-reddt-shitty-daystrum-2026-07-04-13-53-18-pm.txt
