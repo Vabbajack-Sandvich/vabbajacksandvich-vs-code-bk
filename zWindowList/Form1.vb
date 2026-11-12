@@ -45,6 +45,7 @@ Public Class Form1
 
     Private Sub btCloseAllWindowsExplorerWindows_Click(sender As Object, e As EventArgs) Handles btCloseAllWindowsExplorerWindows.Click
         zCloseAllExplorerWindows()
+        zUpdateTextboxAndLabel()
     End Sub
 
     Private Sub ListExplorerWindows_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListExplorerWindows.SelectedIndexChanged

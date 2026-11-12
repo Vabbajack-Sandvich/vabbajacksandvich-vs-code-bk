@@ -7561,10 +7561,12 @@ Module vabbajacksandvich
                             ' Convert the URI into a standard local file path
                             Dim localPath As String = New Uri(locationUrl).LocalPath
                             paths.Add(localPath)
-                        Else
+                            'skipping special folders
+                            'Else
                             ' Special folders like "This PC" or "Recycle Bin" have an empty LocationURL
                             ' You can fall back to LocationName for the window title
-                            paths.Add($"[Special Folder] {window.LocationName}")
+                            'paths.Add($"[Special Folder] {window.LocationName}")
+                            'paths.Add(window.LocationName)
                         End If
                     End If
                 Catch ex As Exception
@@ -7626,6 +7628,7 @@ Module vabbajacksandvich
         For Each folderPath As String In openFolders
             Application.DoEvents()
             'Console.WriteLine(folderPath)
+
             zGAWListBox.Items.Add(folderPath)
         Next
 

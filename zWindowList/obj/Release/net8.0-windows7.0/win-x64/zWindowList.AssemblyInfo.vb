@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("zWindowList"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Release"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f01053c669de2ecaa8b60dbfe31f75046c514f0e"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1772c3758175f64dd0ab54d4a0c48b8fb4aaef28"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("zWindowList"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("zWindowList"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
