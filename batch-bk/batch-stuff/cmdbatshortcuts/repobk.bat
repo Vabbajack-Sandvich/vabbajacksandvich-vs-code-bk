@@ -15,6 +15,10 @@ set mytime=%time::=%
 set mytimestamp=%mydate: =_%_%mytime:.=_%
 set mytimestamp=%mytimestamp: =%
 
+rem 2026-11-11-23-03-15-PM
+rem adding the module update to this
+call mu.bat
+
 call c.bat
 call nr.bat
 rem C:\zonide\zip\CODE\vabbajacksandvich-code-non-repo-bk
